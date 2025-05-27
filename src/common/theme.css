@@ -1,0 +1,65 @@
+:root {
+  /* Color styles */
+  --black: rgba(0, 0, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+  --gray-100: rgba(225, 225, 225, 1);
+  --gray-200: rgba(196, 196, 196, 1);
+  --gray-300: rgba(166, 166, 166, 1);
+  --gray-400: rgba(137, 137, 137, 1);
+  --gray-500: rgba(107, 107, 107, 1);
+  --gray-600: rgba(86, 86, 86, 1);
+  --gray-700: rgba(64, 64, 64, 1);
+  --gray-800: rgba(43, 43, 43, 1);
+  --gray-900: rgba(21, 21, 21, 1);
+  --brand-red-1: rgba(255, 21, 60, 1);
+  --brand-red-2: rgba(233, 57, 69, 1);
+  --brand-dark-bg-1: rgba(25, 25, 25, 1);
+  --brand-dark-bg-2: rgba(33, 33, 33, 1);
+
+  /* Text-size styles */
+  --heading-medium: 16px;
+  --heading-large: 21px;
+  --heading-xl: 28px;
+  --heading-xxl: 38px;
+  --heading-xxxl: 51px;
+  --label-small: 12px;
+  --label-medium: 16px;
+  --label-large: 21px;
+  --label-xl: 28px;
+  --label-xxl: 38px;
+  --paragraph-small: 12px;
+  --paragraph-medium: 16px;
+  --paragraph-large: 21px;
+  --paragraph-xl: 28px;
+
+  /* Text-weight styles */
+  --font-weight-700: 700;
+  --font-weight-600: 600;
+  --font-weight-400: 400;
+
+  /* Line-height styles */
+  --line-height-heading: 1.4;
+  --line-height-label: 1.5;
+  --line-height-paragraph: 1.6;
+
+  /* Effect styles */
+  --text: inset 1px 1px 0px rgba(0, 0, 0, 1);
+  --above---high: 0px -16px 48px rgba(0, 0, 0, 0.3);
+  --above---medium: 0px -8px 36px rgba(0, 0, 0, 0.2);
+  --above---low: 0px -4px 24px rgba(0, 0, 0, 0.1);
+  --below---high: 0px 16px 48px rgba(0, 0, 0, 0.3);
+  --below---medium: 0px 8px 36px rgba(0, 0, 0, 0.2);
+  --below---low: 0px 4px 24px rgba(0, 0, 0, 0.1);
+
+  /* Spacing styles */
+  --spacing-5: 5px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-52: 52px;
+  --spacing-70: 70px;
+}
