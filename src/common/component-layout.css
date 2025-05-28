@@ -1,0 +1,4 @@
+.components-wrapper {
+  background-color: var(--gray-900);
+  min-height: 100svh;
+}
