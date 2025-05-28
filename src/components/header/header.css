@@ -1,14 +1,80 @@
 body {
-  background-color: #121212;
+  background: #2b2b2b;
   color: #fff;
 }
 
+/* ------ 공통 헤더 스타일 ------ */
 .header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 29px var(--spacing-70);
+  display: flex;
+  flex-flow: column nowrap;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      width: 132px;
+      height: 42px;
+    }
+
+    /* ------ 메뉴 네비게이션 ------ */
+    .nav {
+      flex-grow: 1;
+      margin-inline-start: 52px;
+
+      .nav-list {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: var(--spacing-52);
+        align-items: center;
+        font-weight: var(--font-weight-400);
+        line-height: var(--line-height-paragraph);
+        font-size: var(--heading-large);
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: #c4c4c4;
+        }
+      }
+    }
+
+    /* ------ 우측 버튼 영역 ------ */
+    .header-right {
+      display: flex;
+      gap: 40px;
+
+      .icon-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        width: 40px;
+      }
+    }
+  }
+
   /* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
   &.header-logged-out {
+    height: 100px;
+
     .nav,
     .header-right {
       display: none;
+    }
+  }
+
+  /* 로그인한 상태, 검색 버튼 비활성화 */
+  &.header-logged-in {
+    .header-right {
+      .close-btn {
+        display: none;
+      }
     }
   }
 
