@@ -11,6 +11,61 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    header
+    <div class="components-wrapper">
+      <ul class="components-list">
+        <li class="components-item">
+          <h1 class="components-title">Header</h1>
+          <hr />
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <!-- 비로그인 상태일 때 -->
+            <header class="header header-logged-out header-logged-in header-search-active">
+              <!-- 로고 (공통) -->
+              <div class="header-inner">
+                <h1 class="logo">
+                  <a href="/">
+                    <img src="/public/icon/tving-white-logo.svg" alt="TAING 로고" />
+                  </a>
+                </h1>
+                <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+                <nav class="nav" aria-label="주요 메뉴">
+                  <ul class="nav-list">
+                    <li>
+                      <a href="#">
+                        <img src="/public/icon/live-icon-grey.svg" alt="실시간 live" />
+                        <p>실시간</p>
+                      </a>
+                    </li>
+                    <li><a href="#">TV프로그램</a></li>
+                    <li><a href="#">영화</a></li>
+                    <li>
+                      <a href="#">
+                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" />
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <!-- 버튼 영역 (우측) -->
+                <div class="header-right">
+                  <!-- 검색 버튼 -->
+                  <button class="icon-btn search-btn" aria-label="검색 열기">
+                    <img src="/public/icon/search-icon-grey.svg" alt="검색" />
+                  </button>
+                  <!-- 검색 닫기 버튼 -->
+                  <button class="icon-btn close-btn" aria-label="검색 닫기">
+                    <img src="/public/icon/close-grey.svg" alt="검색 닫기" />
+                  </button>
+                  <!-- 프로필 버튼 -->
+                  <button class="icon-btn profile-btn" aria-label="프로필">
+                    <img src="/public/icon/tving-icon-desktop.svg" alt="프로필" />
+                  </button>
+                </div>
+              </div>
+            </header>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
