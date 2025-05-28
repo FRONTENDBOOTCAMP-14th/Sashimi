@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Component - main</title>
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
     <link rel="stylesheet" href="/src/components/main/main.css" />
@@ -13,13 +13,224 @@
   </head>
   <body>
     <div class="components-wrapper">
+      <h1>Component - main</h1>
       <ul class="components-list">
         <li class="components-item">
-          <h1 class="components-title">컴포넌트 타이틀</h1>
+          <h2 class="components-title">Main Slide - Icon</h2>
           <div class="components-box">
-            <!-- 컴포넌트 시작 -->
-            컴포넌트 여기다 짜기
-            <!-- 컴포넌트 종료 -->
+            <!-- 슬라이드 재생 버튼 -->
+            <button class="slide-play" type="button" aria-label="슬라이드 재생">
+              <img src="/icon/slide-play.svg" alt="" aria-hidden="true" />
+            </button>
+            <!-- 슬라이드 일시정지 버튼 -->
+            <button class="slide-pause" type="button" aria-label="슬라이드 일시정지">
+              <img src="/icon/slide-pause.svg" alt="" aria-hidden="true" />
+            </button>
+            <!-- 슬라이드 목록 버튼 리스트 -->
+            <ul class="slide-dots-list">
+              <li class="slide-dots-item">
+                <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
+                <button class="slide-dots active" type="button" aria-label="슬라이드 2번"></button>
+                <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
+                <button class="slide-dots" type="button" aria-label="슬라이드 4번"></button>
+              </li>
+            </ul>
+            <!-- 슬라이드 목록 및 재생or일시정지 조합 -->
+            <div class="slide-nav">
+              <button class="slide-pause" type="button" aria-label="슬라이드 일시정지">
+                <img src="/icon/slide-pause.svg" alt="" aria-hidden="true" />
+              </button>
+              <ul class="slide-dots-list">
+                <li class="slide-dots-item">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
+                  <button class="slide-dots active" type="button" aria-label="슬라이드 2번"></button>
+                  <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
+                  <button class="slide-dots" type="button" aria-label="슬라이드 4번"></button>
+                </li>
+              </ul>
+            </div>
+            <!-- 슬라이드 next,prev 버튼 -->
+            <button class="slide-next" type="button" aria-label="이전 슬라이드">
+              <img src="/icon/slide-left.svg" alt="" aria-hidden="true" />
+            </button>
+            <button class="slide-prev" type="button" aria-label="다음 슬라이드">
+              <img src="/icon/slide-right.svg" alt="" aria-hidden="true" />
+            </button>
+            <!-- 슬라이드 자세히보기 버튼 -->
+            <a href="#" target="_self" aria-label="슬라이드 1번">자세히보기</a>
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Main Slide - Resources</h2>
+          <div class="components-box">
+            <!-- 슬라이드 이미지 리소스 -->
+            <div class="slide-img" style="background-image: url()">
+              <span class="sr-only">ex. 드라마 "재벌집 막내아들"의 커버 이미지 입니다.</span>
+            </div>
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Main Content - Icon</h2>
+          <div class="components-box">
+            <!-- 성인 콘텐츠 표시 아이콘 -->
+            <img class="icon-19plus" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+            <img class="icon-18plus" src="/icon/icon-18plus.svg" alt="국제 기준 18세 이상 관람가능" />
+            <!-- 티빙 오리지널 콘텐츠 표시 아이콘 -->
+            <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+            <!-- 콘텐츠 플레이 버튼 -->
+            <button class="btn-vod-play" type="button" aria-label="(동적으로 '콘텐츠명' 삽입) 재생하기">
+              <img src="/icon/icon-content-play.svg" alt="" aria-hidden="true" />
+            </button>
+            <!-- Quick VOD 표시 아이콘 -->
+            <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+            <!-- 무료 VOD 표시 아이콘 -->
+            <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Main Content - Thumbnail</h2>
+          <div class="components-box">
+            <!-- 가로 썸네일  -->
+            <div class="thumbnail width" style="background-image: url()">
+              <div class="thumbnail-info-top">
+                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+              </div>
+              <div class="thumbnail-info-bottom">
+                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+              </div>
+            </div>
+            <!-- 가로 썸네일(시청 기록 있을때) -->
+            <div class="thumbnail width veiw" style="background-image: url()">
+              <div class="thumbnail-info-top">
+                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+              </div>
+              <div class="thumbnail-info-bottom">
+                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+              </div>
+            </div>
+            <!-- 세로 썸네일  -->
+            <div class="thumbnail height" style="background-image: url()">
+              <div class="thumbnail-info-top">
+                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+              </div>
+              <div class="thumbnail-info-bottom">
+                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+              </div>
+            </div>
+            <!-- 세로 썸네일(시청 기록 있을때) -->
+            <div class="thumbnail height veiw" style="background-image: url()">
+              <div class="thumbnail-info-top">
+                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+              </div>
+              <div class="thumbnail-info-bottom">
+                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Main Content - Label</h2>
+          <div class="components-box">
+            <!-- 타이틀만 있는 경우 + 포인트 요소(.point 로 제어) -->
+            <h3 class="thumnail point">
+              <strong>Title 텍스트 입니다.</strong>
+            </h3>
+            <!-- 타이틀 + 서브타이틀 -->
+            <h3 class="thumnail">
+              <strong>Title 텍스트 입니다.</strong>
+              <b>Sub Title 텍스트 입니다.</b>
+            </h3>
+            <!-- 큰숫자 + 타이틀 + 포인트 -->
+            <h3 class="thumnail point">
+              <em>1</em>
+              <strong>Title 텍스트 입니다.</strong>
+            </h3>
+            <!-- 큰숫자 + 타이틀 + 서브타이틀 + 관람자 -->
+            <h3 class="thumnail">
+              <em>1</em>
+              <strong>Title 텍스트 입니다.</strong>
+              <b>Sub Title 텍스트 입니다.</b>
+              <span>Viewer</span>
+            </h3>
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Main Content - Thumnail + Label</h2>
+          <div class="components-box">
+            <!-- 가로 상황 (큰 숫자 없는) -->
+            <div class="thumbnail-item">
+              <div class="thumbnail width" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
+              </div>
+              <h3 class="thumnail point">
+                <strong>Title 텍스트 입니다.</strong>
+              </h3>
+            </div>
+            <!-- 가로 상황 (큰 숫자 있는) -->
+            <div class="thumbnail-item">
+              <div class="thumbnail width" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
+              </div>
+              <h3 class="thumnail point">
+                <em>1</em>
+                <strong>Title 텍스트 입니다.</strong>
+              </h3>
+            </div>
+            <!-- 세로 상황 (큰 숫자 없는) -->
+            <div class="thumbnail-item">
+              <div class="thumbnail height" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
+              </div>
+              <h3 class="thumnail point">
+                <strong>Title 텍스트 입니다.</strong>
+              </h3>
+            </div>
+            <!-- 세로 상황 (큰 숫자 있는) -->
+            <div class="thumbnail-item">
+              <div class="thumbnail height" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
+              </div>
+              <h3 class="thumnail point">
+                <em>1</em>
+                <strong>Title 텍스트 입니다.</strong>
+              </h3>
+            </div>
           </div>
         </li>
       </ul>
