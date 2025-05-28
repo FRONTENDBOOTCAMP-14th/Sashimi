@@ -2,3 +2,20 @@ body {
   background-color: #121212;
   color: #fff;
 }
+
+.header {
+  /* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
+  &.header-logged-out {
+    .nav,
+    .header-right {
+      display: none;
+    }
+  }
+
+  /* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
+  &.header-search-active {
+    .search-btn {
+      display: none;
+    }
+  }
+}
