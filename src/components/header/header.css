@@ -1,9 +1,97 @@
 body {
-  background-color: #121212;
+  background: #2b2b2b;
   color: #fff;
 }
 
+/* ------ 공통 헤더 스타일 ------ */
 .header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 100px;
+  padding: 0 var(--spacing-70);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  flex-shrink: 0;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 132px;
+      height: 42px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      flex-shrink: 0;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  /* ------ 메뉴 네비게이션 ------ */
+  .nav {
+    flex-grow: 1;
+    margin-inline-start: 52px;
+
+    .nav-list {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: var(--spacing-52);
+      align-items: center;
+      font-weight: var(--font-weight-400);
+      line-height: var(--line-height-paragraph);
+      font-size: var(--heading-large);
+      white-space: nowrap;
+      overflow-x: auto;
+      text-align: center;
+
+      li {
+        flex-shrink: 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: #c4c4c4;
+
+          img {
+            max-width: 100%;
+            height: auto;
+            flex-shrink: 0;
+            object-fit: contain;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  /* ------ 우측 버튼 영역 ------ */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   /* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
   &.header-logged-out {
     .nav,
@@ -12,10 +100,151 @@ body {
     }
   }
 
+  /* 로그인한 상태, 검색 버튼 비활성화 */
+  &.header-logged-in {
+    .header-right {
+      .close-btn,
+      .search-btn-mobile {
+        display: none;
+      }
+    }
+  }
+
   /* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
   &.header-search-active {
-    .search-btn {
-      display: none;
+    .header-right {
+      .search-btn-mobile,
+      .search-btn-desktop,
+      .close-btn-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 반응형 */
+@media (max-width: 320px) {
+  body {
+    min-width: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 0 var(--spacing-16);
+    height: 38px;
+
+    .header-inner {
+      flex-direction: row;
+
+      .logo {
+        width: 46px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .header-right {
+        gap: 16px;
+
+        .icon-btn {
+          width: 18px;
+
+          .search-btn-desktop,
+          .close-btn-desktop {
+            display: none;
+          }
+
+          .search-btn-mobile,
+          .close-btn-mobile {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  
+  .header.header-search-active {
+    .header-right {
+      .icon-btn {
+        .search-btn-mobile {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding: 0 40px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+
+  .header-inner {
+    .logo {
+      width: 77px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .nav {
+      .nav-list {
+        gap: 28px;
+        font-size: var(--paragraph-small);
+        height: 20px;
+        display: flex;
+        align-items: center;
+
+        li {
+          display: flex;
+          align-items: center;
+          
+          a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 20px;
+
+            p, span {
+              margin: 0;
+              padding: 0;
+              line-height: 1;
+              display: flex;
+              align-items: center;
+              height: 20px;
+            }
+
+            img {
+              width: 20px;
+              height: 20px;
+              display: block;
+            }
+
+            .paramounts {
+              width: 65px;
+              height: 20px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+
+      .header-right {
+      gap: 24px;
+
+      .icon-btn {
+        width: 24px;
+        height: 24px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
   }
 }

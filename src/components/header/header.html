@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Component - header</title>
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/components/header/header.css" />
     <script type="module" src="/src/main.js"></script>
@@ -32,7 +32,7 @@
                   <ul class="nav-list">
                     <li>
                       <a href="#">
-                        <img src="/public/icon/live-icon-grey.svg" alt="실시간 live" />
+                        <img src="/public/icon/live-icon-grey.svg" alt="실시간 라이브" />
                         <p>실시간</p>
                       </a>
                     </li>
@@ -40,7 +40,7 @@
                     <li><a href="#">영화</a></li>
                     <li>
                       <a href="#">
-                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" />
+                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
                       </a>
                     </li>
                   </ul>
@@ -49,11 +49,13 @@
                 <div class="header-right">
                   <!-- 검색 버튼 -->
                   <button class="icon-btn search-btn" aria-label="검색 열기">
-                    <img src="/public/icon/search-icon-grey.svg" alt="검색" />
+                    <img src="/public/icon/search-icon-grey.svg" alt="검색" class="search-btn-desktop" />
+                    <img src="/public/icon/search-icon-white.svg" alt="검색" class="search-btn-mobile" />
                   </button>
                   <!-- 검색 닫기 버튼 -->
                   <button class="icon-btn close-btn" aria-label="검색 닫기">
-                    <img src="/public/icon/close-grey.svg" alt="검색 닫기" />
+                    <img src="/public/icon/close-grey.svg" alt="검색 닫기" class="close-btn-desktop" />
+                    <img src="/public/icon/close-white.svg" alt="검색 닫기" class="close-btn-mobile" />
                   </button>
                   <!-- 프로필 버튼 -->
                   <button class="icon-btn profile-btn" aria-label="프로필">
@@ -85,7 +87,7 @@
                     <li><a href="#">영화</a></li>
                     <li>
                       <a href="#">
-                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" />
+                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
                       </a>
                     </li>
                   </ul>
@@ -94,11 +96,13 @@
                 <div class="header-right">
                   <!-- 검색 버튼 -->
                   <button class="icon-btn search-btn" aria-label="검색 열기">
-                    <img src="/public/icon/search-icon-grey.svg" alt="검색" />
+                    <img src="/public/icon/search-icon-grey.svg" alt="검색" class="search-btn-desktop" />
+                    <img src="/public/icon/search-icon-white.svg" alt="검색" class="search-btn-mobile" />
                   </button>
                   <!-- 검색 닫기 버튼 -->
                   <button class="icon-btn close-btn" aria-label="검색 닫기">
                     <img src="/public/icon/close-grey.svg" alt="검색 닫기" />
+                    <img src="/public/icon/close-white.svg" alt="검색 닫기" class="close-btn-mobile" />
                   </button>
                   <!-- 프로필 버튼 -->
                   <button class="icon-btn profile-btn" aria-label="프로필">
@@ -130,7 +134,7 @@
                     <li><a href="#">영화</a></li>
                     <li>
                       <a href="#">
-                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" />
+                        <img src="/public/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
                       </a>
                     </li>
                   </ul>
@@ -139,11 +143,13 @@
                 <div class="header-right">
                   <!-- 검색 버튼 -->
                   <button class="icon-btn search-btn" aria-label="검색 열기">
-                    <img src="/public/icon/search-icon-grey.svg" alt="검색" />
+                    <img src="/public/icon/search-icon-grey.svg" alt="검색" class="search-btn-desktop" />
+                    <img src="/public/icon/search-icon-white.svg" alt="검색" class="search-btn-mobile" />
                   </button>
                   <!-- 검색 닫기 버튼 -->
                   <button class="icon-btn close-btn" aria-label="검색 닫기">
-                    <img src="/public/icon/close-grey.svg" alt="검색 닫기" />
+                    <img src="/public/icon/close-grey.svg" alt="검색 닫기" class="close-btn-desktop" />
+                    <img src="/public/icon/close-white.svg" alt="검색 닫기" class="close-btn-mobile" />
                   </button>
                   <!-- 프로필 버튼 -->
                   <button class="icon-btn profile-btn" aria-label="프로필">
@@ -152,6 +158,7 @@
                 </div>
               </div>
             </header>
+            <hr />
             <!-- 컴포넌트 종료 -->
           </div>
         </li>
