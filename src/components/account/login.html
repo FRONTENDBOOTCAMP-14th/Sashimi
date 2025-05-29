@@ -18,10 +18,10 @@
         <li class="components-item">
           <h2 class="components-title">id-input-field 컴포넌트</h2>
           <div class="components-box">
-            <div class="input-group"> 
-              <input class="input-field" type="text" placeholder="아이디" maxlength="30">
-              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon">
-              <p class="input-hint">아이디는 최대 30자까지 입력가능</p>
+            <div class="input-group">
+              <input class="input-field" type="text" placeholder="아이디" maxlength="30" aria-label="아이디 입력필드">
+              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+              <p class="input-hint" aria-live="polite">아이디는 최대 30자까지 입력가능</p>
             </div>
           </div>
         </li>
@@ -30,10 +30,10 @@
           <h2 class="components-title">pw-input-field 컴포넌트</h2>
           <div class="components-box">
             <div class="input-group">
-              <input class="input-field" type="password" placeholder="패스워드" maxlength="20"> 
-              <img src="/icon/pw-toggle-button.svg" alt="패스워드 보기/숨기기 버튼" class="toggle-password-icon">
-              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon">
-              <p class="input-hint">영문, 숫자, 특수문자를 포함 8자 이상 20자이내</p> 
+              <input class="input-field" type="password" placeholder="패스워드" maxlength="20" aria-label="패스워드 입력필드">
+              <img src="/icon/pw-toggle-button.svg" alt="패스워드 보기/숨기기 버튼" class="toggle-password-icon" aria-hidden="true">
+              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+              <p class="input-hint" aria-live="polite">영문, 숫자, 특수문자를 포함 8자 이상 20자이내</p>
             </div>
           </div>
         </li>
