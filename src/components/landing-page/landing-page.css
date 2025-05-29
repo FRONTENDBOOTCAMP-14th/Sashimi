@@ -45,6 +45,40 @@ body {
   }
 }
 
+/* 아이콘 스타일링 */
+.icon {
+  /* 기본 - 데스크탑 */
+  .icon-taing-renewal > img {
+    inline-size: 506px;
+  }
+
+  .icon-slogan-logo {
+    inline-size: 279px;
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .icon-taing-renewal > img {
+      inline-size: 283px;
+    }
+
+    .icon-slogan-logo {
+      inline-size: 135px;
+    }
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    .icon-taing-renewal > img {
+      inline-size: 188px;
+    }
+
+    .icon-slogan-logo {
+      inline-size: 83px;
+    }
+  }
+}
+
 /* 리소스 컴포넌트 스타일링 */
 .resource {
   /* 랜딩 페이지 상단 배경 이미지 스타일링 */
