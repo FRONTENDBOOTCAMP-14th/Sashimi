@@ -112,9 +112,6 @@ body {
       background-size: cover;
       background-position: center;
 
-      /* min-inline-size: 907px;
-      min-block-size: 510px; */
-
       inline-size: 100%;
       aspect-ratio: 16 / 9;
     }
@@ -127,10 +124,8 @@ body {
       background-size: cover;
       background-position: center;
 
-      min-inline-size: 277px;
-      min-block-size: 400px;
-      /* inline-size: 100%;
-      aspect-ratio: 16 / 9; */
+      inline-size: 277px;
+      block-size: 400px;
     }
   }
 
