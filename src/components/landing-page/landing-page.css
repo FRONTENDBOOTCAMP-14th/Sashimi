@@ -2,3 +2,115 @@ body {
   background-color: #121212;
   color: #fff;
 }
+
+/* 컴포넌트 페이지 레이아웃 스타일링 */
+.components-wrapper {
+  background-color: var(--gray-900);
+  min-height: 100svh;
+  padding: 60px;
+
+  > h1,
+  h2.components-title {
+    color: var(--white);
+    line-height: var(--line-height-heading);
+  }
+
+  > h1 {
+    font-size: var(--heading-xxxl);
+    margin-block-end: var(--spacing-36);
+  }
+
+  h2.components-title {
+    font-size: var(--heading-xxl);
+    margin-block-end: var(--spacing-20);
+  }
+
+  .components-list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--spacing-36);
+
+    .components-item {
+      outline: 2px dashed var(--gray-700);
+      border-radius: 8px;
+      padding: var(--spacing-20) var(--spacing-36) var(--spacing-36);
+
+      .components-box {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: var(--spacing-40);
+      }
+    }
+  }
+}
+
+/* 리소스 컴포넌트 스타일링 */
+.resource {
+  /* 랜딩 페이지 상단 배경 이미지 스타일링 */
+  .landing-background-thumbnail {
+    background-image: url('../../../public/images/image-landing-background-thumbnail.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+
+    /* 모바일 */
+    @media (max-width: 768px) {
+      aspect-ratio: 16 / 19;
+    }
+
+    /* 태블릿 */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      aspect-ratio: 765 / 536;
+    }
+  }
+
+  /* 랜딩 페이지 '오리지널 컨텐츠' 배경 이미지 스타일링 */
+  .original-content {
+    /* 데스크탑 컴포넌트 */
+    /* 페이지 제작 시, 1024px 이상에서만 보이도록 설정 예정 */
+    &.horizontal {
+      background-image: url('../../../public/images/image-thumbnail-05.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      /* min-inline-size: 907px;
+      min-block-size: 510px; */
+
+      inline-size: 100%;
+      aspect-ratio: 16 / 9;
+    }
+
+    /* 모바일, 태블릿 컴포넌트 */
+    /* 페이지 제작 시, 1024px 이하에서만 보이도록 설정 예정 */
+    &.vertical {
+      background-image: url('../../../public/images/image-thumbnail-01.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      min-inline-size: 277px;
+      min-block-size: 400px;
+      /* inline-size: 100%;
+      aspect-ratio: 16 / 9; */
+    }
+  }
+
+  /* 랜딩 페이지 '보고 싶은 컨텐츠' 배경 이미지 스타일링 */
+  .discover-content {
+    background-image: url('../../../public/images/image-thumbnail-09.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    /* min-inline-size: 470px;
+    min-block-size: 264px; */
+
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+  }
+}
