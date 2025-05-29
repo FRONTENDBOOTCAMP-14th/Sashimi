@@ -1,4 +1,230 @@
 body {
-  background-color: #121212;
-  color: #fff;
+  background: #333;
+}
+
+/* ------ 공통 헤더 스타일 ------ */
+.header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  block-size: 100px;
+  padding: 0 var(--spacing-70);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  flex-shrink: 0;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      inline-size: 132px;
+      block-size: 42px;
+    }
+  }
+
+  /* ------ 메뉴 네비게이션 ------ */
+  .nav {
+    flex-grow: 1;
+    margin-inline-start: var(--spacing-52);
+
+    .nav-list {
+      gap: var(--spacing-52);
+      font: var(--font-weight-400) var(--heading-large) var(--line-height-paragraph);
+      white-space: nowrap;
+      overflow-x: auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+
+      li {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          text-decoration: none;
+          color: #c4c4c4;
+
+          p {
+            margin-block-start: 8px;
+          }
+
+          .paramounts {
+            inline-size: 111px;
+            block-size: 26px;
+            object-fit: contain;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ------ 우측 버튼 영역 ------ */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-40);
+
+    .icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      inline-size: var(--spacing-40);
+      block-size: var(--spacing-40);
+    }
+  }
+
+  /* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
+  &.header-logged-out {
+    .nav,
+    .header-right {
+      display: none;
+    }
+  }
+
+  /* 로그인한 상태, 검색 버튼 비활성화 */
+  &.header-logged-in {
+    .header-right {
+      .close-btn,
+      .search-btn-mobile {
+        display: none;
+      }
+    }
+  }
+
+  /* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
+  &.header-search-active {
+    .header-right {
+      .search-btn,
+      .close-btn .close-btn-mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 반응형 */
+@media (max-width: 320px) {
+  body {
+    min-inline-size: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-inline: var(--spacing-16);
+    block-size: 38px;
+
+    .header-inner {
+      flex-direction: row;
+
+      .logo {
+        inline-size: 46px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .header-right {
+        gap: var(--spacing-16);
+
+        .icon-btn {
+          inline-size: 18px;
+
+          .search-btn-desktop,
+          .close-btn-desktop {
+            display: none;
+          }
+
+          .search-btn-mobile,
+          .close-btn-mobile {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  .header.header-search-active {
+    .header-right {
+      .icon-btn {
+        .search-btn-mobile {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    padding-inline: var(--spacing-40);
+    block-size: 56px;
+    flex-shrink: 0;
+  }
+
+  .header-inner {
+    .logo {
+      inline-size: 77px;
+      block-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .nav {
+      .nav-list {
+        gap: 28px;
+        font-size: var(--paragraph-small);
+        block-size: 20px;
+        display: flex;
+        align-items: center;
+
+        li {
+          display: flex;
+          align-items: center;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            p {
+              margin-block-start: 6px;
+            }
+
+            img {
+              inline-size: 20px;
+              block-size: 20px;
+            }
+
+            .paramounts {
+              inline-size: 65px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+
+    .header-right {
+      gap: 24px;
+
+      .icon-btn,
+      img {
+        inline-size: 24px;
+        block-size: 24px;
+      }
+    }
+  }
 }
