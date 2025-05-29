@@ -12,6 +12,61 @@
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    header
+    <div class="components-wrapper">
+      <h1>Component - profiles</h1>
+      <ul class="components-list">
+        <li class="components-item">
+          <h2 class="components-title">Icon</h2>
+          <div class="components-box icon">
+            <!-- 컴포넌트 시작 -->
+            <!-- 잠긴 프로필에 쓰이는 lock 아이콘 -->
+            <img class="icon-lock" src="/icon/profiles-lock.svg" alt="잠긴 프로필 아이콘" />
+            <!-- 프로필 편집에서 쓰이는 edit 아이콘 -->
+            <img class="icon-edit" src="/icon/profiles-edit.svg" alt="프로필 편집 아이콘" />
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Text</h2>
+          <div class="components-box text">
+            <!-- 컴포넌트 시작 -->
+            <div class="text-box">
+              <h2 class="text-headline">프로필 선택</h2>
+              <p class="text-description">시청할 프로필을 선택해주세요.</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Profile Thumbnail</h2>
+          <div class="components-box profile-thumbnail">
+            <!-- 컴포넌트 시작 -->
+            <div class="profile-card-box">
+              <div class="profile-resource default"></div>
+              <p class="nickname">default profile</p>
+            </div>
+            <div class="profile-card-box">
+              <div class="profile-resource lock"></div>
+              <p class="nickname">locked profile</p>
+            </div>
+            <div class="profile-card-box">
+              <div class="profile-resource edit"></div>
+              <p class="nickname">edited profile</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Resources</h2>
+          <div class="components-box resource">
+            <!-- 컴포넌트 시작 -->
+            <!-- 프로필 썸네일의 백그라운드 이미지로 추가 예정 -->
+            <!-- 프로필 이미지 -->
+            <div class="profile-resource"></div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
