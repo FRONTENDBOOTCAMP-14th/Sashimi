@@ -129,6 +129,68 @@ body {
   }
 }
 
+/* 프로필 편집, 완료 버튼 */
+.button {
+  --button-inline-size: 272px;
+  --button-block-size: 86px;
+  --button-text-size: var(--label-xl);
+  --button-text-line-height: var(--line-height-label);
+  --edit-text-color: var(--gray-300);
+  --edit-border-color: var(--gray-600);
+  --complete-background-color: var(--gray-100);
+
+  /* 공통 스타일 */
+  .profile-button {
+    inline-size: var(--button-inline-size);
+    block-size: var(--button-block-size);
+    font-size: var(--button-text-size);
+    border-radius: 4px;
+  }
+  /* 프로필 편집 (기본) */
+  .edit {
+    background-color: transparent;
+    color: var(--edit-text-color);
+    border: 1px solid var(--edit-border-color);
+
+    /* 프로필 편집 - hover */
+    &:hover {
+      --edit-text-color: var(--white);
+      --edit-border-color: currentColor;
+    }
+  }
+
+  /* 완료 버튼 (기본) */
+  .complete {
+    background-color: var(--complete-background-color);
+    color: var(--black);
+
+    /* 완료 버튼 - hover */
+    &:hover {
+      --complete-background-color: var(--white);
+    }
+  }
+
+  /* 태블릿 (768~1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .edit,
+    .complete {
+      --button-inline-size: 156px;
+      --button-block-size: 50px;
+      --button-text-size: var(--label-small);
+    }
+  }
+
+  /* 모바일 (≤768px) */
+  @media (max-width: 768px) {
+    .edit,
+    .complete {
+      --button-inline-size: 135px;
+      --button-block-size: 42px;
+      --button-text-size: var(--label-small);
+    }
+  }
+}
+
 /* 프로필 사진 */
 .resource .profile-resource {
   --profile-size: 234px;
