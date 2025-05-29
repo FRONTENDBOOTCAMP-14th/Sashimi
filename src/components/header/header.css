@@ -1,3 +1,7 @@
+body {
+  background: #333;
+}
+
 /* ------ 공통 헤더 스타일 ------ */
 .header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
@@ -102,9 +106,8 @@
   /* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
   &.header-search-active {
     .header-right {
-      .search-btn-mobile,
-      .search-btn-desktop,
-      .close-btn-mobile {
+      .search-btn,
+      .close-btn .close-btn-mobile {
         display: none;
       }
     }
