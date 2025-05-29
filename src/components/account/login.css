@@ -1,5 +1,163 @@
-body {
-    background-color: #121212;
-    color: #fff;
+.components-wrapper {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.components-title {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.components-divider {
+  margin-top: 25px;
+}
+
+.input-group {
+  position: relative; 
+  width: 732px;
+  height: 96px;
+  font-size: 28px;
+
+  @media screen and (max-width: 1024px) {
+    width: 416px;
+    height: 54px;
   }
+
+  @media screen and (max-width: 768px) {
+    width: 288px;
+    height: 46px;
+    font-size: 12px;
+  }
+}
+
+.input-field {
+  width: 100%; 
+  height: 100%; 
+  background-color: var(--brand-dark-bg-2);
+  color: white;
+  padding-left: 24px;
+  border: none;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--gray-600);
+  }
+
+  &:focus { 
+    outline-color: var(--gray-100);
+    outline-width: 1px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+}
+
+.clear-input-icon {
+    position: absolute; 
+    right: 24px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    height: auto;
+    cursor: pointer; 
+    z-index: 1; 
+    display: none;
+
+    &:hover { 
+      opacity: 0.5; 
+  }
+
   
+  @media screen and (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.input-group input:not(:placeholder-shown) + .clear-input-icon {
+    display: block; 
+}
+
+.input-hint {
+  display: none;
+  font-size: var(--paragraph-large); 
+  color: var(--gray-500); 
+  margin-top: 4px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: var(--paragraph-small);
+  }
+}
+
+.input-group .input-field:focus ~ .input-hint {
+  display: block; 
+}
+
+.toggle-password-icon {
+  position: absolute;
+  right: 24px; 
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+
+   &:hover { 
+    opacity: 0.5; 
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 20px; 
+    height: 20px;
+  }
+
+  .input-group input.input-field[type="password"]:not(:placeholder-shown) ~ .toggle-password-icon {
+    right: 48px; 
+  }
+}
+
+.login-button {
+  background-color: var(--brand-red-1);
+
+  &:hover { 
+    background-color: #CC1030;
+  }
+}
+
+.confirm-button {
+  background-color: var(--gray-700);
+
+  &:hover { 
+    background-color: white;
+  }
+
+  &:active { 
+    background-color: var(--gray-100);
+  }
+}
+
+.certification-button {
+  background-color: var(--gray-100);
+  color: black;
+}
+
+.button-style {
+  width: 732px;
+  height: 86px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-size: var(--label-xl);
+
+  @media screen and (max-width: 1024px) {
+    width: 416px; 
+    height: 50px;
+    font-size: var(--label-medium);
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 288px; 
+    height: 42px;
+    font-size: var(--label-small);
+  }
+}
