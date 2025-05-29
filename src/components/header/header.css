@@ -61,8 +61,7 @@ img {
           text-decoration: none;
           color: #c4c4c4;
 
-          p,
-          span {
+          p {
             margin-block-start: 8px;
           }
 
@@ -211,8 +210,7 @@ img {
             align-items: center;
             gap: 4px;
 
-            p,
-            span {
+            p {
               margin-block-start: 6px;
             }
 
