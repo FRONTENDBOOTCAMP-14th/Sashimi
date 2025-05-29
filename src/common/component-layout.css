@@ -1,4 +1,42 @@
 .components-wrapper {
   background-color: var(--gray-900);
   min-height: 100svh;
+  padding: 60px;
+
+  > h1,
+  h2.components-title {
+    color: var(--white);
+    line-height: var(--line-height-heading);
+  }
+
+  > h1 {
+    font-size: var(--heading-xxxl);
+    margin-block-end: var(--spacing-36);
+  }
+
+  h2.components-title {
+    font-size: var(--heading-xl);
+    margin-block-end: var(--spacing-20);
+    border-bottom: 1px solid var(--gray-700);
+    padding-block-end: var(--spacing-20);
+  }
+
+  .components-list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--spacing-36);
+
+    .components-item {
+      outline: 2px dashed var(--gray-700);
+      border-radius: 8px;
+      padding: var(--spacing-36);
+
+      .components-box {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: var(--spacing-40);
+      }
+    }
+  }
 }
