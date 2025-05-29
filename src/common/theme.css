@@ -52,6 +52,7 @@
   --below---low: 0px 4px 24px rgba(0, 0, 0, 0.1);
 
   /* Spacing styles */
+  --spacing-4: 4px;
   --spacing-5: 5px;
   --spacing-8: 8px;
   --spacing-12: 12px;

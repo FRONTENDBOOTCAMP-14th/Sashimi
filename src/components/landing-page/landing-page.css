@@ -3,48 +3,6 @@ body {
   color: #fff;
 }
 
-/* 컴포넌트 페이지 레이아웃 스타일링 */
-.components-wrapper {
-  background-color: var(--gray-900);
-  min-height: 100svh;
-  padding: 60px;
-
-  > h1,
-  h2.components-title {
-    color: var(--white);
-    line-height: var(--line-height-heading);
-  }
-
-  > h1 {
-    font-size: var(--heading-xxxl);
-    margin-block-end: var(--spacing-36);
-  }
-
-  h2.components-title {
-    font-size: var(--heading-xxl);
-    margin-block-end: var(--spacing-20);
-  }
-
-  .components-list {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: var(--spacing-36);
-
-    .components-item {
-      outline: 2px dashed var(--gray-700);
-      border-radius: 8px;
-      padding: var(--spacing-20) var(--spacing-36) var(--spacing-36);
-
-      .components-box {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        gap: var(--spacing-40);
-      }
-    }
-  }
-}
-
 /* 아이콘 스타일링 */
 .icon {
   /* 기본 - 데스크탑 */
@@ -81,15 +39,26 @@ body {
 
 /* 텍스트 컴포넌트 스타일링 */
 .text .text-box {
+  --headline-size: var(--heading-xxl);
+  --headline-line-height: var(--line-height-heading);
+  --headline-margin-bottom: var(--spacing-20);
+
+  --description-size: var(--label-xl);
+  --description-line-height: var(--line-height-label);
+
+  --sub-description-size: var(--paragraph-large);
+  --sub-description-line-height: var(--line-height-paragraph);
+  --sub-description-margin-top: var(--spacing-8);
+
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 
   .text-headline {
-    font-size: var(--heading-xxl);
-    line-height: var(--line-height-heading);
+    font-size: var(--headline-size);
+    line-height: var(--headline-line-height);
 
-    margin-block-end: var(--spacing-20);
+    margin-block-end: var(--headline-margin-bottom);
 
     span {
       display: block;
@@ -98,17 +67,51 @@ body {
   }
 
   .text-description {
-    font-size: var(--label-xl);
-    line-height: var(--line-height-label);
+    font-size: var(--description-size);
+    line-height: var(--description-line-height);
     color: var(--gray-200);
   }
 
   .text-sub-description {
-    font-size: var(--paragraph-large);
-    line-height: var(--line-height-paragraph);
+    font-size: var(--sub-description-size);
+    line-height: var(--sub-description-line-height);
     color: var(--gray-200);
 
-    margin-block-start: var(--spacing-8);
+    margin-block-start: var(--sub-description-margin-top);
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: var(--spacing-8);
+    }
+
+    .text-description {
+      --description-size: var(--label-medium);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--label-small);
+      --sub-description-margin-top: var(--spacing-4);
+    }
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: 0px;
+    }
+
+    .text-description {
+      --description-size: var(--paragraph-small);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--paragraph-small);
+      --sub-description-margin-top: 0px;
+    }
   }
 }
 
@@ -116,7 +119,7 @@ body {
 .resource {
   /* 랜딩 페이지 상단 배경 이미지 스타일링 */
   .landing-background-thumbnail {
-    background-image: url('../../../public/images/image-landing-background-thumbnail.png');
+    background-image: url('/images/image-landing-background-thumbnail.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -140,7 +143,7 @@ body {
     /* 데스크탑 컴포넌트 */
     /* 페이지 제작 시, 1024px 이상에서만 보이도록 설정 예정 */
     &.horizontal {
-      background-image: url('../../../public/images/image-thumbnail-05.png');
+      background-image: url('/images/image-thumbnail-05.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -152,7 +155,7 @@ body {
     /* 모바일, 태블릿 컴포넌트 */
     /* 페이지 제작 시, 1024px 이하에서만 보이도록 설정 예정 */
     &.vertical {
-      background-image: url('../../../public/images/image-thumbnail-01.png');
+      background-image: url('/images/image-thumbnail-01.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -164,7 +167,7 @@ body {
 
   /* 랜딩 페이지 '보고 싶은 컨텐츠' 배경 이미지 스타일링 */
   .discover-content {
-    background-image: url('../../../public/images/image-thumbnail-09.png');
+    background-image: url('/images/image-thumbnail-09.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
