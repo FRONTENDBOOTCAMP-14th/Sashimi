@@ -31,20 +31,24 @@
 }
 
 .input-field {
+  --input-field-color: var(--brand-dark-bg-2);
+  --placeholder-color: var(--gray-600);
+  --focus-outline-color: var(--gray-100);
+
   width: 100%; 
   height: 100%; 
-  background-color: var(--brand-dark-bg-2);
+  background-color: var(--input-field-color);
   color: white;
   padding-left: 24px;
   border: none;
   border-radius: 4px;
 
   &::placeholder {
-    color: var(--gray-600);
+    color: var(--placeholder-color);
   }
 
   &:focus { 
-    outline-color: var(--gray-100);
+    outline-color: var(--focus-outline-color);
     outline-width: 1px;
   }
 
@@ -56,8 +60,8 @@
 
 .clear-input-icon {
     position: absolute; 
-    right: 24px; 
-    top: 50%;
+    inset-inline-end: 24px; 
+    inset-block-start: 50%;
     transform: translateY(-50%); 
     height: auto;
     cursor: pointer; 
@@ -80,13 +84,17 @@
 }
 
 .input-hint {
+  --hint-font-size: var(--paragraph-large);
+  --hint-font-size-mobile: var(--paragraph-small);
+  --hint-font-color: var(--gray-500);
+
   display: none;
-  font-size: var(--paragraph-large); 
-  color: var(--gray-500); 
+  font-size: var(--hint-font-size); 
+  color: var(--hint-font-color); 
   margin-top: 4px;
 
   @media screen and (max-width: 1024px) {
-    font-size: var(--paragraph-small);
+    font-size: var(--hint-font-size-mobile);
   }
 }
 
@@ -96,8 +104,8 @@
 
 .toggle-password-icon {
   position: absolute;
-  right: 24px; 
-  top: 50%;
+  inset-inline-end: 24px; 
+  inset-block-start: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 1;
@@ -112,12 +120,14 @@
   }
 
   .input-group input.input-field[type="password"]:not(:placeholder-shown) ~ .toggle-password-icon {
-    right: 48px; 
+    inset-inline-end: 48px; 
   }
 }
 
 .login-button {
-  background-color: var(--brand-red-1);
+  --login-btn-color: var(--brand-red-1);
+
+  background-color: var(--login-btn-color);
 
   &:hover { 
     background-color: #CC1030;
@@ -125,39 +135,48 @@
 }
 
 .confirm-button {
-  background-color: var(--gray-700);
+  --confirm-btn-color: var(--gray-700);
+  --confirm-btn-color-active: var(--gray-100);
+
+  background-color: var(--confirm-btn-color);
 
   &:hover { 
     background-color: white;
   }
 
   &:active { 
-    background-color: var(--gray-100);
+    background-color: var(--confirm-btn-color-active);
   }
 }
 
 .certification-button {
-  background-color: var(--gray-100);
+  --certification-btn-color: var(--gray-100);
+
+  background-color: var(--certification-btn-color);
   color: black;
 }
 
 .button-style {
+  --btn-font-size-pc: var(--label-xl);
+  --btn-font-size-tb: var(--label-medium);
+  --btn-font-size-mb: var(--label-small);
+
   width: 732px;
   height: 86px;
   border-radius: 4px;
   border: none;
   color: white;
-  font-size: var(--label-xl);
+  font-size: var(--btn-font-size-pc);
 
   @media screen and (max-width: 1024px) {
     width: 416px; 
     height: 50px;
-    font-size: var(--label-medium);
+    font-size: var(--btn-font-size-tb);
   }
 
   @media screen and (max-width: 768px) {
     width: 288px; 
     height: 42px;
-    font-size: var(--label-small);
+    font-size: var(--btn-font-size-mb);
   }
 }
