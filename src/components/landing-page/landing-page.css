@@ -81,15 +81,26 @@ body {
 
 /* 텍스트 컴포넌트 스타일링 */
 .text .text-box {
+  --headline-size: var(--heading-xxl);
+  --headline-line-height: var(--line-height-heading);
+  --headline-margin-bottom: var(--spacing-20);
+
+  --description-size: var(--label-xl);
+  --description-line-height: var(--line-height-label);
+
+  --sub-description-size: var(--paragraph-large);
+  --sub-description-line-height: var(--line-height-paragraph);
+  --sub-description-margin-top: var(--spacing-8);
+
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 
   .text-headline {
-    font-size: var(--heading-xxl);
-    line-height: var(--line-height-heading);
+    font-size: var(--headline-size);
+    line-height: var(--headline-line-height);
 
-    margin-block-end: var(--spacing-20);
+    margin-block-end: var(--headline-margin-bottom);
 
     span {
       display: block;
@@ -98,17 +109,51 @@ body {
   }
 
   .text-description {
-    font-size: var(--label-xl);
-    line-height: var(--line-height-label);
+    font-size: var(--description-size);
+    line-height: var(--description-line-height);
     color: var(--gray-200);
   }
 
   .text-sub-description {
-    font-size: var(--paragraph-large);
-    line-height: var(--line-height-paragraph);
+    font-size: var(--sub-description-size);
+    line-height: var(--sub-description-line-height);
     color: var(--gray-200);
 
-    margin-block-start: var(--spacing-8);
+    margin-block-start: var(--sub-description-margin-top);
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: var(--spacing-8);
+    }
+
+    .text-description {
+      --description-size: var(--label-medium);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--label-small);
+      --sub-description-margin-top: var(--spacing-4);
+    }
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: 0px;
+    }
+
+    .text-description {
+      --description-size: var(--paragraph-small);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--paragraph-small);
+      --sub-description-margin-top: 0px;
+    }
   }
 }
 
