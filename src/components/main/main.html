@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="components-wrapper">
-      <h1>Component - main</h1>
+      <h1>Component - Main</h1>
       <ul class="components-list">
         <li class="components-item">
           <h2 class="components-title">Main Slide - Icon</h2>
@@ -30,8 +30,14 @@
             <ul class="slide-dots-list">
               <li class="slide-dots-item">
                 <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
-                <button class="slide-dots active" type="button" aria-label="슬라이드 2번"></button>
+              </li>
+              <li class="slide-dots-item active">
+                <button class="slide-dots" type="button" aria-label="슬라이드 2번"></button>
+              </li>
+              <li class="slide-dots-item">
                 <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
+              </li>
+              <li class="slide-dots-item">
                 <button class="slide-dots" type="button" aria-label="슬라이드 4번"></button>
               </li>
             </ul>
@@ -43,8 +49,14 @@
               <ul class="slide-dots-list">
                 <li class="slide-dots-item">
                   <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
-                  <button class="slide-dots active" type="button" aria-label="슬라이드 2번"></button>
+                </li>
+                <li class="slide-dots-item active">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 2번"></button>
+                </li>
+                <li class="slide-dots-item">
                   <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
+                </li>
+                <li class="slide-dots-item">
                   <button class="slide-dots" type="button" aria-label="슬라이드 4번"></button>
                 </li>
               </ul>
@@ -57,14 +69,14 @@
               <img src="/icon/slide-right.svg" alt="" aria-hidden="true" />
             </button>
             <!-- 슬라이드 자세히보기 버튼 -->
-            <a href="#" target="_self" aria-label="슬라이드 1번">자세히보기</a>
+            <a class="slide-more" href="#" target="_self" aria-label="슬라이드 1번">자세히보기</a>
           </div>
         </li>
         <li class="components-item">
           <h2 class="components-title">Main Slide - Resources</h2>
           <div class="components-box">
             <!-- 슬라이드 이미지 리소스 -->
-            <div class="slide-img" style="background-image: url()">
+            <div class="slide-img" style="background-image: url('/images/slide-banner01.png')">
               <span class="sr-only">ex. 드라마 "재벌집 막내아들"의 커버 이미지 입니다.</span>
             </div>
           </div>
@@ -91,47 +103,55 @@
           <h2 class="components-title">Main Content - Thumbnail</h2>
           <div class="components-box">
             <!-- 가로 썸네일  -->
-            <div class="thumbnail width" style="background-image: url()">
-              <div class="thumbnail-info-top">
-                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
-                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
-                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
-              </div>
-              <div class="thumbnail-info-bottom">
-                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
-              </div>
-            </div>
-            <!-- 가로 썸네일(시청 기록 있을때) -->
-            <div class="thumbnail width veiw" style="background-image: url()">
-              <div class="thumbnail-info-top">
-                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
-                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
-                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
-              </div>
-              <div class="thumbnail-info-bottom">
-                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+            <div class="thumbnail-item wide">
+              <div class="thumbnail" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
               </div>
             </div>
-            <!-- 세로 썸네일  -->
-            <div class="thumbnail height" style="background-image: url()">
-              <div class="thumbnail-info-top">
-                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
-                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
-                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+            <!-- 가로 썸네일(시청 기록 있을때)  -->
+            <div class="thumbnail-item wide">
+              <div class="thumbnail view" style="--view-per: 30%; background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
               </div>
-              <div class="thumbnail-info-bottom">
-                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+            </div>
+            <!-- 세로 썸네일 -->
+            <div class="thumbnail-item long">
+              <div class="thumbnail" style="background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
               </div>
             </div>
             <!-- 세로 썸네일(시청 기록 있을때) -->
-            <div class="thumbnail height veiw" style="background-image: url()">
-              <div class="thumbnail-info-top">
-                <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
-                <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
-                <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
-              </div>
-              <div class="thumbnail-info-bottom">
-                <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+            <div class="thumbnail-item long">
+              <div class="thumbnail view" style="--view-per: 70%; background-image: url()">
+                <div class="thumbnail-info-top">
+                  <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                  <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
+                  <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                </div>
+                <div class="thumbnail-info-bottom">
+                  <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                </div>
               </div>
             </div>
           </div>
@@ -140,24 +160,24 @@
           <h2 class="components-title">Main Content - Label</h2>
           <div class="components-box">
             <!-- 타이틀만 있는 경우 + 포인트 요소(.point 로 제어) -->
-            <h3 class="thumnail point">
-              <strong>Title 텍스트 입니다.</strong>
+            <h3 class="thumnail-label point">
+              <strong>Title 텍스트</strong>
             </h3>
             <!-- 타이틀 + 서브타이틀 -->
-            <h3 class="thumnail">
-              <strong>Title 텍스트 입니다.</strong>
-              <b>Sub Title 텍스트 입니다.</b>
+            <h3 class="thumnail-label">
+              <strong>Title 텍스트</strong>
+              <b>Sub Title 텍스트</b>
             </h3>
             <!-- 큰숫자 + 타이틀 + 포인트 -->
-            <h3 class="thumnail point">
+            <h3 class="thumnail-label number point">
               <em>1</em>
-              <strong>Title 텍스트 입니다.</strong>
+              <strong>Title 텍스트</strong>
             </h3>
             <!-- 큰숫자 + 타이틀 + 서브타이틀 + 관람자 -->
-            <h3 class="thumnail">
+            <h3 class="thumnail-label number center">
               <em>1</em>
-              <strong>Title 텍스트 입니다.</strong>
-              <b>Sub Title 텍스트 입니다.</b>
+              <strong>Title 텍스트</strong>
+              <b>Sub Title 텍스트</b>
               <span>Viewer</span>
             </h3>
           </div>
@@ -166,8 +186,8 @@
           <h2 class="components-title">Main Content - Thumnail + Label</h2>
           <div class="components-box">
             <!-- 가로 상황 (큰 숫자 없는) -->
-            <div class="thumbnail-item">
-              <div class="thumbnail width" style="background-image: url()">
+            <div class="thumbnail-item wide">
+              <div class="thumbnail" style="background-image: url()">
                 <div class="thumbnail-info-top">
                   <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
                   <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
@@ -177,13 +197,14 @@
                   <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
                 </div>
               </div>
-              <h3 class="thumnail point">
-                <strong>Title 텍스트 입니다.</strong>
+              <h3 class="thumnail-label point">
+                <strong>Title 텍스트</strong>
+                <b>Sub Title 텍스트</b>
               </h3>
             </div>
             <!-- 가로 상황 (큰 숫자 있는) -->
-            <div class="thumbnail-item">
-              <div class="thumbnail width" style="background-image: url()">
+            <div class="thumbnail-item wide">
+              <div class="thumbnail" style="background-image: url()">
                 <div class="thumbnail-info-top">
                   <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
                   <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
@@ -193,14 +214,15 @@
                   <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
                 </div>
               </div>
-              <h3 class="thumnail point">
+              <h3 class="thumnail-label number center point">
                 <em>1</em>
-                <strong>Title 텍스트 입니다.</strong>
+                <strong>Title 텍스트</strong>
+                <b>Sub Title 텍스트</b>
               </h3>
             </div>
             <!-- 세로 상황 (큰 숫자 없는) -->
-            <div class="thumbnail-item">
-              <div class="thumbnail height" style="background-image: url()">
+            <div class="thumbnail-item long">
+              <div class="thumbnail" style="background-image: url()">
                 <div class="thumbnail-info-top">
                   <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
                   <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
@@ -210,13 +232,13 @@
                   <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
                 </div>
               </div>
-              <h3 class="thumnail point">
-                <strong>Title 텍스트 입니다.</strong>
+              <h3 class="thumnail-label point">
+                <strong>Title 텍스트</strong>
               </h3>
             </div>
             <!-- 세로 상황 (큰 숫자 있는) -->
-            <div class="thumbnail-item">
-              <div class="thumbnail height" style="background-image: url()">
+            <div class="thumbnail-item long">
+              <div class="thumbnail" style="background-image: url()">
                 <div class="thumbnail-info-top">
                   <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
                   <img class="icon-vod-free" src="/icon/icon-free-vod.svg" alt="무료 V.O.D" />
@@ -226,9 +248,9 @@
                   <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
                 </div>
               </div>
-              <h3 class="thumnail point">
+              <h3 class="thumnail-label number point">
                 <em>1</em>
-                <strong>Title 텍스트 입니다.</strong>
+                <strong>Title 텍스트</strong>
               </h3>
             </div>
           </div>

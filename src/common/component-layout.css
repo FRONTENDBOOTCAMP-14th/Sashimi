@@ -15,8 +15,10 @@
   }
 
   h2.components-title {
-    font-size: var(--heading-xxl);
+    font-size: var(--heading-xl);
     margin-block-end: var(--spacing-20);
+    border-bottom: 1px solid var(--gray-700);
+    padding-block-end: var(--spacing-20);
   }
 
   .components-list {
@@ -27,7 +29,7 @@
     .components-item {
       outline: 2px dashed var(--gray-700);
       border-radius: 8px;
-      padding: var(--spacing-20) var(--spacing-36) var(--spacing-36);
+      padding: var(--spacing-36);
 
       .components-box {
         display: flex;

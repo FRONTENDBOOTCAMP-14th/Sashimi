@@ -1,0 +1,319 @@
+/* 슬라이드 재생,일시정지 버튼 */
+.slide-play,
+.slide-pause {
+  @media (width <= 1024px) {
+    inline-size: 10px;
+  }
+
+  @media (width <= 768px) {
+    inline-size: 8px;
+  }
+}
+
+/* 슬라이드 다음, 이전 버튼 */
+.slide-next,
+.slide-prev {
+  @media (width <= 1024px) {
+    inline-size: 40px;
+  }
+
+  @media (width <= 768px) {
+    inline-size: 14px;
+  }
+}
+
+/* 성인 콘텐츠 표시 아이콘 */
+.icon-18plus,
+.icon-19plus {
+  @media (width <= 1024px) {
+    inline-size: 16px;
+  }
+}
+
+/* 티빙 오리지널 콘텐츠 표시 아이콘 */
+.icon-original {
+  @media (width <= 1024px) {
+    inline-size: 74px;
+  }
+
+  @media (width <= 768px) {
+    inline-size: 51px;
+  }
+}
+
+/* Quick VOD 표시 아이콘 */
+.icon-vod-quick,
+.icon-vod-free {
+  @media (width <= 1024px) {
+    block-size: 16px;
+  }
+}
+
+/* 슬라이드 목록 버튼 리스트 */
+.slide-dots-list {
+  --slide-dots-size: 12px;
+  --slide-dots-list-gap: var(--spacing-12);
+  --slide-dots-color: var(--gray-400);
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: var(--slide-dots-list-gap);
+
+  .slide-dots-item {
+    .slide-dots {
+      display: block;
+      inline-size: var(--slide-dots-size);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: var(--slide-dots-color);
+    }
+
+    &.active {
+      --slide-dots-color: var(--white);
+    }
+  }
+
+  @media (width <= 1024px) {
+    --slide-dots-size: 8px;
+    --slide-dots-list-gap: var(--spacing-4);
+  }
+
+  @media (width <= 768px) {
+    --slide-dots-size: 6px;
+  }
+}
+
+/* 슬라이드 목록 및 재생or일시정지 조합  */
+.slide-nav {
+  --slide-nav-gap: var(--spacing-16);
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: var(--slide-nav-gap);
+
+  @media (width <= 1024px) {
+    --slide-nav-gap: var(--spacing-8);
+  }
+
+  @media (width <= 768px) {
+    --slide-nav-gap: var(--spacing-5);
+  }
+}
+
+/* 슬라이드 자세히보기 버튼 */
+.slide-more {
+  --slide-more-font-size: var(--paragraph-large);
+  --slide-more-color: var(--white);
+  --slide-more-padding: 22px 64px;
+
+  font-size: var(--slide-more-font-size);
+  color: var(--slide-more-color);
+  line-height: var(--line-height-paragraph);
+  padding: var(--slide-more-padding);
+  border: 1px solid var(--slide-more-color);
+  border-radius: 4px;
+  transition: all 0.2s;
+
+  @media (width <= 1024px) {
+    --slide-more-font-size: var(--paragraph-small);
+    --slide-more-padding: 12px 38px;
+  }
+
+  @media (width <= 768px) {
+    --slide-more-padding: 4px 6px;
+  }
+
+  &:hover,
+  &:focus {
+    --slide-more-color: var(--brand-red-1);
+
+    color: var(--white);
+    background-color: var(--slide-more-color);
+  }
+}
+
+/* 메인 슬라이드 이미지 */
+.slide-img {
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  inline-size: 100%;
+  aspect-ratio: 128/57;
+}
+
+/* 썸네일 레이블 요소 */
+.thumnail-label {
+  --point-size: 8px;
+  --strong-size: var(--label-large);
+  --span-b-size: var(--paragraph-medium);
+  --label-gap: var(--spacing-4);
+  --em-size: 70px;
+  --em-padding-left: 60px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: start;
+  gap: var(--label-gap);
+
+  strong {
+    color: var(--gray-200);
+    font-size: var(--strong-size);
+    line-height: var(--line-height-label);
+    font-weight: var(--font-weight-600);
+  }
+
+  b {
+    color: var(--gray-300);
+    font-size: var(--span-b-size);
+    line-height: var(--line-height-paragraph);
+    font-weight: var(--font-weight-400);
+  }
+
+  span {
+    color: var(--gray-400);
+    font-size: var(--span-b-size);
+    line-height: var(--line-height-paragraph);
+    font-weight: var(--font-weight-400);
+  }
+
+  &.point {
+    strong {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        inset: 0 -12px auto auto;
+        inline-size: var(--point-size);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--brand-red-1);
+      }
+    }
+  }
+
+  &.number {
+    position: relative;
+    padding-inline-start: var(--em-padding-left);
+
+    em {
+      position: absolute;
+      inset: auto auto 0 0;
+      font-size: var(--em-size);
+      font-style: italic;
+      line-height: 1;
+      color: var(--white);
+      font-family: sans-serif;
+    }
+
+    &.center {
+      em {
+        inset: auto auto 58% 0;
+        translate: 0 50%;
+      }
+    }
+  }
+
+  @media (width <= 1024px) {
+    --point-size: 6px;
+    --strong-size: var(--paragraph-small);
+    --span-b-size: var(--paragraph-small);
+    --em-size: 46px;
+    --em-padding-left: 42px;
+  }
+
+  @media (width <= 768px) {
+    --point-size: 4px;
+    --em-size: 34px;
+    --em-padding-left: 34px;
+  }
+}
+
+/* 썸네일 */
+.thumbnail {
+  --view-per: 0%;
+  --thumbnail-padding: var(--spacing-8) var(--spacing-8) var(--spacing-24);
+
+  inline-size: 100%;
+  background-color: var(--black);
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: var(--thumbnail-padding);
+
+  .ml-auto {
+    margin-left: auto;
+  }
+
+  .thumbnail-info-top {
+    display: flex;
+    gap: var(--spacing-8);
+  }
+
+  .thumbnail-info-bottom {
+    display: flex;
+    justify-content: center;
+  }
+
+  &.view {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: auto auto 0 0;
+      inline-size: var(--view-per);
+      block-size: 4px;
+      background-color: var(--brand-red-1);
+    }
+  }
+
+  @media (width <= 1024px) {
+    --thumbnail-padding: var(--spacing-8) var(--spacing-8) var(--spacing-12);
+  }
+}
+
+/* 썸네일 + 라벨 가로,세로 상황 */
+.thumbnail-item {
+  --thumbnail-max-wide: 345px;
+  --thumbnail-max-long: 240px;
+
+  inline-size: 100%;
+
+  &.wide {
+    max-width: var(--thumbnail-max-wide);
+
+    .thumbnail {
+      aspect-ratio: 345/194;
+    }
+  }
+
+  &.long {
+    max-width: var(--thumbnail-max-long);
+
+    .thumbnail {
+      aspect-ratio: 16/23;
+    }
+  }
+
+  .thumnail-label {
+    margin-block-start: var(--spacing-8);
+  }
+
+  @media (width <= 1024px) {
+    --thumbnail-max-wide: 225px;
+    --thumbnail-max-long: 225px;
+  }
+
+  @media (width <= 768px) {
+    --thumbnail-max-wide: 145px;
+    --thumbnail-max-long: 145px;
+  }
+}
