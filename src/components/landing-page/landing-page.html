@@ -5,12 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Component - landing page</title>
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/components/header/header.css" />
+    <link rel="stylesheet" href="./landing-page.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    header
+    <div class="components-wrapper">
+      <h1>Component - landing page</h1>
+      <ul class="components-list">
+        <li class="components-item">
+          <h2 class="components-title">Icon</h2>
+          <div class="components-box icon">
+            <!-- 컴포넌트 시작 -->
+            <!-- 로그인 페이지로 이동하는 링크 -->
+            <a class="icon-taing-renewal" href="/"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
+            <!-- 슬로건 로고 -->
+            <img class="icon-slogan-logo" src="/icon/icon-slogan-logo.svg" alt="" />
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Text</h2>
+          <div class="components-box text">
+            <!-- 컴포넌트 시작 -->
+            <div class="text-box">
+              <h2 class="text-headline"><span>타잉 오리지널 콘텐츠,</span><span>방송, 영화, 해외시리즈까지!</span><span>재미를 플레이해보세요.</span></h2>
+              <p class="text-description">해당 부분에 맞는 설명을 작성해주세요.</p>
+              <p class="text-sub-description">해당 부분에 맞는 서브 설명을 작성해주세요.</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Resources</h2>
+          <div class="components-box resource">
+            <!-- 컴포넌트 시작 -->
+            <!-- 백그라운드 이미지로 추가 예정 -->
+            <!-- landing page 상단 백그라운드 이미지 -->
+            <div class="landing-background-thumbnail"></div>
+
+            <!-- 가로, 세로 original-content 컨테이너 -->
+            <div class="original-content horizontal"></div>
+            <div class="original-content vertical"></div>
+
+            <!-- discover-content 컨테이너 -->
+            <div class="discover-content"></div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
