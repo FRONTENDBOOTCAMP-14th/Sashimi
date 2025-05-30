@@ -5,12 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Component - modal</title>
     <link rel="icon" href="/favicon.ico" />
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/components/header/header.css" />
+    <link rel="stylesheet" href="/src/components/modal/modal.css" />
+    <link rel="stylesheet" href="/src/common/component-layout.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    header
+    <div class="components-wrapper">
+      <h1 class="components-title">Components - Modal</h1>
+      <ul class="components-list">
+        <li class="components-item">
+          <h2 class="components-title">logout-modal 컴포넌트</h2>
+          <div class="components-box">
+            <div class="logout-modal">
+              <div class="top-box">
+                <p class="logout-text">로그아웃 하시겠습니까?</p>
+              </div>
+              <div class="bottom-box">
+                <button type="button" class="button-st confirm-button">확인</button>
+                <p class="divider" aria-hidden="true">|</p>
+                <button type="button" class="button-st">취소</button>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="components-item">
+          <h2 class="components-title">main-page-modal 컴포넌트</h2>
+          <div class="components-box">
+            <div class="main-page-modal">
+              <div class="modal-image" style="background-image: url('/images/modal-image.png')" aria-hidden="true"></div>
+              <div class="close-box">
+                <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
+                <p aria-hidden="true">|</p>
+                <button type="button" class="btn close-button">닫기</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
