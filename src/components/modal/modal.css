@@ -51,19 +51,17 @@
 
 .logout-text {
   --font-size: var(--paragraph-large);
-  --font-size-mb: var(--paragraph-small);
 
   font-size: var(--font-size);
   color: white;
 
   @media screen and (max-width: 1024px) {
-    font-size: var(--font-size-mb);
+    font-size: var(--paragraph-small);
   }
 }
 
-.button {
+.button-st {
   --btn-font-size: var(--paragraph-large);
-  --btn-font-size-mb: var(--paragraph-small);
   --btn-color: var(--gray-300);
 
   inline-size: 173px;
@@ -72,7 +70,7 @@
   color: var(--btn-color);
 
   @media screen and (max-width: 1024px) {
-    font-size: var(--btn-font-size-mb);
+    font-size: var(--paragraph-small);
     inline-size: 90px;
   }
 
@@ -111,7 +109,6 @@
 }
 
 .modal-image {
-  background-image: url('/images/modal-image.png');
   background-size: cover;
   inline-size: 100%;
   block-size: 662px;
@@ -127,7 +124,6 @@
 
 .close-box {
   --font-size: var(--paragraph-large);
-  --font-size-mb: var(--paragraph-small);
 
   inline-size: 100%;
   flex-grow: 1;
@@ -138,7 +134,7 @@
   align-items: center;
 
   @media screen and (max-width: 1024px) {
-    font-size: var(--font-size-mb);
+    --font-size: var(--paragraph-small);
   }
 }
 
