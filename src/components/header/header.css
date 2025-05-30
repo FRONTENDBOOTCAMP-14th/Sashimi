@@ -17,6 +17,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* 스크롤바 생겨서 만든 */
+    flex-flow: row wrap;
 
     .logo {
       display: flex;

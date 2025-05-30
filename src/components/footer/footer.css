@@ -5,6 +5,8 @@
   font-size: var(--paragraph-large);
   font-weight: var(--font-weight-400);
   line-height: var(--line-height-paragraph);
+
+  inline-size: 100%;
 }
 
 .footer-inner {
@@ -31,8 +33,6 @@
 
   /* 연락처 정보 */
   .footer-info {
-    min-inline-size: 1100px;
-
     address {
       display: flex;
       flex-flow: column nowrap;
