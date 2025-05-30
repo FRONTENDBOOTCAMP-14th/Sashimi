@@ -1,0 +1,176 @@
+body {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* 아이콘 스타일링 */
+/* 기본 - 데스크탑 */
+.icon-taing-renewal > img {
+  inline-size: 506px;
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    inline-size: 283px;
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    inline-size: 188px;
+  }
+}
+
+/* 슬로건 로고 */
+.icon-slogan-logo {
+  inline-size: 279px;
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    inline-size: 135px;
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    inline-size: 83px;
+  }
+}
+
+/* 텍스트 컴포넌트 스타일링 */
+.landing-text-box {
+  --headline-size: var(--heading-xxl);
+  --headline-line-height: var(--line-height-heading);
+  --headline-margin-bottom: var(--spacing-20);
+
+  --description-size: var(--label-xl);
+  --description-line-height: var(--line-height-label);
+
+  --sub-description-size: var(--paragraph-large);
+  --sub-description-line-height: var(--line-height-paragraph);
+  --sub-description-margin-top: var(--spacing-8);
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  .text-headline {
+    font-size: var(--headline-size);
+    line-height: var(--headline-line-height);
+
+    margin-block-end: var(--headline-margin-bottom);
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .text-description {
+    font-size: var(--description-size);
+    line-height: var(--description-line-height);
+    color: var(--gray-200);
+  }
+
+  .text-sub-description {
+    font-size: var(--sub-description-size);
+    line-height: var(--sub-description-line-height);
+    color: var(--gray-200);
+
+    margin-block-start: var(--sub-description-margin-top);
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: var(--spacing-8);
+    }
+
+    .text-description {
+      --description-size: var(--label-medium);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--label-small);
+      --sub-description-margin-top: var(--spacing-4);
+    }
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    .text-headline {
+      --headline-size: var(--heading-large);
+      --headline-margin-bottom: 0px;
+    }
+
+    .text-description {
+      --description-size: var(--paragraph-small);
+    }
+
+    .text-sub-description {
+      --sub-description-size: var(--paragraph-small);
+      --sub-description-margin-top: 0px;
+    }
+  }
+}
+
+/* 리소스 컴포넌트 스타일링 */
+/* 랜딩 페이지 상단 배경 이미지 스타일링 */
+.landing-background-thumbnail {
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+
+  /* 모바일 */
+  @media (max-width: 768px) {
+    aspect-ratio: 16 / 19;
+  }
+
+  /* 태블릿 */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    aspect-ratio: 765 / 536;
+  }
+}
+
+/* 랜딩 페이지 '오리지널 컨텐츠' 배경 이미지 스타일링 */
+.original-content {
+  /* 데스크탑 컴포넌트 */
+  /* 페이지 제작 시, 1024px 이상에서만 보이도록 설정 예정 */
+  &.horizontal {
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* 모바일, 태블릿 컴포넌트 */
+  /* 페이지 제작 시, 1024px 이하에서만 보이도록 설정 예정 */
+  &.vertical {
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    inline-size: 277px;
+    block-size: 400px;
+  }
+}
+
+/* 랜딩 페이지 '보고 싶은 컨텐츠' 배경 이미지 스타일링 */
+.discover-content {
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* min-inline-size: 470px;
+    min-block-size: 264px; */
+
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+}

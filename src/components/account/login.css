@@ -1,0 +1,171 @@
+.input-group {
+  position: relative;
+  inline-size: 732px;
+  block-size: 96px;
+  font-size: 28px;
+
+  @media screen and (max-width: 1024px) {
+    inline-size: 416px;
+    block-size: 54px;
+  }
+
+  @media screen and (max-width: 768px) {
+    inline-size: 288px;
+    block-size: 46px;
+    font-size: 12px;
+  }
+}
+
+.input-field {
+  --input-field-color: var(--brand-dark-bg-2);
+  --placeholder-color: var(--gray-600);
+  --focus-outline-color: var(--gray-100);
+
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--input-field-color);
+  color: white;
+  padding-inline-start: 24px;
+  border: none;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &:focus {
+    outline-color: var(--focus-outline-color);
+    outline-width: 1px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+    padding-inline-start: 16px;
+  }
+}
+
+.clear-input-icon {
+    position: absolute;
+    inset-inline-end: 24px;
+    inset-block-start: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+
+    &:hover {
+      opacity: 0.5;
+  }
+
+
+  @media screen and (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.input-group input:not(:placeholder-shown) + .clear-input-icon {
+    display: block;
+}
+
+.input-hint {
+  --hint-font-size: var(--paragraph-large);
+  --hint-font-size-mobile: var(--paragraph-small);
+  --hint-font-color: var(--gray-500);
+
+  display: none;
+  font-size: var(--hint-font-size);
+  color: var(--hint-font-color);
+  margin-block-start: 4px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: var(--hint-font-size-mobile);
+  }
+}
+
+.input-group .input-field:focus ~ .input-hint {
+  display: block;
+}
+
+.toggle-password-icon {
+  position: absolute;
+  inset-inline-end: 24px;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+
+   &:hover {
+    opacity: 0.5;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
+
+  .input-group input.input-field[type="password"]:not(:placeholder-shown) ~ .toggle-password-icon {
+    inset-inline-end: 48px;
+  }
+}
+
+.login-button {
+  --login-btn-color: var(--brand-red-1);
+
+  background-color: var(--login-btn-color);
+  color: white;
+
+  &:hover {
+    background-color: #CC1030;
+  }
+}
+
+.confirm-button {
+  --confirm-btn-color: var(--gray-700);
+  --confirm-btn-color-active: var(--gray-100);
+
+  background-color: var(--confirm-btn-color);
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+
+  &:active {
+    background-color: var(--confirm-btn-color-active);
+    color: black;
+  }
+}
+
+.certification-button {
+  --certification-btn-color: var(--gray-100);
+
+  background-color: var(--certification-btn-color);
+  color: black;
+}
+
+.button-style {
+  --btn-font-size-pc: var(--label-xl);
+  --btn-font-size-tb: var(--label-medium);
+  --btn-font-size-mb: var(--label-small);
+
+  inline-size: 732px;
+  block-size: 86px;
+  border-radius: 4px;
+  border: none;
+  font-size: var(--btn-font-size-pc);
+
+  @media screen and (max-width: 1024px) {
+    inline-size: 416px;
+    block-size: 50px;
+    font-size: var(--btn-font-size-tb);
+  }
+
+  @media screen and (max-width: 768px) {
+    inline-size: 288px;
+    block-size: 42px;
+    font-size: var(--btn-font-size-mb);
+  }
+}
