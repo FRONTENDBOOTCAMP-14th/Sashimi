@@ -1,9 +1,6 @@
-body {
+.site-footer {
   background: var(--black);
   color: var(--gray-500);
-}
-
-.site-footer {
   padding-block: 140px 170px;
   font-size: var(--paragraph-large);
   font-weight: var(--font-weight-400);
@@ -98,12 +95,6 @@ body {
 }
 
 /* 반응형 */
-@media (max-width: 320px) {
-  body {
-    min-inline-size: 320px;
-  }
-}
-
 @media (max-width: 767px) {
   .site-footer {
     padding-block: 52px 82px;
