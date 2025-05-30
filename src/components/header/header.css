@@ -11,6 +11,7 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   flex-shrink: 0;
+  width: 100%;
 
   .header-inner {
     display: flex;
