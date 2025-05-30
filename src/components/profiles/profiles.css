@@ -4,8 +4,8 @@ body {
 }
 
 /* 아이콘 */
-.icon .icon-lock,
-.icon .icon-edit {
+.icon-lock,
+.icon-edit {
   --icon-size: 60px;
   inline-size: var(--icon-size);
   /* aspect-ratio: 1/1; */
@@ -22,7 +22,7 @@ body {
 }
 
 /* 텍스트 컴포넌트 */
-.text .text-box {
+.profiles-text-box {
   --headline-size: var(--heading-xxl);
   --headline-line-height: var(--line-height-heading);
 
@@ -62,7 +62,7 @@ body {
 }
 
 /* 프로필 썸네일 */
-.profile-thumbnail .profile-card-box {
+.profile-thumbnail {
   --profile-spacing: var(--spacing-16);
   --nickname-size: var(--paragraph-xl);
   --profile-size: 234px;
@@ -130,17 +130,17 @@ body {
 }
 
 /* 프로필 편집, 완료 버튼 */
-.button {
-  --button-inline-size: 272px;
-  --button-block-size: 86px;
-  --button-text-size: var(--label-xl);
-  --button-text-line-height: var(--line-height-label);
-  --edit-text-color: var(--gray-300);
-  --edit-border-color: var(--gray-600);
-  --complete-background-color: var(--gray-100);
-
+.profile-button-box {
   /* 공통 스타일 */
   .profile-button {
+    --button-inline-size: 272px;
+    --button-block-size: 86px;
+    --button-text-size: var(--label-xl);
+    --button-text-line-height: var(--line-height-label);
+    --edit-text-color: var(--gray-300);
+    --edit-border-color: var(--gray-600);
+    --complete-background-color: var(--gray-100);
+
     inline-size: var(--button-inline-size);
     block-size: var(--button-block-size);
     font-size: var(--button-text-size);
@@ -192,7 +192,7 @@ body {
 }
 
 /* 프로필 사진 */
-.resource .profile-resource {
+.profile-resource {
   --profile-size: 234px;
 
   inline-size: var(--profile-size);
