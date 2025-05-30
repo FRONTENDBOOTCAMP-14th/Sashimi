@@ -116,7 +116,7 @@
   }
 }
 
-/* 검색어 관련 버튼 폰트사이트 제어 */
+/* 검색어 관련 버튼 (최근 검색어 모두 삭제 / 최근 검색어 아이템 / 인기 검색어 아이템) 폰트사이트 제어 */
 .search-popular-btn,
 .search-recent-btn,
 .search-all-reset-btn {
