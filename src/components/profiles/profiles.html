@@ -7,10 +7,81 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/components/header/header.css" />
+    <link rel="stylesheet" href="/src/common/component-layout.css" />
+    <link rel="stylesheet" href="/src/components/profiles/profiles.css" />
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    header
+    <div class="components-wrapper">
+      <h1>Component - profiles</h1>
+      <ul class="components-list">
+        <li class="components-item">
+          <h2 class="components-title">Icon</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <!-- 잠긴 프로필에 쓰이는 lock 아이콘 -->
+            <img class="icon-lock" src="/icon/profiles-lock.svg" alt="잠긴 프로필 아이콘" />
+            <!-- 프로필 편집에서 쓰이는 edit 아이콘 -->
+            <img class="icon-edit" src="/icon/profiles-edit.svg" alt="프로필 편집 아이콘" />
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Text</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <div class="profiles-text-box">
+              <h2 class="text-headline">프로필 선택</h2>
+              <p class="text-description">시청할 프로필을 선택해주세요.</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Profile Thumbnail</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <div class="profile-thumbnail">
+              <div class="profile-resource default" style="background-image: url('/images/profiles-profile-1.png')"></div>
+              <p class="nickname">default profile</p>
+            </div>
+            <div class="profile-thumbnail">
+              <div class="profile-resource lock" style="background-image: url('/images/profiles-profile-1.png')"></div>
+              <p class="nickname">locked profile</p>
+            </div>
+            <div class="profile-thumbnail">
+              <div class="profile-resource edit" style="background-image: url('/images/profiles-profile-1.png')"></div>
+              <p class="nickname">edited profile</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Button</h2>
+          <div class="components-box">
+            <div class="profile-button-box">
+              <!-- 프로필 편집 버튼 -->
+              <form action="/index.html" method="GET">
+                <button class="profile-button edit" type="submit" aria-label="프로필 편집 페이지로 이동">프로필 편집</button>
+              </form>
+              <!-- 편집 완료 버튼 -->
+              <form action="/index.html" method="GET">
+                <button class="profile-button complete" type="submit" aria-label="편집 완료, 프로필 선택 페이지로 이동">완료</button>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Resources</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <!-- 프로필 썸네일의 백그라운드 이미지로 추가 예정 -->
+            <!-- 프로필 이미지 -->
+            <div class="profile-resource" style="background-image: url('/images/profiles-profile-1.png')"></div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
