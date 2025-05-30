@@ -5,6 +5,8 @@
   font-size: var(--paragraph-large);
   font-weight: var(--font-weight-400);
   line-height: var(--line-height-paragraph);
+
+  inline-size: 100%;
 }
 
 .footer-inner {
