@@ -31,8 +31,6 @@
 
   /* 연락처 정보 */
   .footer-info {
-    min-inline-size: 1100px;
-
     address {
       display: flex;
       flex-flow: column nowrap;

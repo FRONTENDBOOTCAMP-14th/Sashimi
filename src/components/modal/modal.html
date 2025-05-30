@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="/src/components/modal/modal.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
     <script type="module" src="/src/main.js"></script>
+    <style>
+      .logout-modal,
+      .main-page-modal {
+        position: static;
+        inline-size: fit-content;
+        block-size: fit-content;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        background-color: transparent;
+
+        .logout-modal-wrap,
+        .main-page-modal-wrap {
+          position: static;
+          translate: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="components-wrapper">
@@ -18,30 +35,34 @@
         <li class="components-item">
           <h2 class="components-title">logout-modal 컴포넌트</h2>
           <div class="components-box">
-            <div class="logout-modal">
-              <div class="top-box">
-                <p class="logout-text">로그아웃 하시겠습니까?</p>
+            <dialog class="logout-modal" open>
+              <div class="logout-modal-wrap">
+                <div class="top-box">
+                  <p class="logout-text">로그아웃 하시겠습니까?</p>
+                </div>
+                <div class="bottom-box">
+                  <button type="button" class="button-st confirm-button">확인</button>
+                  <p class="divider" aria-hidden="true">|</p>
+                  <button type="button" class="button-st">취소</button>
+                </div>
               </div>
-              <div class="bottom-box">
-                <button type="button" class="button-st confirm-button">확인</button>
-                <p class="divider" aria-hidden="true">|</p>
-                <button type="button" class="button-st">취소</button>
-              </div>
-            </div>
+            </dialog>
           </div>
         </li>
 
         <li class="components-item">
           <h2 class="components-title">main-page-modal 컴포넌트</h2>
           <div class="components-box">
-            <div class="main-page-modal">
-              <div class="modal-image" style="background-image: url('/images/modal-image.png')" aria-hidden="true"></div>
-              <div class="close-box">
-                <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
-                <p aria-hidden="true">|</p>
-                <button type="button" class="btn close-button">닫기</button>
+            <dialog class="main-page-modal" open>
+              <div class="main-page-modal-wrap">
+                <div class="modal-image" style="background-image: url('/images/modal-image.png')" aria-hidden="true"></div>
+                <div class="close-box">
+                  <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
+                  <p aria-hidden="true">|</p>
+                  <button type="button" class="btn close-button">닫기</button>
+                </div>
               </div>
-            </div>
+            </dialog>
           </div>
         </li>
       </ul>
