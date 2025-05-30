@@ -115,7 +115,7 @@ body {
 /* 리소스 컴포넌트 스타일링 */
 /* 랜딩 페이지 상단 배경 이미지 스타일링 */
 .landing-background-thumbnail {
-  background-image: url('/images/image-landing-background-thumbnail.png');
+  background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -139,7 +139,7 @@ body {
   /* 데스크탑 컴포넌트 */
   /* 페이지 제작 시, 1024px 이상에서만 보이도록 설정 예정 */
   &.horizontal {
-    background-image: url('/images/image-thumbnail-05.png');
+    background-color: var(--black);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -151,7 +151,7 @@ body {
   /* 모바일, 태블릿 컴포넌트 */
   /* 페이지 제작 시, 1024px 이하에서만 보이도록 설정 예정 */
   &.vertical {
-    background-image: url('/images/image-thumbnail-01.png');
+    background-color: var(--black);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -163,7 +163,7 @@ body {
 
 /* 랜딩 페이지 '보고 싶은 컨텐츠' 배경 이미지 스타일링 */
 .discover-content {
-  background-image: url('/images/image-thumbnail-09.png');
+  background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

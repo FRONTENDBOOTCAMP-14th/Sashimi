@@ -77,8 +77,7 @@ body {
     inline-size: var(--profile-size);
     aspect-ratio: 1/1;
 
-    /* background-color: var(--black); */
-    background-image: url(/images/profiles-profile-4.png);
+    background-color: var(--black);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -198,7 +197,7 @@ body {
   inline-size: var(--profile-size);
   aspect-ratio: 1/1;
 
-  background-image: url(/images/profiles-profile-1.png);
+  background-color: var(--black);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
