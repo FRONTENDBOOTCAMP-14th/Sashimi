@@ -69,3 +69,5 @@ $('.main-cont-list.only').slick({
     },
   ],
 });
+
+document.querySelector('.main-page-modal').showModal();
