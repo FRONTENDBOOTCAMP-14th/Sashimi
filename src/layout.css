@@ -26,5 +26,6 @@ dialog {
 
   &.full {
     --contents-wrapper-width: 100%;
+    --contents-wrapper-padding: 0px;
   }
 }
