@@ -711,7 +711,7 @@
         <div class="close-box">
           <button type="button" class="btn today-close-button" onclick="alert('구현 전 입니다.')">오늘 하루 보지 않기</button>
           <p aria-hidden="true">|</p>
-          <button type="button" class="btn close-button" onclick="document.querySelector('.main-page-modal').close();">닫기</button>
+          <button type="button" class="btn close-button" onclick="document.querySelector('.main-page-modal').close();" autofocus>닫기</button>
         </div>
       </div>
     </dialog>
@@ -724,7 +724,7 @@
           <p class="logout-text">로그아웃 하시겠습니까?</p>
         </div>
         <div class="bottom-box">
-          <button type="button" class="button-st confirm-button" onclick="location.href='/index.html'">확인</button>
+          <button type="button" class="button-st confirm-button" onclick="location.href='/index.html'" autofocus>확인</button>
           <p class="divider" aria-hidden="true">|</p>
           <button type="button" class="button-st" onclick="document.querySelector('.logout-modal').close()">취소</button>
         </div>
