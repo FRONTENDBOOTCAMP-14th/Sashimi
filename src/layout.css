@@ -31,3 +31,9 @@ dialog {
     --contents-wrapper-padding: 0px;
   }
 }
+
+.header {
+  position: sticky;
+  inset: 0 auto auto 0;
+  z-index: 999;
+}
