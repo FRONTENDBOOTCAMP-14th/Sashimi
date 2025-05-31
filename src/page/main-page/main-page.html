@@ -703,5 +703,18 @@
       </footer>
       <!-- 푸터 종료 -->
     </div>
+
+    <!-- 모달 시작 -->
+    <dialog class="main-page-modal" open>
+      <div class="main-page-modal-wrap">
+        <div class="modal-image" style="background-image: url('/images/modal-image.png')" aria-hidden="true"></div>
+        <div class="close-box">
+          <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
+          <p aria-hidden="true">|</p>
+          <button type="button" class="btn close-button" onclick="document.querySelector('.main-page-modal').close();">닫기</button>
+        </div>
+      </div>
+    </dialog>
+    <!-- 모달 종료 -->
   </body>
 </html>
