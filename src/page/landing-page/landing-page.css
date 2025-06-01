@@ -127,27 +127,12 @@
     display: none; /* 기본적으로 세로형 컨테이너는 숨김 (데스크탑) */
   }
 
-  /* 태블릿 (769px ~ 1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
+  /* 모바일, 태블릿 (~ 1024px) */
+  @media (max-width: 1024px) {
     --content-inline-size: 277px;
     --column-gap: var(--spacing-12);
 
     /* 태블릿에서는 세로형 콘텐츠 표시, 가로형 숨김 */
-    &.vertical-container {
-      display: flex;
-    }
-
-    &.horizontal-container {
-      display: none;
-    }
-  }
-
-  /* 모바일 (≤ 768px) */
-  @media (max-width: 768px) {
-    --content-inline-size: 277px;
-    --column-gap: var(--spacing-12);
-
-    /* 모바일에서도 세로형 콘텐츠 표시, 가로형 숨김 */
     &.vertical-container {
       display: flex;
     }
@@ -192,17 +177,10 @@
     animation-duration: 20s; /* 두번째 slider-wrapper의 속도를 더 빠르게 */
   }
 
-  /* 태블릿 (769px ~ 1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
+  /* 모바일, 태블릿 (~ 1024px) */
+  @media (max-width: 1024px) {
     --content-inline-size: 181px;
     --column-gap: 12px;
     --row-gap: 12px;
-  }
-
-  /* 모바일 (≤ 768px) */
-  @media (max-width: 768px) {
-    --content-inline-size: 181px;
-    --column-gap: 12px;
-    --row-gap: 13px;
   }
 }
