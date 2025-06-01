@@ -51,6 +51,26 @@
   }
 }
 
+.contents-wrapper.landing-background-thumbnail {
+  .text-description,
+  .text-sub-description {
+    color: var(--gray-400);
+  }
+  .text-sub-description {
+    display: none; /* 서브 설명 텍스트 숨김 */
+  }
+
+  /* 모바일, 태블릿 ( ~ 1024px) */
+  @media (max-width: 1024px) {
+    .text-description {
+      display: none; /* 설명 텍스트 숨김 */
+    }
+    .text-sub-description {
+      display: inline; /* 서브 설명 텍스트 보이기 */
+    }
+  }
+}
+
 /* 오리지널 컨텐츠 슬라이드 애니메이션 */
 .original-content-box-slider {
   display: flex;
