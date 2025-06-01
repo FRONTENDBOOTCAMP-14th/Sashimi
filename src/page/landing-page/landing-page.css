@@ -12,6 +12,7 @@
   z-index: 1000;
 }
 
+/* 공통 스타일링 */
 .contents-wrapper {
   --gap-size: 60px;
   --contents-wrapper-padding-top: 160px;
@@ -30,6 +31,11 @@
 
   .landing-text-box {
     align-self: flex-end;
+  }
+
+  .icon-taing-renewal {
+    display: inline-block;
+    block-size: fit-content;
   }
 
   /* 태블릿 (769px ~ 1024px) */
