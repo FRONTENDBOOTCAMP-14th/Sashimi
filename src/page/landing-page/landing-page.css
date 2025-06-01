@@ -188,27 +188,24 @@
 /* main 태그 마지막 컨텐츠  */
 .contents-wrapper.main-last {
   --column-gap: var(--spacing-36);
-  --margin-bottom: 290px;
+  --padding-block: 290px;
 
   gap: var(--column-gap);
+  padding-block: var(--padding-block);
 
   .text-headline {
     margin: 0;
   }
 
-  .icon-taing-renewal {
-    margin-block-end: var(--margin-bottom);
-  }
-
   /* 태블릿 (769px ~ 1024px) */
   @media (min-width: 769px) and (max-width: 1024px) {
     --column-gap: 14px;
-    --margin-bottom: 100px;
+    --padding-block: 100px;
   }
 
   /* 모바일 (768px) */
   @media (max-width: 768px) {
     --column-gap: 18px;
-    --margin-bottom: 52px;
+    --padding-block: 52px;
   }
 }
