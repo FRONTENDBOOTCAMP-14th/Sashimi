@@ -1,0 +1,301 @@
+/* mine */
+.contents-wrapper {
+  --contents-wrapper-width: 1480px;
+  --contents-wrapper-padding: 70px;
+  --contents-wrapper-spacing-top: 52px;
+
+  max-inline-size: var(--contents-wrapper-width);
+  /* 화면이 좁을 때 최소 여백용 (돌아버릴 거 같아서 넣음) */
+  padding-inline: var(--contents-wrapper-padding);
+  margin-block-start: var(--contents-wrapper-spacing-top);
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --contents-wrapper-width: 522px;
+    --contents-wrapper-spacing-top: 28px;
+
+    max-inline-size: var(--contents-wrapper-width);
+    padding-inline: 0;
+    margin-block-start: var(--contents-wrapper-spacing-top);
+  }
+
+  /* 모바일 */
+  @media (width <= 768px) {
+    --contents-wrapper-width: 244px;
+    --contents-wrapper-spacing-top: 20px;
+
+    max-inline-size: var(--contents-wrapper-width);
+    padding-inline: 0;
+    margin-block-start: var(--contents-wrapper-spacing-top);
+
+    .search-history-box {
+      display: none;
+    }
+  }
+}
+
+/* mine */
+.search-history-section {
+  --search-history-section-spacing-top: 98px;
+
+  margin-block-start: var(--search-history-section-spacing-top);
+  display: flex;
+  justify-content: space-between;
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --search-history-section-spacing-top: 48px;
+
+    margin-block-start: var(--search-history-section-spacing-top);
+  }
+
+  /* 모바일 */
+  @media (width <= 768px) {
+    --search-history-section-spacing-top: 40px;
+
+    margin-block-start: var(--search-history-section-spacing-top);
+  }
+}
+
+/* mine */
+.search-history-box {
+  --search-history-box-gap: 20px;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--search-history-box-gap);
+
+  @media (width <= 1024px) {
+    --search-history-box-gap: 12px;
+
+    gap: var(--search-history-box-gap);
+  }
+
+  .search-history-title-box {
+    --search-history-title-box-gap: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: var(--search-history-title-box-gap);
+
+    @media (width <= 1024px) {
+      --search-history-title-box-gap: 20px;
+
+      gap: var(--search-history-title-box-gap);
+    }
+  }
+
+  h2 {
+    color: var(--gray-200);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-label);
+  }
+
+  p {
+    color: var(--gray-300);
+  }
+
+  h2,
+  .search-all-reset-btn {
+    white-space: nowrap;
+  }
+
+  @media (width <= 1024px) {
+    --search-history-box-gap: 12px;
+  }
+}
+
+/* mine */
+.search-history-lists {
+  --search-history-lists-gap: 16px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--search-history-lists-gap);
+
+  @media (width <= 1024px) {
+    --search-history-lists-gap: 8px;
+  }
+}
+
+/* mine */
+.search-trending-box {
+  --search-trending-box-gap: 36px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--search-trending-box-gap);
+
+  /* 테블릿 & 모바일 */
+  @media (width <= 1024px) {
+    --search-trending-box-gap: 20px;
+
+    gap: var(--search-trending-box-gap);
+  }
+
+  h2 {
+    color: var(--gray-200);
+    font-weight: var(--font-weight-600);
+    line-height: var(--line-height-label);
+  }
+
+  .search-trending-lists {
+    --search-trending-lists-gap: 16px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--search-trending-lists-gap);
+
+    font-weight: var(--font-weight-400);
+    line-height: var(--line-height-paragraph);
+    font-size: var(--label-large);
+
+    /* 테블릿 & 모바일 */
+    @media (width <= 1024px) {
+      --search-trending-lists-gap: 9px;
+
+      gap: var(--search-trending-lists-gap);
+    }
+
+    p {
+      color: var(--gray-500);
+    }
+  }
+}
+
+/* 검색 영역 */
+.search-input {
+  --search-input-height: 89px;
+  --search-input-font-size: var(--label-xxl);
+
+  inline-size: 100%;
+  block-size: var(--search-input-height);
+  display: flex;
+  align-items: center;
+  border-block-end: 2px solid var(--white);
+
+  input {
+    background-color: transparent;
+    border: 0;
+    flex-grow: 1;
+    font-size: var(--search-input-font-size);
+    color: var(--white);
+  }
+
+  .search-submit-btn {
+    flex-shrink: 0;
+  }
+
+  @media (width <= 1024px) {
+    --search-input-height: 56px;
+    --search-input-font-size: var(--label-large);
+  }
+
+  @media (width <= 768px) {
+    --search-input-height: 41px;
+    --search-input-font-size: var(--label-medium);
+  }
+}
+
+/* 돋보기(검색) 버튼 */
+.search-submit-btn {
+  @media (width <= 1024px) {
+    inline-size: 28px;
+  }
+
+  @media (width <= 768px) {
+    inline-size: 22px;
+  }
+}
+
+/* 최근 검색어 전부 리셋 버튼 */
+.search-all-reset-btn {
+  @media (width <= 1024px) {
+    > img {
+      inline-size: 24px;
+    }
+  }
+}
+
+/* 바로 옆 최근 검색어 제거하는 버튼 */
+.search-recent-reset-btn {
+  @media (width <= 1024px) {
+    inline-size: 12px;
+  }
+}
+
+/* 인기 검색어 아이템 */
+.search-popular-btn {
+  --search-popular-gap: var(--spacing-36);
+
+  display: flex;
+  gap: var(--search-popular-gap);
+
+  strong {
+    color: var(--brand-red-1);
+  }
+
+  span {
+    color: var(--gray-300);
+  }
+
+  @media (width <= 1024px) {
+    --search-popular-gap: var(--spacing-12);
+  }
+}
+
+/* 최근 검색어 아이템 */
+.search-recent-item {
+  --search-recent-gap: var(--spacing-20);
+
+  display: flex;
+  align-items: center;
+  gap: var(--search-recent-gap);
+
+  .search-recent-btn {
+    color: var(--gray-300);
+  }
+
+  @media (width <= 1024px) {
+    --search-recent-gap: var(--spacing-16);
+  }
+}
+
+/* 최근 검색어 전부 삭제 버튼 */
+.search-all-reset-btn {
+  --search-all-reset-gap: var(--spacing-8);
+
+  display: flex;
+  align-items: center;
+  color: var(--gray-300);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+  gap: var(--search-all-reset-gap);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (width <= 1024px) {
+    --search-all-reset-gap: var(--spacing-5);
+  }
+}
+
+/* 검색어 관련 버튼 (최근 검색어 모두 삭제 / 최근 검색어 아이템 / 인기 검색어 아이템) 폰트사이트 제어 */
+/* font-weight 제거함, .timestamp 추가함 */
+.search-popular-btn,
+.search-recent-btn,
+.search-all-reset-btn,
+.timestamp {
+  --search-btn-all-font-size: var(--label-large);
+
+  font-size: var(--search-btn-all-font-size);
+
+  @media (width <= 1024px) {
+    --search-btn-all-font-size: var(--label-small);
+  }
+}
+
+.hidden-history {
+  display: none;
+}
