@@ -15,14 +15,8 @@
 .contents-wrapper {
   --gap-size: 60px;
   --contents-wrapper-padding-top: 160px;
-  /* display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center; */
 
   display: grid;
-  /* grid-template-rows: repeat(auto-fit, 1fr); */
-  /* justify-content: center; */
   justify-items: center;
   row-gap: var(--gap-size);
 
@@ -51,6 +45,20 @@
   }
 }
 
+/* 오리지널 컨텐츠 슬라이드 애니메이션 */
+.original-content-box-slider {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: var(--column-gap);
+  animation: slider-desktop 15s infinite ease-in-out;
+
+  /* 모바일/태블릿용 애니메이션*/
+  @media (max-width: 1024px) {
+    animation: slider-mobile 15s linear infinite;
+  }
+}
+
+/* 오리지널 컨텐츠 레이아웃 스타일링 */
 .original-content-box {
   --content-inline-size: 907px;
   --column-gap: 22px;
@@ -124,6 +132,7 @@
   }
 }
 
+/* 디스커버 컨텐츠 슬라이드 애니메이션 및 레이아웃 스타일링 */
 .discover-content-slide-box {
   --content-inline-size: 470px;
   --column-gap: 20px;
@@ -144,7 +153,6 @@
     .discover-content {
       inline-size: var(--content-inline-size);
       flex-shrink: 0;
-      border-radius: 4px;
     }
   }
 
