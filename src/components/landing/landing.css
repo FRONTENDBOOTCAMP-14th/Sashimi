@@ -9,6 +9,14 @@ ul {
   margin: 0;
 }
 
+.landing-resources-list {
+  inline-size: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--spacing-20);
+}
+
 /* 아이콘 스타일링 */
 /* 기본 - 데스크탑 */
 .icon-taing-renewal > img {
