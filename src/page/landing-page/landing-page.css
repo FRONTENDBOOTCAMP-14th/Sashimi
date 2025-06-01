@@ -1,4 +1,5 @@
 @import url('/src/components/landing/landing.css');
+@import url('/src/page/landing-page/landing-page-animation.css');
 
 /* 헤더를 fixed로 배치하여 항상 상단에 고정 */
 /* sticky를 사용하면 공간을 차지해서 main 콘텐츠의 배경 이미지가 헤더 아래부터 시작함 */
@@ -123,7 +124,7 @@
   }
 }
 
-.slide-box {
+.discover-content-slide-box {
   --content-inline-size: 470px;
   --column-gap: 20px;
   --row-gap: 16px;
@@ -151,6 +152,10 @@
     display: flex;
     flex-flow: row nowrap;
     column-gap: var(--column-gap);
+    animation: slideLeft 30s linear infinite;
+  }
+  .slider-wrapper:nth-child(2) {
+    animation-duration: 20s; /* 두번째 slider-wrapper의 속도를 더 빠르게 */
   }
 
   /* 태블릿 (769px ~ 1024px) */
