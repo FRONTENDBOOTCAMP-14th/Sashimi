@@ -1,8 +1,3 @@
-body {
-  background-color: #121212;
-  color: #fff;
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -68,6 +63,7 @@ ul {
   .text-headline {
     font-size: var(--headline-size);
     line-height: var(--headline-line-height);
+    color: var(--white);
 
     margin-block-end: var(--headline-margin-bottom);
 
