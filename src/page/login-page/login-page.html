@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>login-page</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/page/login-page/login-page.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header header-logged-out">
+            <!-- 로고 (공통) -->
+            <div class="header-inner">
+                <h1 class="logo">
+                <a href="/">
+                    <img src="/icon/tving-white-logo.svg" alt="TAING 로고" />
+                </a>
+                </h1>
+                <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+                <nav class="nav" aria-label="주요 메뉴">
+                <ul class="nav-list">
+                    <li>
+                    <a href="#">
+                        <img src="/icon/live-icon-grey.svg" alt="실시간 라이브" />
+                        <p>실시간</p>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="#"><p>TV프로그램</p></a>
+                    </li>
+                    <li>
+                    <a href="#"><p>영화</p></a>
+                    </li>
+                    <li>
+                    <a href="#">
+                        <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                    </a>
+                    </li>
+                </ul>
+                </nav>
+                <!-- 버튼 영역 (우측) -->
+                <div class="header-right">
+                <!-- 검색 버튼 -->
+                <button class="icon-btn search-btn" aria-label="검색 열기">
+                    <img src="/icon/search-icon-grey.svg" alt="" class="search-btn-desktop" />
+                    <img src="/icon/search-icon-white.svg" alt="" class="search-btn-mobile" />
+                </button>
+                <!-- 검색 닫기 버튼 -->
+                <button class="icon-btn close-btn" aria-label="검색 닫기">
+                    <img src="/icon/close-grey.svg" alt="" class="close-btn-desktop" />
+                    <img src="/icon/close-white.svg" alt="" class="close-btn-mobile" />
+                </button>
+                <!-- 프로필 버튼 -->
+                <button class="icon-btn profile-btn" aria-label="프로필 열기">
+                    <img src="/icon/tving-icon-desktop.svg" alt="" />
+                </button>
+                </div>
+            </div>
+      </header>
+      <main>
+        <div class="contents-wrapper">
+          <!-- 콘텐츠 시작 -->
+          <form action="/" method="post">
+            <div class="login-box">
+              <h1 class="title-st">TVING ID 로그인</h1>
+              <div class="input-group input-mg">
+                  <input class="input-field" type="text" placeholder="아이디" name="id" maxlength="30" aria-label="아이디 입력필드">
+                  <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+              </div>
+      
+              <div class="input-group">
+                  <input class="input-field" type="password" placeholder="패스워드" name="password" maxlength="20" aria-label="패스워드 입력필드">
+                  <img src="/icon/pw-toggle-button.svg" alt="패스워드 보기/숨기기 버튼" class="toggle-password-icon" aria-hidden="true">
+                  <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+              </div>
+
+              <div class="button-box button-mg">
+                  <button type="button" class="auto-login-btn">
+                      <img class="check-img" src="/icon/gray-check-button.svg" aria-hidden="true">자동로그인
+                  </button>
+              </div>
+      
+              <button class="button-style login-button" type="submit">로그인하기</button>
+
+              <div class="find-box">
+                <a class="find-btn" href="/src/page/login-page/find-id-page.html" title="아이디 찾기 페이지로 이동">아이디찾기</a>
+                <span class="divider" aria-hidden="true">|</span>
+                <a class="find-btn" href="/src/page/login-page/find-pw-page.html" title="비밀번호 찾기 페이지로 이동">비밀번호찾기</a>
+              </div>
+
+              <p class="advice-mg">아직 계정이 없으신가요?&nbsp;
+                <a class="find-btn" href="/" title="회원가입 페이지로 이동">&nbsp;회원가입하기</a>
+              </p>
+            </div>
+          </form>
+          <!-- 콘텐츠 종료 -->
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <!-- 고객센터 ~ 인재채용 -->
+          <div class="footer-top">
+            <nav aria-label="푸터 링크">
+              <ul class="footer-links">
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년 보호정책</a></li>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">인재채용</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- 연락처 정보 -->
+          <div class="footer-info">
+            <address>
+              <p>
+                <span>대표이사 : YANG JIEUL</span><span><a href="#">사업자정보확인</a></span
+                ><span>사업자등록번호 : 188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              </p>
+
+              <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+
+              <p>
+                <a href="#"><span>고객문의 바로가기</span><span>대표메일 : tving@cj.net</span><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span></a>
+              </p>
+
+              <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(반송편성문의) : 1855-1631</span></p>
+            </address>
+          </div>
+
+          <!-- 소셜 미디어 -->
+          <div class="footer-social">
+            <ul class="social-icons" aria-label="SNS 링크">
+              <li>
+                <a href="#" aria-label="유튜브" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="인스타그램" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="트위터" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="페이스북" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="footer-bottom">
+            <small>Copyright &copy; 주식회사 티빙 All right reserved.</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
