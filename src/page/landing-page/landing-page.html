@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Sashimi</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="/src/page/landing-page/landing-page.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <h1 class="sr-only">Landing Page</h1>
+    <div class="container">
+      <header class="header header-logged-out">
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING 로고" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="#">
+                  <img src="/icon/live-icon-grey.svg" alt="실시간 라이브" />
+                  <p>실시간</p>
+                </a>
+              </li>
+              <li>
+                <a href="#"><p>TV프로그램</p></a>
+              </li>
+              <li>
+                <a href="#"><p>영화</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button type="button" class="icon-btn search-btn" aria-label="검색 열기">
+              <img src="/icon/search-icon-grey.svg" alt="" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button type="button" class="icon-btn close-btn" aria-label="검색 닫기">
+              <img src="/icon/close-grey.svg" alt="" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button type="button" class="icon-btn profile-btn" aria-label="프로필 열기">
+              <img src="/icon/tving-icon-desktop.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="contents-wrapper landing-background-thumbnail" style="background-image: url('/images/image-landing-background-thumbnail.png')">
+          <!-- 콘텐츠 시작 -->
+          <div class="landing-text-box">
+            <h2 class="text-headline"><span>타잉 오리지널 콘텐츠,</span><span>방송, 영화, 해외시리즈까지!</span><span>재미를 플레이해보세요.</span></h2>
+            <p class="text-description">간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
+            <p class="text-sub-description">간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
+          </div>
+          <a class="icon-taing-renewal" href="/"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
+          <!--  콘텐츠 종료 -->
+        </div>
+        <div class="contents-wrapper contents-wrapper-padding-sm">
+          <!-- 콘텐츠 시작 -->
+          <div class="landing-text-box">
+            <h2 class="text-headline">타잉에만 있는 재미</h2>
+            <p class="text-description">오리지널 콘텐츠를 만나보세요!</p>
+            <p class="text-sub-description">차별화된 웰메이드 오리지널 콘텐츠</p>
+          </div>
+          <!-- 가로 original-content 컨테이너 -->
+          <div class="original-content-box horizontal-container">
+            <ul class="original-content-box-slider">
+              <li class="original-content horizontal" style="background-image: url('/images/image-thumbnail-05.png')"><span class="sr-only">러브캐처 in BALI</span></li>
+              <li class="original-content horizontal" style="background-image: url('/images/image-thumbnail-06.png')"><span class="sr-only">보물찾기</span></li>
+              <li class="original-content horizontal" style="background-image: url('/images/image-thumbnail-07.png')"><span class="sr-only">푸드 크로니클</span></li>
+              <li class="original-content horizontal" style="background-image: url('/images/image-thumbnail-08.png')"><span class="sr-only">몸값</span></li>
+            </ul>
+          </div>
+          <!-- 세로 original-content 컨테이너 -->
+          <div class="original-content-box vertical-container">
+            <ul class="original-content-box-slider">
+              <li class="original-content vertical" style="background-image: url('/images/image-thumbnail-01.png')"><span class="sr-only">러브캐처 in BALI</span></li>
+              <li class="original-content vertical" style="background-image: url('/images/image-thumbnail-02.png')"><span class="sr-only">보물찾기</span></li>
+              <li class="original-content vertical" style="background-image: url('/images/image-thumbnail-03.png')"><span class="sr-only">푸드 크로니클</span></li>
+              <li class="original-content vertical" style="background-image: url('/images/image-thumbnail-04.png')"><span class="sr-only">몸값</span></li>
+            </ul>
+          </div>
+          <!--  콘텐츠 종료 -->
+        </div>
+        <div class="contents-wrapper contents-wrapper-padding-sm">
+          <!-- 콘텐츠 시작 -->
+          <div class="landing-text-box">
+            <h2 class="text-headline">내가 찾던 재미</h2>
+            <p class="text-description">보고 싶은 콘텐츠를 발견하세요!</p>
+            <p class="text-sub-description">최신, 인기 TV프로그램, 영화, 해외시리즈, 파라마운트+ 오리지널 및 독점</p>
+          </div>
+          <!-- discover-content 컨테이너 -->
+          <div class="discover-content-slide-box">
+            <div class="slider-wrapper">
+              <ul class="discover-content-box horizontal-container">
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-09.png')"><span class="sr-only">슈룹</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-10.png')"><span class="sr-only">연예인 매니저로 살아남기</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-11.png')"><span class="sr-only">렛미인</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-12.png')"><span class="sr-only">유퀴즈 온더 블럭</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-13.png')"><span class="sr-only">푸드 크로니클</span></li>
+              </ul>
+              <!-- 중복된 이미지 스크린리더에서 숨기기 -->
+              <ul aria-hidden="true" class="discover-content-box horizontal-container">
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-09.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-10.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-11.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-12.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-13.png')"></li>
+              </ul>
+            </div>
+            <div class="slider-wrapper">
+              <ul class="discover-content-box horizontal-container">
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-10.png')"><span class="sr-only">연예인 매니저로 살아남기</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-13.png')"><span class="sr-only">푸드 크로니클</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-11.png')"><span class="sr-only">렛미인</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-09.png')"><span class="sr-only">슈룹</span></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-12.png')"><span class="sr-only">유퀴즈 온더 블럭</span></li>
+              </ul>
+              <!-- 중복된 이미지 스크린리더에서 숨기기 -->
+              <ul aria-hidden="true" class="discover-content-box horizontal-container">
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-10.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-13.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-11.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-09.png')"></li>
+                <li class="discover-content" style="background-image: url('/images/image-thumbnail-12.png')"></li>
+              </ul>
+            </div>
+          </div>
+          <!--  콘텐츠 종료 -->
+        </div>
+        <div class="contents-wrapper contents-wrapper-padding-lg main-last">
+          <!-- 콘텐츠 시작 -->
+          <!-- 슬로건 로고 -->
+          <img class="icon-slogan-logo" src="/icon/icon-slogan-logo.svg" alt="" />
+          <div class="landing-text-box">
+            <h2 class="text-headline">지금 시작해보세요</h2>
+          </div>
+          <a class="icon-taing-renewal" href="/"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
+          <!--  콘텐츠 종료 -->
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <!-- 고객센터 ~ 인재채용 -->
+          <div class="footer-top">
+            <nav aria-label="푸터 링크">
+              <ul class="footer-links">
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년 보호정책</a></li>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">인재채용</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- 연락처 정보 -->
+          <div class="footer-info">
+            <address>
+              <p>
+                <span>대표이사 : YANG JIEUL</span><span><a href="#">사업자정보확인</a></span
+                ><span>사업자등록번호 : 188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              </p>
+
+              <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+
+              <p>
+                <a href="#"><span>고객문의 바로가기</span><span>대표메일 : tving@cj.net</span><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span></a>
+              </p>
+
+              <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(반송편성문의) : 1855-1631</span></p>
+            </address>
+          </div>
+
+          <!-- 소셜 미디어 -->
+          <div class="footer-social">
+            <ul class="social-icons" aria-label="SNS 링크">
+              <li>
+                <a href="#" aria-label="유튜브" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="인스타그램" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="트위터" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="페이스북" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="footer-bottom">
+            <small>Copyright &copy; 주식회사 티빙 All right reserved.</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
