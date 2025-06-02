@@ -1,6 +1,9 @@
-body {
-  background-color: #121212;
-  color: #fff;
+.landing-resources-list {
+  inline-size: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--spacing-20);
 }
 
 /* 아이콘 스타일링 */
@@ -54,6 +57,7 @@ body {
   .text-headline {
     font-size: var(--headline-size);
     line-height: var(--headline-line-height);
+    color: var(--white);
 
     margin-block-end: var(--headline-margin-bottom);
 
@@ -120,6 +124,8 @@ body {
   background-size: cover;
   background-position: bottom;
 
+  border-radius: var(--spacing-4);
+
   inline-size: 100%;
   aspect-ratio: 16 / 9;
 
@@ -136,6 +142,8 @@ body {
 
 /* 랜딩 페이지 '오리지널 컨텐츠' 배경 이미지 스타일링 */
 .original-content {
+  border-radius: var(--spacing-4);
+
   /* 데스크탑 컴포넌트 */
   /* 페이지 제작 시, 1024px 이상에서만 보이도록 설정 예정 */
   &.horizontal {
@@ -167,6 +175,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: var(--spacing-4);
 
   /* min-inline-size: 470px;
     min-block-size: 264px; */
