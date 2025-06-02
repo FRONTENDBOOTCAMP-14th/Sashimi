@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/common/index.css" />
     <!-- 각 페이지 css -->
     <link rel="stylesheet" href="/src/page/profile-page/profile-page-edit.css" />
+    <script type="module" src="/src/page/profile-page/profile-page.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -93,9 +94,7 @@
 
             <div class="profile-button-box">
               <!-- 편집 완료 버튼 -->
-              <form action="/index.html" method="GET">
-                <button class="profile-button complete" type="submit" aria-label="편집 완료, 프로필 선택 페이지로 이동">완료</button>
-              </form>
+              <button class="profile-button complete" type="button" aria-label="편집 완료, 프로필 선택 페이지로 이동">완료</button>
             </div>
           </section>
           <!-- 콘텐츠 종료 -->
