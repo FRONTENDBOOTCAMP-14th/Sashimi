@@ -1,4 +1,4 @@
-@import url('/src/components/profiles/profiles.css');
+@import url('/src/components/profile/profile.css');
 
 .contents-wrapper {
   --contents-wrapper-width: 1100px;
