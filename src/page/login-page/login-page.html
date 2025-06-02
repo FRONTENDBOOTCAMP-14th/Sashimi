@@ -68,21 +68,24 @@
             <div class="login-box">
               <h1 class="title-st">TVING ID 로그인</h1>
               <div class="input-group input-mg">
-                  <input class="input-field" type="text" placeholder="아이디" name="id" maxlength="30" aria-label="아이디 입력필드">
-                  <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+                <label for="user-id" class="sr-only">아이디</label>
+                <input id="user-id" class="input-field" type="text" placeholder="아이디" maxlength="30"/>
+                <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon"/>
               </div>
       
               <div class="input-group">
-                  <input class="input-field" type="password" placeholder="패스워드" name="password" maxlength="20" aria-label="패스워드 입력필드">
-                  <img src="/icon/pw-toggle-button.svg" alt="패스워드 보기/숨기기 버튼" class="toggle-password-icon" aria-hidden="true">
-                  <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
+                <label for="password" class="sr-only">비밀번호</label>
+                <input id="password" class="input-field" type="password" placeholder="패스워드" maxlength="20"/>
+                <button type="button" class="bt-st" aria-label="비밀번호 보기버튼">
+                  <img src="/icon/pw-toggle-button.svg" class="toggle-password-icon" alt=""/>
+                </button>
               </div>
 
               <div class="button-box button-mg">
                 <input type="checkbox" id="auto-login" class="auto-login-checkbox">
                 <label for="auto-login" class="auto-login-btn">
-                    <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg" aria-hidden="true">
-                    <img class="check-img check-img-checked" src="/icon/red-check-button.svg" aria-hidden="true">
+                    <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg" alt="체크 비활성화">
+                    <img class="check-img check-img-checked" src="/icon/red-check-button.svg" alt="체크 활성화">
                     자동로그인
                 </label>
             </div>
