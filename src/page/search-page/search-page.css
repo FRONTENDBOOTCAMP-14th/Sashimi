@@ -1,34 +1,28 @@
-@import url('src/components/search/search.css');
+@import url('/src/components/search/search.css');
 
-/* mine */
-.contents-wrapper {
-  --contents-wrapper-width: 1480px;
-  --contents-wrapper-padding: 70px;
-  --contents-wrapper-spacing-top: 52px;
+.search-area {
+  --search-area-padding-top: 52px;
+  --search-area-padding-bottom: 93px;
+  --search-area-padding-x: 70px;
 
-  max-inline-size: var(--contents-wrapper-width);
-  /* 화면이 좁을 때 최소 여백용 (돌아버릴 거 같아서 넣음) */
-  padding-inline: var(--contents-wrapper-padding);
-  margin-block-start: var(--contents-wrapper-spacing-top);
+  background-color: #191919;
 
-  /* 테블릿 */
-  @media (width <= 1024px) {
-    --contents-wrapper-width: 522px;
-    --contents-wrapper-spacing-top: 28px;
-
-    max-inline-size: var(--contents-wrapper-width);
-    padding-inline: 0;
-    margin-block-start: var(--contents-wrapper-spacing-top);
+  .search-wrap {
+    inline-size: 100%;
+    max-inline-size: 1480px;
+    margin: 0 auto;
+    padding: var(--search-area-padding-top) var(--search-area-padding-x) var(--search-area-padding-bottom);
   }
 
-  /* 모바일 */
-  @media (width <= 768px) {
-    --contents-wrapper-width: 244px;
-    --contents-wrapper-spacing-top: 20px;
+  @media (width <= 1024px) {
+    --search-area-padding-top: 28px;
+    --search-area-padding-bottom: 52px;
+    --search-area-padding-x: 40px;
+  }
 
-    max-inline-size: var(--contents-wrapper-width);
-    padding-inline: 0;
-    margin-block-start: var(--contents-wrapper-spacing-top);
+  @media (width <= 768px) {
+    --search-area-padding-top: 20px;
+    --search-area-padding-bottom: 20px;
 
     .search-history-box {
       display: none;
@@ -47,15 +41,11 @@
   /* 테블릿 */
   @media (width <= 1024px) {
     --search-history-section-spacing-top: 48px;
-
-    margin-block-start: var(--search-history-section-spacing-top);
   }
 
   /* 모바일 */
   @media (width <= 768px) {
     --search-history-section-spacing-top: 40px;
-
-    margin-block-start: var(--search-history-section-spacing-top);
   }
 }
 
@@ -66,24 +56,21 @@
   display: flex;
   flex-flow: column wrap;
   gap: var(--search-history-box-gap);
+  border-right: 1px solid var(--gray-800);
+  inline-size: 50%;
 
   @media (width <= 1024px) {
     --search-history-box-gap: 12px;
-
-    gap: var(--search-history-box-gap);
   }
 
   .search-history-title-box {
     --search-history-title-box-gap: 24px;
 
     display: flex;
-    justify-content: space-between;
     gap: var(--search-history-title-box-gap);
 
     @media (width <= 1024px) {
       --search-history-title-box-gap: 20px;
-
-      gap: var(--search-history-title-box-gap);
     }
   }
 
@@ -123,16 +110,24 @@
 /* mine */
 .search-trending-box {
   --search-trending-box-gap: 36px;
+  --search-trending-box-spacing: 60px;
 
   display: flex;
   flex-flow: column nowrap;
   gap: var(--search-trending-box-gap);
+  padding-inline-start: var(--search-trending-box-spacing);
+  inline-size: 50%;
 
   /* 테블릿 & 모바일 */
   @media (width <= 1024px) {
     --search-trending-box-gap: 20px;
+    --search-trending-box-spacing: 35px;
+  }
 
-    gap: var(--search-trending-box-gap);
+  @media (width <= 768px) {
+    --search-trending-box-spacing: 0px;
+
+    inline-size: 100%;
   }
 
   h2 {
@@ -155,8 +150,6 @@
     /* 테블릿 & 모바일 */
     @media (width <= 1024px) {
       --search-trending-lists-gap: 9px;
-
-      gap: var(--search-trending-lists-gap);
     }
 
     p {
