@@ -1,0 +1,145 @@
+@import url('/src/components/account/login.css');
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    inline-size: 732px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        inline-size: 416px;
+    }
+
+    @media screen and (max-width: 768px) {
+        inline-size: 288px;
+  }
+}
+
+.button-box {
+    inline-size: 100%;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.title-st {
+    font-size: 38px;
+    color: white;
+    margin-block-start: 70px;
+    margin-block-end: 60px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
+        margin-block-start: 40px;
+        margin-block-end: 24px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        margin-block-start: 28px;
+        margin-block-end: 28px;
+  }
+}
+
+.input-mg {
+    margin-block-end: 15px;
+
+    @media screen and (max-width: 1024px) {
+        margin-block-end: 8px;
+    }
+}
+
+.button-mg {
+    margin-block-start: 16px;
+    margin-block-end: 32px;
+
+    @media screen and (max-width: 1024px) {
+        margin-block-start: 12px;
+        margin-block-end: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-block-start: 8px;
+        margin-block-end: 17px;
+    }
+}
+
+.auto-login-btn {
+    color: var(--gray-500);
+    font-size: var(--label-large);
+    display: flex;
+    gap: 12px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 12px;
+        gap: 4px;
+    }
+}
+
+.check-img {
+    inline-size: 26px;
+    block-size: 26px;
+
+    @media screen and (max-width: 1024px) {
+        inline-size: 16px; 
+        block-size: 16px;
+    }
+}
+
+.find-box {
+    display: flex;
+    inline-size: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 42px;
+    margin-block-start: 48px;
+    margin-block-end: 44px;
+
+    @media screen and (max-width: 1024px) {
+        gap: 22px;
+        margin-block-start: 24px;
+        margin-block-end: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        gap: 20px;
+        margin-block-start: 20px;
+        margin-block-end: 20px;
+    }
+}
+
+.find-btn {
+    color: var(--gray-300);
+    font-size: 21px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+
+.divider {
+    color: var(--gray-800);
+    font-size: 21px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
+}
+
+.advice-mg {
+    color: var(--gray-500);
+    font-size: 21px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
+}
