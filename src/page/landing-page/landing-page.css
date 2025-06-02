@@ -51,7 +51,18 @@
   }
 }
 
+/* 랜딩 페이지 최상단 콘텐츠 배경 이미지 및 레이아웃 스타일링 */
 .contents-wrapper.landing-background-thumbnail {
+  background-color: var(--black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  border-radius: var(--spacing-4);
+
+  inline-size: 100%;
+  aspect-ratio: 16 / 9;
+
   .text-description,
   .text-sub-description {
     color: var(--gray-400);
@@ -68,6 +79,16 @@
     .text-sub-description {
       display: inline; /* 서브 설명 텍스트 보이기 */
     }
+  }
+
+  /* 태블릿 */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    aspect-ratio: 765 / 536;
+  }
+
+  /* 모바일 */
+  @media (max-width: 768px) {
+    aspect-ratio: 16 / 19;
   }
 }
 
@@ -189,9 +210,15 @@
 .contents-wrapper.main-last {
   --column-gap: var(--spacing-36);
   --padding-block: 290px;
+  --logo-inline-size: 279px;
 
   gap: var(--column-gap);
   padding-block: var(--padding-block);
+
+  /* 슬로건 로고 */
+  .icon-slogan-logo {
+    inline-size: var(--logo-inline-size);
+  }
 
   .text-headline {
     margin: 0;
@@ -201,11 +228,13 @@
   @media (min-width: 769px) and (max-width: 1024px) {
     --column-gap: 14px;
     --padding-block: 100px;
+    --logo-inline-size: 135px;
   }
 
   /* 모바일 (768px) */
   @media (max-width: 768px) {
     --column-gap: 18px;
     --padding-block: 52px;
+    --logo-inline-size: 83px;
   }
 }
