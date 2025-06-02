@@ -33,17 +33,14 @@
 
   .logo {
     --logo-width: 132px;
-    --logo-height: 42px;
 
     display: flex;
     align-items: center;
     inline-size: var(--logo-width);
-    block-size: var(--logo-height);
 
     /* 테블릿 */
     @media (width <= 1024px) {
       --logo-width: 77px;
-      --logo-height: 42px;
     }
 
     /* 모바일 */
@@ -154,7 +151,6 @@
   --nav-list-paramounts-img-height: 26px;
   --nav-list-paramounts-top: 4px;
 
-  object-fit: contain;
   inline-size: var(--nav-list-paramounts-img-width);
   block-size: var(--nav-list-paramounts-img-height);
   margin-top: var(--nav-list-paramounts-top);
