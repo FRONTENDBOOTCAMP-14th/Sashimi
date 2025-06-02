@@ -23,26 +23,26 @@
         <div class="header-inner">
           <h1 class="logo">
             <a href="/">
-              <img src="/icon/tving-white-logo.svg" alt="TAING 로고" />
+              <img src="/icon/tving-white-logo.svg" alt="TAING" />
             </a>
           </h1>
           <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
           <nav class="nav" aria-label="주요 메뉴">
             <ul class="nav-list">
               <li>
-                <a href="#">
-                  <img src="/icon/live-icon-grey.svg" alt="실시간 live" />
-                  <p>실시간</p>
+                <a href="/">
+                  <img src="/icon/live-icon-grey.svg" alt="" />
+                  <span>실시간</span>
                 </a>
               </li>
               <li>
-                <a href="#"><p>TV프로그램</p></a>
+                <a href="/"><span>TV프로그램</span></a>
               </li>
               <li>
-                <a href="#"><p>영화</p></a>
+                <a href="/"><span>영화</span></a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
                 </a>
               </li>
@@ -51,16 +51,16 @@
           <!-- 버튼 영역 (우측) -->
           <div class="header-right">
             <!-- 검색 버튼 -->
-            <button type="button" class="icon-btn search-btn" aria-label="검색 열기">
-              <img src="/icon/search-icon-grey.svg" alt="" />
+            <button type="button" class="icon-btn search-btn">
+              <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
             </button>
             <!-- 검색 닫기 버튼 -->
-            <button type="button" class="icon-btn close-btn" aria-label="검색 닫기">
-              <img src="/icon/close-grey.svg" alt="" />
+            <button type="button" class="icon-btn close-btn">
+              <img src="/icon/close-grey.svg" alt="검색 닫기" />
             </button>
             <!-- 프로필 버튼 -->
-            <button type="button" class="icon-btn profile-btn" aria-label="프로필 열기" onclick="document.querySelector('.logout-modal').showModal()">
-              <img src="/icon/tving-icon-desktop.svg" alt="" />
+            <button type="button" class="icon-btn profile-btn" onclick="document.querySelector('.logout-modal').showModal()">
+              <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
             </button>
           </div>
         </div>
@@ -77,23 +77,23 @@
                 <span class="slide-comment">인생 2회차를 사는 판타지 드라마</span>
               </div>
             </div>
-            <a class="slide-more" href="#" target="_self" aria-label="슬라이드 1번">자세히보기</a>
-            <button class="slide-next" type="button" aria-label="이전 슬라이드">
-              <img src="/icon/slide-right.svg" alt="" aria-hidden="true" />
+            <a class="slide-more" href="#" target="_self">자세히보기</a>
+            <button class="slide-next" type="button">
+              <img src="/icon/slide-right.svg" alt="이전 슬라이드" />
             </button>
-            <button class="slide-prev" type="button" aria-label="다음 슬라이드">
-              <img src="/icon/slide-left.svg" alt="" aria-hidden="true" />
+            <button class="slide-prev" type="button">
+              <img src="/icon/slide-left.svg" alt="다음 슬라이드" />
             </button>
             <div class="slide-nav">
-              <button class="slide-pause" type="button" aria-label="슬라이드 일시정지">
-                <img src="/icon/slide-pause.svg" alt="" aria-hidden="true" />
+              <button class="slide-pause" type="button">
+                <img src="/icon/slide-pause.svg" alt="슬라이드 일시정지" />
               </button>
               <ul class="slide-dots-list">
                 <li class="slide-dots-item">
                   <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
                 </li>
                 <li class="slide-dots-item active">
-                  <button class="slide-dots" type="button" aria-label="슬라이드 2번"></button>
+                  <button class="slide-dots" type="button" aria-label="슬라이드 2번" aria-current="true"></button>
                 </li>
                 <li class="slide-dots-item">
                   <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
@@ -109,7 +109,7 @@
         <div class="contents-wrapper">
           <div class="main-cont-wrap">
             <h2 class="main-cont-title">티빙에서 꼭 봐야하는 콘텐츠</h2>
-            <ul class="main-cont-list important" role="listbox">
+            <ul class="main-cont-list important">
               <li class="main-cont-item">
                 <a class="thumbnail-item long" href="#">
                   <div class="thumbnail view" style="--view-per: 70%; background-image: url('/images/thumbnail-long01.png')">
@@ -679,16 +679,16 @@
           <div class="footer-social">
             <ul class="social-icons" aria-label="SNS 링크">
               <li>
-                <a href="#" aria-label="유튜브" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="" /></a>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="유튜브" /></a>
               </li>
               <li>
-                <a href="#" aria-label="인스타그램" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="" /></a>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="인스타그램" /></a>
               </li>
               <li>
-                <a href="#" aria-label="트위터" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="" /></a>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="트위터" /></a>
               </li>
               <li>
-                <a href="#" aria-label="페이스북" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="" /></a>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="페이스북" /></a>
               </li>
             </ul>
           </div>
