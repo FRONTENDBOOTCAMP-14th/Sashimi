@@ -1,0 +1,211 @@
+@import url('/src/components/landing/landing.css');
+@import url('/src/page/landing-page/landing-page-animation.css');
+
+/* 헤더를 fixed로 배치하여 항상 상단에 고정 */
+/* sticky를 사용하면 공간을 차지해서 main 콘텐츠의 배경 이미지가 헤더 아래부터 시작함 */
+/* 공간 차지를 안해야 main 콘텐츠의 배경 이미지가 상단부터 시작할 수 있다. */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* 공통 스타일링 */
+.contents-wrapper {
+  --gap-size: 60px;
+  --contents-wrapper-padding-top: 160px;
+
+  display: grid;
+  justify-items: center;
+  row-gap: var(--gap-size);
+
+  &.contents-wrapper-padding-sm {
+    padding-block-start: var(--contents-wrapper-padding-top);
+  }
+
+  &.contents-wrapper-padding-lg {
+    padding-block-start: var(--contents-wrapper-padding-top);
+  }
+
+  .landing-text-box {
+    align-self: flex-end;
+  }
+
+  .icon-taing-renewal {
+    display: inline-block;
+    block-size: fit-content;
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    --gap-size: 28px;
+    --contents-wrapper-padding-top: 80px;
+  }
+
+  /* 모바일 (≤ 768px) */
+  @media (max-width: 768px) {
+    --gap-size: var(--spacing-16);
+    --contents-wrapper-padding-top: 48px;
+  }
+}
+
+.contents-wrapper.landing-background-thumbnail {
+  .text-description,
+  .text-sub-description {
+    color: var(--gray-400);
+  }
+  .text-sub-description {
+    display: none; /* 서브 설명 텍스트 숨김 */
+  }
+
+  /* 모바일, 태블릿 ( ~ 1024px) */
+  @media (max-width: 1024px) {
+    .text-description {
+      display: none; /* 설명 텍스트 숨김 */
+    }
+    .text-sub-description {
+      display: inline; /* 서브 설명 텍스트 보이기 */
+    }
+  }
+}
+
+/* 오리지널 컨텐츠 슬라이드 애니메이션 */
+.original-content-box-slider {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: var(--column-gap);
+  animation: slider-desktop 15s infinite ease-in-out;
+
+  /* 모바일/태블릿용 애니메이션*/
+  @media (max-width: 1024px) {
+    animation: slider-mobile 15s linear infinite;
+  }
+}
+
+/* 오리지널 컨텐츠 레이아웃 스타일링 */
+.original-content-box {
+  --content-inline-size: 907px;
+  --column-gap: 22px;
+
+  inline-size: 100%;
+  block-size: fit-content;
+  overflow: hidden; /* 화면 밖으로 나간 콘텐츠 숨김 (가로 스크롤 방지) */
+
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: var(--column-gap);
+
+  /* 첫 번째 아이템의 중앙이 정확히 뷰포트 중앙에 위치할 수 있게 */
+  /* 가상 요소를 첫 번째 실제 콘텐츠 앞에 배치하여 밀어내는 효과 */
+  /* 가상 요소의 크기가 뷰포트 크기에 따라 자동으로 계산됨 > 반응형이 잘 작동 */
+  &::before {
+    content: '';
+    /* 계산 공식: 뷰포트 중앙(50%) - 첫번째 아이템 너비의 절반 - 갭 크기 */
+    /* 이렇게 하면 첫 번째 아이템이 화면 정중앙에 위치하게 됨 */
+    flex: 0 0 calc(50% - (var(--content-inline-size) / 2) - var(--column-gap));
+
+    /* 디버깅용 - 개발 중에만 사용 */
+    /* background: rgba(255, 0, 0, 0.2); */
+  }
+
+  .original-content {
+    /* 플렉스 아이템이 늘어나거나 줄어들지 않도록 고정 */
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    /* horizontal 컴포넌트를 제작할 때, 반응형을 보여주기 위해 inline-size를 100%로 설정해놨더니 */
+    /* horizontal 컴포넌트의 너비가 제대로 설정되지 않아 화면 상에서 이미지들이 확대되어 보여서 아래의 코드를 추가함. */
+    &.horizontal {
+      inline-size: var(--content-inline-size);
+    }
+  }
+
+  /* 반응형 디자인: 데스크탑에서는 가로형만, 모바일/태블릿에서는 세로형만 표시 */
+  &.vertical-container {
+    display: none; /* 기본적으로 세로형 컨테이너는 숨김 (데스크탑) */
+  }
+
+  /* 모바일, 태블릿 (~ 1024px) */
+  @media (max-width: 1024px) {
+    --content-inline-size: 277px;
+    --column-gap: var(--spacing-12);
+
+    /* 태블릿에서는 세로형 콘텐츠 표시, 가로형 숨김 */
+    &.vertical-container {
+      display: flex;
+    }
+
+    &.horizontal-container {
+      display: none;
+    }
+  }
+}
+
+/* 디스커버 컨텐츠 슬라이드 애니메이션 및 레이아웃 스타일링 */
+.discover-content-slide-box {
+  --content-inline-size: 470px;
+  --column-gap: 20px;
+  --row-gap: 16px;
+
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: var(--row-gap);
+
+  .discover-content-box {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: var(--column-gap);
+
+    .discover-content {
+      inline-size: var(--content-inline-size);
+      flex-shrink: 0;
+    }
+  }
+
+  .slider-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: var(--column-gap);
+    animation: slideLeft 30s linear infinite;
+  }
+  .slider-wrapper:nth-child(2) {
+    animation-duration: 20s; /* 두번째 slider-wrapper의 속도를 더 빠르게 */
+  }
+
+  /* 모바일, 태블릿 (~ 1024px) */
+  @media (max-width: 1024px) {
+    --content-inline-size: 181px;
+    --column-gap: 12px;
+    --row-gap: 12px;
+  }
+}
+
+/* main 태그 마지막 컨텐츠  */
+.contents-wrapper.main-last {
+  --column-gap: var(--spacing-36);
+  --padding-block: 290px;
+
+  gap: var(--column-gap);
+  padding-block: var(--padding-block);
+
+  .text-headline {
+    margin: 0;
+  }
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    --column-gap: 14px;
+    --padding-block: 100px;
+  }
+
+  /* 모바일 (768px) */
+  @media (max-width: 768px) {
+    --column-gap: 18px;
+    --padding-block: 52px;
+  }
+}
