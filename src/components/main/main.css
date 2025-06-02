@@ -108,6 +108,7 @@
   --slide-more-color: var(--white);
   --slide-more-padding: 22px 64px;
 
+  display: inline-block;
   font-size: var(--slide-more-font-size);
   color: var(--slide-more-color);
   line-height: var(--line-height-paragraph);
@@ -162,6 +163,14 @@
     font-size: var(--strong-size);
     line-height: var(--line-height-label);
     font-weight: var(--font-weight-600);
+
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: var(--spacing-12);
   }
 
   b {
@@ -186,7 +195,7 @@
         content: '';
         position: absolute;
         display: block;
-        inset: 0 -12px auto auto;
+        inset: 0 0 auto auto;
         inline-size: var(--point-size);
         aspect-ratio: 1;
         border-radius: 50%;
@@ -285,6 +294,7 @@
   --thumbnail-max-wide: 345px;
   --thumbnail-max-long: 240px;
 
+  display: block;
   inline-size: 100%;
 
   &.wide {
