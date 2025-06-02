@@ -70,8 +70,9 @@
               <p class="pw-advice-message">아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한 인증 메일이 발송됩니다. 이메일을 확인하여 12시간 이내에 비밀번호 재설정을 완료해주세요.</p>
 
               <div class="input-group input-margin">
-                  <input class="input-field" type="text" placeholder="아이디" name="id" maxlength="30" aria-label="아이디 입력필드">
-                  <img src="/icon/close-button.svg" class="clear-input-icon" aria-hidden="true">
+                <label for="user-id" class="sr-only">아이디</label>
+                <input id="user-id" class="input-field" type="text" placeholder="아이디" maxlength="30"/>
+                <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon"/>
               </div>
       
               <button class="button-style confirm-button" type="submit">확인</button>   
