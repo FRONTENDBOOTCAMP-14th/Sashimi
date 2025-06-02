@@ -64,7 +64,7 @@
       <main>
         <div class="contents-wrapper">
           <!-- 콘텐츠 시작 -->
-          <form action="/" method="post">
+          <form action="/src/page/login-page/sign-up-page.html" method="post">
             <div class="login-box">
               <h1 class="title-st">TVING ID 로그인</h1>
               <div class="input-group input-mg">
@@ -79,10 +79,13 @@
               </div>
 
               <div class="button-box button-mg">
-                  <button type="button" class="auto-login-btn">
-                      <img class="check-img" src="/icon/gray-check-button.svg" aria-hidden="true">자동로그인
-                  </button>
-              </div>
+                <input type="checkbox" id="auto-login" class="auto-login-checkbox">
+                <label for="auto-login" class="auto-login-btn">
+                    <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg" aria-hidden="true">
+                    <img class="check-img check-img-checked" src="/icon/red-check-button.svg" aria-hidden="true">
+                    자동로그인
+                </label>
+            </div>
       
               <button class="button-style login-button" type="submit">로그인하기</button>
 
@@ -93,7 +96,7 @@
               </div>
 
               <p class="advice-mg">아직 계정이 없으신가요?&nbsp;
-                <a class="find-btn" href="/" title="회원가입 페이지로 이동">&nbsp;회원가입하기</a>
+                <a class="find-btn" href="/src/page/login-page/sign-up-page.html" title="회원가입 페이지로 이동">&nbsp;회원가입하기</a>
               </p>
             </div>
           </form>

@@ -115,10 +115,6 @@
     width: 20px;
     height: 20px;
   }
-
-  .input-group input.input-field[type="password"]:not(:placeholder-shown) ~ .toggle-password-icon {
-    inset-inline-end: 48px;
-  }
 }
 
 .login-button {
@@ -184,4 +180,8 @@
     block-size: 42px;
     font-size: var(--label-small);
   }
+}
+
+.bt-st {
+  display: flex;
 }

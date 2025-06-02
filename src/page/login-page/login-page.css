@@ -65,11 +65,18 @@
     }
 }
 
+.auto-login-checkbox {
+    display: none;
+}
+
 .auto-login-btn {
     color: var(--gray-500);
     font-size: var(--label-large);
     display: flex;
     gap: 12px;
+    cursor: pointer;
+    background: none;
+    border: none;
 
     @media screen and (max-width: 1024px) {
         font-size: 12px;
@@ -85,6 +92,26 @@
         inline-size: 16px; 
         block-size: 16px;
     }
+}
+
+.auto-login-checkbox:checked + .auto-login-btn {
+    color: #E93945;
+}
+
+.check-img-unchecked {
+    display: block;
+}
+
+.check-img-checked {
+    display: none;
+}
+
+.auto-login-checkbox:checked + .auto-login-btn .check-img-unchecked {
+    display: none;
+}
+
+.auto-login-checkbox:checked + .auto-login-btn .check-img-checked {
+    display: block;
 }
 
 .find-box {

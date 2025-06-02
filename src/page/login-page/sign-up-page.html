@@ -94,66 +94,85 @@
               </div>
 
               <div class="button-box button-mg">
-                  <button type="button" class="all-check-btn">
-                      <img class="check-img" src="/icon/gray-check-button.svg" aria-hidden="true">모두 동의합니다.
-                  </button>
+                <input type="checkbox" id="all-check" class="checkbox-hidden all-check-checkbox">
+                <label for="all-check" class="all-check-btn">
+                  <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg"/>
+                  <img class="check-img check-img-checked" src="/icon/red-check-button.svg"/>
+                  모두 동의합니다.
+                </label>
               </div>
 
               <ul class="terms-list">
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    만 14세 이상입니다.
-                  </button>
+                  <input type="checkbox" id="check-1" class="checkbox-hidden check-item-checkbox">
+                  <label for="check-1" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      만 14세 이상입니다.
+                  </label>
                 </li>
 
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
+                  <input type="checkbox" id="check-2" class="checkbox-hidden check-item-checkbox">
+                  <label for="check-2" class="check-list">
+                    <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                    <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
                     [필수] 서비스 이용약관 동의
-                  </button>
+                  </label>
                 </li>
 
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [필수] 개인정보 수집 및 서비스 활용 동의
-                  </button>
+                    <input type="checkbox" id="check-3" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-3" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [필수] 개인정보 수집 및 서비스 활용 동의
+                    </label>
                 </li>
 
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [필수] 채널 홈페이지 개인정보 제 3자 제공동의
-                  </button>
+                    <input type="checkbox" id="check-4" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-4" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [필수] 채널 홈페이지 개인정보 제 3자 제공동의
+                    </label>
                 </li>
 
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [선택] 개인정보 제 3자 제공동의
-                  </button>
+                    <input type="checkbox" id="check-5" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-5" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [선택] 개인정보 제 3자 제공동의
+                    </label>
                 </li>
-                
+
                 <li class="button-box">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [선택] 개인정보 수집 및 서비스 활용 동의
-                  </button>
+                    <input type="checkbox" id="check-6" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-6" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [선택] 개인정보 수집 및 서비스 활용 동의
+                    </label>
                 </li>
 
                 <li class="button-box list-pd">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [선택] 마케팅 정보 SMS 수신동의
-                  </button>
+                    <input type="checkbox" id="check-7" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-7" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [선택] 마케팅 정보 SMS 수신동의
+                    </label>
                 </li>
 
                 <li class="button-box list-pd">
-                  <button type="button" class="check-list">
-                    <img src="/icon/gray-check.svg" class="check-img" aria-hidden="true" />
-                    [선택] 마케팅 정보 이메일 수신동의
-                  </button>
+                    <input type="checkbox" id="check-8" class="checkbox-hidden check-item-checkbox">
+                    <label for="check-8" class="check-list">
+                      <img class="check-img check-img-unchecked" src="/icon/gray-check.svg"/>
+                      <img class="check-img check-img-checked" src="/icon/red-check.svg"/>
+                      [선택] 마케팅 정보 이메일 수신동의
+                    </label>
                 </li>
               </ul>
 
