@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/components/index/common.css" />
+    <title>convention 컴포넌트</title>
+</head>
+<body>
+    <main class="container">
+        <section class="day-section">
+            <h4 class="section-title">🧱 HTML/CSS 네이밍 규칙</h4>
+            <div class="warning-box">
+                <h5 class="section-description" style="margin-block-end: 0px;">🔔 id 보다는 class 사용을 권장. id는 고유성으로 인해 스타일 재사용 및 유지보수에 불리</h5>
+            </div>
+
+            <ul class="section-list">
+                <li class="section-item enhanced-item"><strong>id → camelCase</strong> / 예 : <span class="code-highlight">userCard</span>, <span class="code-highlight">scrollTarget</span></li>
+                <li class="section-item enhanced-item"><strong>class → kebab-case</strong> / 예 : <span class="code-highlight">main-banner</span>, <span class="code-highlight">card-item</span></li>
+                <li class="section-item enhanced-item"><strong>파일명, 폴더명, 이미지명 → kebab-case</strong> / 예 : <span class="code-highlight">user-profile.js</span>, <span class="code-highlight">img-folder/</span></li>
+            </ul>
+        </section>
+
+        <section class="day-section">
+            <h4 class="section-title">🎨 스타일링 원칙</h4>
+            <ul class="section-list">
+                <li class="section-item enhanced-item">
+                    색상, 폰트, 크기 등은 변수로 관리 → CSS 변수 또는 SCSS 변수 사용 / 예 : <span class="code-highlight">root { --main-color: #1e90ff; --font-heading: 'Pretendard', sans-serif; }</span>
+                </li>
+                <li class="section-item enhanced-item">
+                    아이콘/일러스트는 <span class="code-highlight">.svg</span> + <span class="code-highlight">&lt;img&gt;</span> 태그 활용 → 브라우저 최적화 및 동적 스타일링에 유리
+                </li>
+                <li class="section-item enhanced-item">
+                    반응형 이미지 처리 -> <span class="code-highlight">picture</span> 태그 대신 <span class="code-highlight">background-image</span> 속성을 선호 -> CSS/JS에서 제어 및 리팩토링이 쉬움
+                </li>
+            </ul>
+        </section>
+
+        <section class="day-section">
+            <h4 class="section-title">🧩 Git 커밋 메시지 컨벤션</h4>
+            <table class="enhanced-table">
+                <thead>
+                    <tr>
+                        <th>이모지</th>
+                        <th>타입</th>
+                        <th>설명</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>✨</td>
+                        <td>feat</td>
+                        <td>새로운 기능 추가</td>
+                    </tr>
+                    <tr>
+                        <td>🐛</td>
+                        <td>bugFix</td>
+                        <td>버그 수정</td>
+                    </tr>
+                    <tr>
+                        <td>📚</td>
+                        <td>docs</td>
+                        <td>문서 수정</td>
+                    </tr>
+                    <tr>
+                        <td>✏️</td>
+                        <td>modify</td>
+                        <td>기능 변경을 포함한 코드 수정</td>
+                    </tr>
+                    <tr>
+                        <td>♻️</td>
+                        <td>refactor</td>
+                        <td>리팩토링 (동작 변화 없음)</td>
+                    </tr>
+                    <tr>
+                        <td>🎨</td>
+                        <td>design</td>
+                        <td>CSS 등 UI 관련 변경</td>
+                    </tr>
+                    <tr>
+                        <td>💡</td>
+                        <td>comment</td>
+                        <td>주석 추가 및 수정</td>
+                    </tr>
+                    <tr>
+                        <td>💅</td>
+                        <td>style</td>
+                        <td>코드 포맷, 공백, 세미콜론 등 포맷팅</td>
+                    </tr>
+                    <tr>
+                        <td>🧪</td>
+                        <td>test</td>
+                        <td>테스트 코드 관련 작업</td>
+                    </tr>
+                    <tr>
+                        <td>⚙️</td>
+                        <td>chore</td>
+                        <td>빌드, 패키지 설정 등 운영 코드 작업</td>
+                    </tr>
+                    <tr>
+                        <td>🚀</td>
+                        <td>init</td>
+                        <td>초기 프로젝트 세팅</td>
+                    </tr>
+                    <tr>
+                        <td>🚚</td>
+                        <td>rename</td>
+                        <td>파일 또는 폴더명 변경</td>
+                    </tr>
+                    <tr>
+                        <td>🗑️</td>
+                        <td>remove</td>
+                        <td>파일 삭제</td>
+                    </tr>
+                    <tr>
+                        <td>🔀</td>
+                        <td>merge</td>
+                        <td>브랜치 병합 시 사용</td>
+                    </tr>
+                    <tr>
+                        <td>🏗️</td>
+                        <td>build</td>
+                        <td>라이브러리, 패키지 설치</td>
+                    </tr>
+                    <tr>
+                        <td>♿️</td>
+                        <td>accessibility</td>
+                        <td>접근성 관련 코드 작업</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="example-box">
+                <strong>✅ 형식 예시</strong>
+                <br/><br>
+                <ul class="section-list">
+                    <li class="section-item"><span class="code-highlight">✨ feat : 로그인 기능 구현</span></li>
+                    <li class="section-item"><span class="code-highlight">♻️ refactor : 카드 컴포넌트 구조 개선</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="day-section">
+            <h4 class="section-title">🌿 Git 브랜치 전략</h4>
+            <ul class="section-list">
+                <li class="section-item branch-item">
+                    <strong>main</strong> → 실제 배포에 사용되는 최종 브랜치
+                </li>
+                <li class="section-item branch-item">
+                    <strong>develop</strong> → 여러 기능 브랜치를 통합하는 개발 브랜치
+                </li>
+                <li class="section-item branch-item">
+                    <strong>feature/기능명</strong> → 단위 작업 브랜치 / 예시 : <span class="code-highlight">feature/signup-form</span>, <span class="code-highlight">feature/product-list</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="day-section">
+            <h4 class="section-title">📚 추가 가이드라인</h4>
+            <ul class="section-list">
+                <li class="section-item enhanced-item"><strong>접근성</strong> : 시맨틱 태그 + WAI-ARIA 속성 적극 사용</li>
+                <li class="section-item enhanced-item"><strong>주석 작성</strong> : 복잡하거나 비직관적인 로직에는 주석 필수</li>
+                <li class="section-item enhanced-item"><strong>파일 구조</strong> : 기능 단위로 폴더 구조를 설계해 유지보수성 확보</li>
+                <li class="section-item enhanced-item"><strong>코드 리뷰</strong> : 모든 PR은 최소 1명 이상의 리뷰 후 머지</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
