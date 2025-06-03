@@ -1,0 +1,43 @@
+h4,
+h5 {
+  margin: 0px;
+}
+
+.container {
+  inline-size: 100%;
+
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 15px;
+
+  color: white;
+}
+
+.day-section {
+  inline-size: 100%;
+  border-block-end: 2px dashed #444;
+
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 15px;
+
+  padding-block-end: 20px;
+
+  .section-title {
+    font-size: 26px;
+  }
+  .section-description {
+    font-size: 18px;
+    margin-block-end: 20px;
+  }
+
+  .section-list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+
+    .section-item {
+      font-size: 15px;
+    }
+  }
+}
