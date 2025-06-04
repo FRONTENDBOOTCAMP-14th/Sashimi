@@ -1,0 +1,182 @@
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--brand-red-1);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.floating-button:hover {
+  transform: translateY(-5px);
+}
+
+.floating-button img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .floating-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .floating-button img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .floating-button {
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .floating-button img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* making-story-modal 세부 내용 관련 스타일링 */
+.making-story-modal {
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 90%;
+  background: #1a1a1a;
+  margin: auto;
+}
+
+.making-story-modal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.making-story-content {
+  color: #ffffff;
+  padding: 24px;
+}
+
+.making-story-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.making-story-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.making-story-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.making-story-close img {
+  width: 24px;
+  height: 24px;
+}
+
+.making-story-body {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+.making-story-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.making-story-body::-webkit-scrollbar-track {
+  background: #333333;
+  border-radius: 4px;
+}
+
+.making-story-body::-webkit-scrollbar-thumb {
+  background: #666666;
+  border-radius: 4px;
+}
+
+.story-section {
+  margin-bottom: 24px;
+}
+
+.story-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: var(--brand-red-1);
+}
+
+.story-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  color: #cccccc;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .making-story-modal {
+    width: 95%;
+  }
+
+  .making-story-header h2 {
+    font-size: 22px;
+  }
+
+  .story-section h3 {
+    font-size: 18px;
+  }
+
+  .story-section p {
+    font-size: 15px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .making-story-content {
+    padding: 16px;
+  }
+
+  .making-story-header h2 {
+    font-size: 20px;
+  }
+
+  .making-story-close img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .story-section h3 {
+    font-size: 16px;
+  }
+
+  .story-section p {
+    font-size: 14px;
+  }
+}
