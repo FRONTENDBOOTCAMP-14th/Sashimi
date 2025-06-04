@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Sashimi</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- 시행착오 모달 js -->
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="/src/page/search-page/search-page.css" />
+    <script type="module" src="/src/page/main-page/main-page.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 시작 -->
+    <header class="header header-logged-in">
+      <!-- 로고 (공통) -->
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="/">
+            <img src="/icon/tving-white-logo.svg" alt="TAING" />
+          </a>
+        </h1>
+        <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+        <nav class="nav" aria-label="주요 메뉴">
+          <ul class="nav-list">
+            <li>
+              <a href="/">
+                <img src="/icon/live-icon-grey.svg" alt="" />
+                <span>실시간</span>
+              </a>
+            </li>
+            <li>
+              <a href="/"><span>TV프로그램</span></a>
+            </li>
+            <li>
+              <a href="/"><span>영화</span></a>
+            </li>
+            <li>
+              <a href="/">
+                <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 버튼 영역 (우측) -->
+        <div class="header-right">
+          <!-- 검색 버튼 -->
+          <button type="button" class="icon-btn search-btn">
+            <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
+          </button>
+          <!-- 검색 닫기 버튼 -->
+          <button type="button" class="icon-btn close-btn">
+            <img src="/icon/close-grey.svg" alt="검색 닫기" />
+          </button>
+          <!-- 프로필 버튼 -->
+          <button type="button" class="icon-btn profile-btn" onclick="document.querySelector('.logout-modal').showModal()">
+            <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- 헤더 종료 -->
+
+    <dialog class="search-header">
+      <header class="header header-search-active">
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="/">
+                  <img src="/icon/live-icon-grey.svg" alt="" />
+                  <span>실시간</span>
+                </a>
+              </li>
+              <li>
+                <a href="/"><span>TV프로그램</span></a>
+              </li>
+              <li>
+                <a href="/"><span>영화</span></a>
+              </li>
+              <li>
+                <a href="/">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button type="button" class="icon-btn search-btn">
+              <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button type="button" class="icon-btn close-btn" onclick="">
+              <img src="/icon/close-grey.svg" alt="검색 닫기" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button type="button" class="icon-btn profile-btn">
+              <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="search-area">
+        <div class="search-wrap">
+          <!-- 예시 콘텐츠 시작 -->
+          <!-- 검색 영역 인풋 -->
+          <div class="search-input">
+            <label for="searchVod" class="sr-only">검색어</label>
+            <input id="searchVod" type="text" placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요" />
+            <button class="search-submit-btn" type="submit" aria-label="검색">
+              <img src="/icon/icon-search.svg" alt="" aria-hidden="true" />
+            </button>
+          </div>
+
+          <!-- mine -->
+          <section class="search-history-section">
+            <!-- 최근 검색어 -->
+            <div class="search-history-box">
+              <div class="search-history-title-box">
+                <h2>최근 검색어</h2>
+                <!-- 최근 검색어 전부 삭제 버튼 -->
+                <button class="search-all-reset-btn" type="button">
+                  <span>모두 지우기</span>
+                  <img src="/icon/close-button.svg" alt="" />
+                </button>
+              </div>
+
+              <div>
+                <p class="hidden-history">검색 내역이 없습니다.</p>
+              </div>
+
+              <!-- 최근 검색어 버튼 -->
+              <div class="search-history-lists">
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">재벌집</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">브레이킹배드</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">세상에이런일이</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 실시간 인기 검색어 -->
+            <div class="search-trending-box">
+              <h2>실시간 인기 검색어</h2>
+              <!-- 인기 검색어 버튼 -->
+              <div class="search-trending-lists">
+                <button class="search-popular-btn" type="button">
+                  <strong>1</strong>
+                  <span>재벌집 막내아들</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>2</strong>
+                  <span>미스터트롯2: 새로운 전설의 시작</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>3</strong>
+                  <span>유 퀴즈 온 더 블럭</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>4</strong>
+                  <span>대행사</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>5</strong>
+                  <span>SHOW ME THE MONEY 11</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>6</strong>
+                  <span>미씽: 그들이 있었다2</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>7</strong>
+                  <span>술꾼도시여자들2</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>8</strong>
+                  <span>캐나다 체크인</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>9</strong>
+                  <span>미씽: 그들이 있었다 - 그들을 '다만나다</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>10</strong>
+                  <span>술꾼도시여자들</span>
+                </button>
+                <p class="timestamp">
+                  <time datetime="2022-12-24T03:04">2022.12.24 오전 03:04 기준</time>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- 예시 콘텐츠 종료 -->
+      </div>
+    </dialog>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>중간 점검 피드백을 통해 최근 검색어를 모두 지우는 button 요소에 중복된 접근성 처리가 있다는 것을 파악했다. button 요소 안에 ‘모두 지우기’ 라는 텍스트가 있지만 aria-label을 통해 좀 더 상세하게 적은 부분이 문제였다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>aria-label을 제거함으로써 button 요소 안에 있는 네이티브한 텍스트만 읽히도록 처리해 문제를 해결했다. 이를 통해 aria-label 같은 접근성 속성들은 네이티브한(img의 alt 속성 / button안의 텍스트 등등) 처리 수단이 없을 경우 사용하는 ‘대체 수단’ 임을 명확히 알아간다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      document.querySelector('.search-header').showModal();
+    </script>
+  </body>
+</html>

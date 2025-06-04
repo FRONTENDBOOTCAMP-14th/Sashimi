@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/components/modal/modal.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
+    <style>
+      .logout-modal,
+      .main-page-modal {
+        position: static;
+        inline-size: fit-content;
+        block-size: fit-content;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        background-color: transparent;
+
+        .logout-modal-wrap,
+        .main-page-modal-wrap {
+          position: static;
+          translate: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="components-wrapper">
@@ -18,33 +36,66 @@
         <li class="components-item">
           <h2 class="components-title">logout-modal 컴포넌트</h2>
           <div class="components-box">
-            <div class="logout-modal">
-              <div class="top-box">
-                <p class="logout-text">로그아웃 하시겠습니까?</p>
+            <dialog class="logout-modal" open>
+              <div class="logout-modal-wrap">
+                <div class="top-box">
+                  <p class="logout-text">로그아웃 하시겠습니까?</p>
+                </div>
+                <div class="bottom-box">
+                  <button type="button" class="button-st confirm-button">확인</button>
+                  <p class="divider" aria-hidden="true">|</p>
+                  <button type="button" class="button-st">취소</button>
+                </div>
               </div>
-              <div class="bottom-box">
-                <button type="button" class="button-st confirm-button">확인</button>
-                <p class="divider" aria-hidden="true">|</p>
-                <button type="button" class="button-st">취소</button>
-              </div>
-            </div>
+            </dialog>
           </div>
         </li>
 
         <li class="components-item">
           <h2 class="components-title">main-page-modal 컴포넌트</h2>
           <div class="components-box">
-            <div class="main-page-modal">
-              <div class="modal-image" style="background-image: url('/images/modal-image.png')" aria-hidden="true"></div>
-              <div class="close-box">
-                <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
-                <p aria-hidden="true">|</p>
-                <button type="button" class="btn close-button">닫기</button>
+            <dialog class="main-page-modal" open>
+              <div class="main-page-modal-wrap">
+                <div class="modal-image" style="background-image: url('/images/modal-image.avif')" aria-hidden="true"></div>
+                <div class="close-box">
+                  <button type="button" class="btn today-close-button">오늘 하루 보지 않기</button>
+                  <p aria-hidden="true">|</p>
+                  <button type="button" class="btn close-button">닫기</button>
+                </div>
               </div>
-            </div>
+            </dialog>
           </div>
         </li>
       </ul>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>모달창의 마크업을 그냥 &lt;div&gt; 로 구현하여 접근성 측면에서 취약하다는 피드백</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>&lt;div&gt; 를 &lt;dialog&gt; 태그로 변경하여 좀 더 모달(팝업)창 이란 이름에 어울리는 시멘틱한 구조로 변경하여 다른 페이지에서도 좀 더 쉽게 활용 될 수 있도록 변경.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

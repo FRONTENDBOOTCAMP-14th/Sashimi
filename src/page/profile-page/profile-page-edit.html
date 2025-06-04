@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Sashimi</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- 시행착오 모달 js -->
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="/src/page/profile-page/profile-page-edit.css" />
+    <script type="module" src="/src/page/profile-page/profile-page.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 1. 비로그인 상태일 때 -->
+      <header class="header header-logged-out">
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="/">
+                  <img src="/icon/live-icon-grey.svg" alt="" />
+                  <span>실시간</span>
+                </a>
+              </li>
+              <li>
+                <a href="/"><span>TV프로그램</span></a>
+              </li>
+              <li>
+                <a href="/"><span>영화</span></a>
+              </li>
+              <li>
+                <a href="/">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button type="button" class="icon-btn search-btn">
+              <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button type="button" class="icon-btn close-btn">
+              <img src="/icon/close-grey.svg" alt="검색 닫기" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button type="button" class="icon-btn profile-btn">
+              <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="contents-wrapper">
+          <!-- 콘텐츠 시작 -->
+
+          <section class="profiles-wrapper">
+            <div class="profiles-text-box">
+              <h2 class="text-headline">프로필 편집</h2>
+              <p class="text-description">편집할 프로필을 선택해주세요.</p>
+            </div>
+
+            <ul class="profile-thumbnail-wrapper">
+              <li class="profile-thumbnail">
+                <div class="profile-resource edit" style="background-image: url('/images/profiles-profile-1.avif')"></div>
+                <p class="nickname">슬비님</p>
+              </li>
+              <li class="profile-thumbnail">
+                <div class="profile-resource edit" style="background-image: url('/images/profiles-profile-2.avif')"></div>
+                <p class="nickname">야무</p>
+              </li>
+              <li class="profile-thumbnail">
+                <div class="profile-resource edit" style="background-image: url('/images/profiles-profile-3.avif')"></div>
+                <p class="nickname">범쌤</p>
+              </li>
+              <li class="profile-thumbnail">
+                <div class="profile-resource edit" style="background-image: url('/images/profiles-profile-4.avif')"></div>
+                <p class="nickname">이듬</p>
+              </li>
+            </ul>
+
+            <div class="profile-button-box">
+              <!-- 편집 완료 버튼 -->
+              <button class="profile-button complete" type="button">완료</button>
+            </div>
+          </section>
+          <!-- 콘텐츠 종료 -->
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <!-- 고객센터 ~ 인재채용 -->
+          <div class="footer-top">
+            <nav aria-label="푸터 링크">
+              <ul class="footer-links">
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년 보호정책</a></li>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">인재채용</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- 연락처 정보 -->
+          <div class="footer-info">
+            <address>
+              <p>
+                <span>대표이사 : YANG JIEUL</span><span><a href="#">사업자정보확인</a></span
+                ><span>사업자등록번호 : 188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              </p>
+
+              <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+
+              <p>
+                <a href="#"><span>고객문의 바로가기</span><span>대표메일 : tving@cj.net</span><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span></a>
+              </p>
+
+              <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(반송편성문의) : 1855-1631</span></p>
+            </address>
+          </div>
+
+          <!-- 소셜 미디어 -->
+          <div class="footer-social">
+            <ul class="social-icons" aria-label="SNS 링크">
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="유튜브" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="인스타그램" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="트위터" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="페이스북" /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="footer-bottom">
+            <small>Copyright &copy; 주식회사 티빙 All right reserved.</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>HTML과 CSS만으로 구현해야 했기 때문에 버튼을 눌렀을 때, 어떤 요소의 상태 변화 처리가 어려웠다. 원래 어떠한 기능을 가지고 있을까를 고려해서 프로필 편집/완료 버튼에 &lt;button&gt; 태그를 사용했었다. 페이지 이동처럼 보이도록 &lt;form action="/index.html"&gt;으로 감싸고 &lt;button type="submit"&gt;을 사용해 임시로 구현했었다. 그러나, ‘프로필 편집’ 버튼은 실제로 단순한 페이지 이동만을 위한 요소였기 때문에 submit 타입을 사용하는 것이 적절하지 않았다는 점을 인지하게 되었다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>페이지 이동이 주목적이라면 &lt;a&gt;태그가 더 적절하다고도 판단했지만, 두 버튼을 동일한 컴포넌트로 관리해야 하므로 한쪽만 &lt;a&gt;로 바꾸면 컴포넌트 재사용성이 떨어진다고 생각했다. 결국 두 버튼 모두 &lt;button type="button"&gt;으로 통일하고, JavaScript로 페이지 이동 동작을 제어하는 방식으로 개선했다. 이로써 시맨틱 마크업을 유지하면서도 컴포넌트의 일관성과 재사용성을 확보할 수 있었다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

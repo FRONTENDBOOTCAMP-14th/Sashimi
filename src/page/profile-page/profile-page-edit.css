@@ -1,0 +1,77 @@
+@import url('/src/components/profile/profile.css');
+
+.contents-wrapper {
+  --contents-wrapper-width: 1100px;
+
+  color: #fff;
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    --contents-wrapper-width: 624px;
+  }
+
+  /* 모바일 (≤768px) */
+  @media (max-width: 768px) {
+    --contents-wrapper-width: 252px;
+  }
+}
+
+/* mine */
+.profiles-wrapper {
+  --profiles-wrapper-spacing: 130px;
+
+  padding-block: var(--profiles-wrapper-spacing);
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    --profiles-wrapper-spacing: 74px;
+
+    padding-block: var(--profiles-wrapper-spacing) 0;
+  }
+
+  /* 모바일 (≤768px) */
+  @media (max-width: 768px) {
+    --profiles-wrapper-spacing: 44px;
+
+    padding-block: var(--profiles-wrapper-spacing) 0;
+  }
+}
+
+/* mine */
+.profile-thumbnail-wrapper {
+  --profile-thumbnail-wrapper-spacing-top: 44px;
+  --profile-thumnail-wrapper-spacing-bottom: 66px;
+  --profile-thumbnail-wrapper-gap: 52px;
+
+  display: flex;
+  margin: var(--profile-thumbnail-wrapper-spacing-top) 0 var(--profile-thumnail-wrapper-spacing-bottom) 0;
+  gap: var(--profile-thumbnail-wrapper-gap);
+
+  /* 태블릿 (769px ~ 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    --profile-thumbnail-wrapper-spacing: 28px;
+    --profile-thumnail-wrapper-spacing-bottom: 44px;
+    --profile-thumbnail-wrapper-gap: 32px;
+
+    margin: var(--profile-thumbnail-wrapper-spacing) 0 var(--profile-thumnail-wrapper-spacing-bottom) 0;
+    gap: var(--profile-thumbnail-wrapper-gap);
+  }
+
+  /* 모바일 (≤768px) */
+  @media (max-width: 768px) {
+    --profile-thumbnail-wrapper-spacing: 32px;
+    --profile-thumbnail-wrapper-gap: 24px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--profile-thumbnail-wrapper-gap);
+    margin-block: var(--profile-thumbnail-wrapper-spacing);
+  }
+}
+
+/* mine */
+/* 버튼 중앙 정렬을 위한. */
+.profile-button-box {
+  display: flex;
+  justify-content: center;
+}

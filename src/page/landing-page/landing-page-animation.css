@@ -1,0 +1,62 @@
+/* discover-content 슬라이드 애니메이션 */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* original-content 슬라이드 애니메이션 */
+@keyframes slider-desktop {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+
+  25%,
+  45% {
+    transform: translateX(calc(-1 * (907px + 22px)));
+  }
+
+  50%,
+  70% {
+    transform: translateX(calc(-2 * (907px + 22px)));
+  }
+
+  75%,
+  95% {
+    transform: translateX(calc(-3 * (907px + 22px)));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slider-mobile {
+  0%,
+  20% {
+    transform: translateX(0);
+  }
+
+  25%,
+  45% {
+    transform: translateX(calc(-1 * (277px + 12px)));
+  }
+
+  50%,
+  70% {
+    transform: translateX(calc(-2 * (277px + 12px)));
+  }
+
+  75%,
+  95% {
+    transform: translateX(calc(-3 * (277px + 12px)));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

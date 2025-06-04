@@ -1,233 +1,243 @@
-body {
-  background: #333;
-}
-
 /* ------ 공통 헤더 스타일 ------ */
 .header {
+  --header-padding-inline: var(--spacing-70);
+  --header-block-size: 100px;
+
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
-  block-size: 100px;
-  padding: 0 var(--spacing-70);
+  block-size: var(--header-block-size);
+  padding: 0 var(--header-padding-inline);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   flex-shrink: 0;
   width: 100%;
 
-  .header-inner {
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --header-padding-inline: var(--spacing-40);
+    --header-block-size: 56px;
+  }
+
+  /* 모바일 */
+  @media (width <= 768px) {
+    --header-padding-inline: var(--spacing-16);
+    --header-block-size: 38px;
+  }
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+
+  .logo {
+    --logo-width: 132px;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* 스크롤바 생겨서 만든 */
-    flex-flow: row wrap;
+    inline-size: var(--logo-width);
 
-    .logo {
-      display: flex;
-      align-items: center;
-      inline-size: 132px;
-      block-size: 42px;
+    /* 테블릿 */
+    @media (width <= 1024px) {
+      --logo-width: 77px;
+    }
+
+    /* 모바일 */
+    @media (width <= 768px) {
+      --logo-width: 46px;
+    }
+  }
+}
+
+/* ------ 메뉴 네비게이션 ------ */
+.nav {
+  --nav-margin-left: var(--spacing-52);
+
+  flex-grow: 1;
+  margin-inline-start: var(--nav-margin-left);
+
+  /* 네비게이션 바 화면 축소했을 때 비율을 맞추기 위한 미디어 쿼리 구문 */
+  @media (width <= 1140px) {
+    --nav-margin-left: 40px;
+  }
+
+  /* 네비게이션 바 화면 축소했을 때 비율을 맞추기 위한 미디어 쿼리 구문 */
+  @media (width <= 1065px) {
+    --nav-margin-left: 20px;
+  }
+
+  /* 모바일 */
+  @media (width <= 768px) {
+    display: none;
+  }
+}
+
+.nav-list {
+  --nav-list-gap: var(--spacing-52);
+  --nav-list-font-size: var(--heading-large);
+
+  gap: var(--nav-list-gap);
+  font-size: var(--nav-list-font-size);
+  line-height: var(--line-height-paragraph);
+  white-space: nowrap;
+  overflow-x: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+  /* 네비게이션 바 화면 축소했을 때 비율을 맞추기 위한 미디어 쿼리 구문 */
+  @media (width <= 1140px) {
+    --nav-list-gap: 28px;
+  }
+
+  /* 네비게이션 바 화면 축소했을 때 비율을 맞추기 위한 미디어 쿼리 구문 */
+  @media (width <= 1065px) {
+    --nav-list-gap: 13px;
+  }
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --nav-list-gap: 28px;
+    --nav-list-font-size: var(--paragraph-small);
+  }
+
+  li {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-list a {
+  --nav-list-anchor-gap: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: var(--nav-list-anchor-gap);
+  text-decoration: none;
+  color: #c4c4c4;
+
+  /* 네비게이션 바 화면 축소했을 때 비율을 맞추기 위한 미디어 쿼리 구문 */
+  @media (width <= 1065px) {
+    --nav-list-anchor-gap: 6px;
+  }
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --nav-list-anchor-gap: 4px;
+  }
+}
+
+.nav-list span {
+  --nav-list-paragraph-margin-top: 8px;
+
+  margin-block-start: var(--nav-list-paragraph-margin-top);
+
+  @media (width <= 1024px) {
+    --nav-list-paragraph-margin-top: 6px;
+  }
+}
+
+.nav-list img {
+  @media (width <= 1024px) {
+    inline-size: 20px;
+    aspect-ratio: 1;
+  }
+}
+
+.nav-list .paramounts {
+  --nav-list-paramounts-img-width: 111px;
+  --nav-list-paramounts-img-height: 26px;
+  --nav-list-paramounts-top: 4px;
+
+  inline-size: var(--nav-list-paramounts-img-width);
+  block-size: var(--nav-list-paramounts-img-height);
+  margin-top: var(--nav-list-paramounts-top);
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --nav-list-paramounts-img-width: 65px;
+  }
+}
+
+/* ------ 우측 버튼 영역 ------ */
+.header-right {
+  --header-right-gap: var(--spacing-40);
+
+  display: flex;
+  align-items: center;
+  gap: var(--header-right-gap);
+
+  /* 테블릿 */
+  @media (width <= 1024px) {
+    --header-right-gap: 24px;
+  }
+
+  /* 모바일 */
+  @media (width <= 768px) {
+    --header-right-gap: var(--spacing-16);
+  }
+
+  .icon-btn {
+    --header-right-icon-width: var(--spacing-40);
+    --header-right-icon-height: var(--spacing-40);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    inline-size: var(--header-right-icon-width);
+    block-size: var(--header-right-icon-height);
+
+    /* 테블릿 */
+    @media (width <= 1024px) {
+      --header-right-icon-width: 24px;
+      aspect-ratio: 1;
+    }
+
+    /* 모바일 */
+    @media (width <= 768px) {
+      --header-right-icon-width: 18px;
+      aspect-ratio: 1;
     }
   }
 
-  /* ------ 메뉴 네비게이션 ------ */
-  .nav {
-    flex-grow: 1;
-    margin-inline-start: var(--spacing-52);
-
-    .nav-list {
-      gap: var(--spacing-52);
-      font: var(--font-weight-400) var(--heading-large) var(--line-height-paragraph);
-      white-space: nowrap;
-      overflow-x: auto;
-      text-align: center;
-      display: flex;
-      align-items: center;
-
-      li {
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-
-        a {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          text-decoration: none;
-          color: #c4c4c4;
-
-          p {
-            margin-block-start: 8px;
-          }
-
-          .paramounts {
-            inline-size: 111px;
-            block-size: 26px;
-            object-fit: contain;
-            margin-top: 4px;
-          }
-        }
-      }
+  img {
+    /* 테블릿 */
+    @media (width <= 1024px) {
+      --header-right-icon-width: 24px;
+      aspect-ratio: 1;
     }
   }
+}
 
-  /* ------ 우측 버튼 영역 ------ */
+/* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
+.header-logged-out {
+  .nav,
   .header-right {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-40);
-
-    .icon-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      inline-size: var(--spacing-40);
-      block-size: var(--spacing-40);
-    }
+    display: none;
   }
+}
 
-  /* 로그인 안 된 상태에서는 닫기 버튼 숨김 */
-  &.header-logged-out {
-    .nav,
-    .header-right {
+/* 로그인한 상태, 검색 버튼 비활성화 */
+.header-logged-in {
+  .header-right {
+    .close-btn,
+    btn-mobile .search- {
       display: none;
     }
   }
-
-  /* 로그인한 상태, 검색 버튼 비활성화 */
-  &.header-logged-in {
-    .header-right {
-      .close-btn,
-      .search-btn-mobile {
-        display: none;
-      }
-    }
-  }
-
-  /* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
-  &.header-search-active {
-    .header-right {
-      .search-btn,
-      .close-btn .close-btn-mobile {
-        display: none;
-      }
-    }
-  }
 }
 
-/* 반응형 */
-@media (max-width: 320px) {
-  body {
-    min-inline-size: 320px;
-  }
-}
-
-@media (max-width: 767px) {
-  .header {
-    padding-inline: var(--spacing-16);
-    block-size: 38px;
-
-    .header-inner {
-      flex-direction: row;
-
-      .logo {
-        inline-size: 46px;
-      }
-
-      .nav {
-        display: none;
-      }
-
-      .header-right {
-        gap: var(--spacing-16);
-
-        .icon-btn {
-          inline-size: 18px;
-
-          .search-btn-desktop,
-          .close-btn-desktop {
-            display: none;
-          }
-
-          .search-btn-mobile,
-          .close-btn-mobile {
-            display: inline-block;
-          }
-        }
-      }
-    }
-  }
-
-  .header.header-search-active {
-    .header-right {
-      .icon-btn {
-        .search-btn-mobile {
-          display: none !important;
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .header {
-    padding-inline: var(--spacing-40);
-    block-size: 56px;
-    flex-shrink: 0;
-  }
-
-  .header-inner {
-    .logo {
-      inline-size: 77px;
-      block-size: 24px;
-      flex-shrink: 0;
-    }
-
-    .nav {
-      .nav-list {
-        gap: 28px;
-        font-size: var(--paragraph-small);
-        block-size: 20px;
-        display: flex;
-        align-items: center;
-
-        li {
-          display: flex;
-          align-items: center;
-
-          a {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-
-            p {
-              margin-block-start: 6px;
-            }
-
-            img {
-              inline-size: 20px;
-              block-size: 20px;
-            }
-
-            .paramounts {
-              inline-size: 65px;
-              object-fit: contain;
-            }
-          }
-        }
-      }
-    }
-
-    .header-right {
-      gap: 24px;
-
-      .icon-btn,
-      img {
-        inline-size: 24px;
-        block-size: 24px;
-      }
+/* 로그인한 상태 및 검색 버튼 활성화 되었을 때 */
+.header-search-active {
+  .header-right {
+    .search-btn {
+      display: none;
     }
   }
 }

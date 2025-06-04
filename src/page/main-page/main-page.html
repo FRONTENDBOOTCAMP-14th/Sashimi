@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Team Sashimi</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="/src/page/main-page/main-page.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="/src/page/main-page/main-page.js"></script>
+    <!-- 시행착오 모달 js -->
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 헤더 시작 -->
+      <header class="header header-logged-in">
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="/">
+                  <img src="/icon/live-icon-grey.svg" alt="" />
+                  <span>실시간</span>
+                </a>
+              </li>
+              <li>
+                <a href="/"><span>TV프로그램</span></a>
+              </li>
+              <li>
+                <a href="/"><span>영화</span></a>
+              </li>
+              <li>
+                <a href="/">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button type="button" class="icon-btn search-btn">
+              <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button type="button" class="icon-btn close-btn">
+              <img src="/icon/close-grey.svg" alt="검색 닫기" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button type="button" class="icon-btn profile-btn" onclick="document.querySelector('.logout-modal').showModal()">
+              <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- 헤더 종료 -->
+      <!-- 컨텐츠 시작 -->
+      <main>
+        <div class="contents-wrapper full">
+          <!-- 슬라이드 시작 -->
+          <div class="slide-arae">
+            <div class="slide-list">
+              <div class="slide-item slide-img" style="background-image: url('/images/slide-banner01.avif')">
+                <span class="sr-only">드라마 "재벌집 막내아들"의 커버 이미지</span>
+                <span class="slide-comment">인생 2회차를 사는 판타지 드라마</span>
+              </div>
+            </div>
+            <a class="slide-more" href="#" target="_self">자세히보기</a>
+            <button class="slide-next" type="button">
+              <img src="/icon/slide-right.svg" alt="이전 슬라이드" />
+            </button>
+            <button class="slide-prev" type="button">
+              <img src="/icon/slide-left.svg" alt="다음 슬라이드" />
+            </button>
+            <div class="slide-nav">
+              <button class="slide-pause" type="button">
+                <img src="/icon/slide-pause.svg" alt="슬라이드 일시정지" />
+              </button>
+              <ul class="slide-dots-list">
+                <li class="slide-dots-item">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 1번"></button>
+                </li>
+                <li class="slide-dots-item active">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 2번" aria-current="true"></button>
+                </li>
+                <li class="slide-dots-item">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 3번"></button>
+                </li>
+                <li class="slide-dots-item">
+                  <button class="slide-dots" type="button" aria-label="슬라이드 4번"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 슬라이드 종료 -->
+        </div>
+        <div class="contents-wrapper">
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">티빙에서 꼭 봐야하는 콘텐츠</h2>
+            <ul class="main-cont-list important">
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail view" style="--view-per: 70%; background-image: url('/images/thumbnail-long01.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom">
+                      <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                    </div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>보물찾기</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail view" style="--view-per: 20%; background-image: url('/images/thumbnail-long02.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom">
+                      <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                    </div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>러브캐처 인 발리</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail view" style="--view-per: 40%; background-image: url('/images/thumbnail-long03.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom">
+                      <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                    </div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>술꾼도시여자들2</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long04.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>털사킹</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long05.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>아무것도 하고 싶지 않아</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long06.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>블랙독</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long07.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>우리들의 블루스</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long08.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>킬리만자로</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long06.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>블랙독</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long07.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>우리들의 블루스</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long08.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>킬리만자로</strong>
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">Quick VOD</h2>
+            <ul class="main-cont-list quick">
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail view" style="--view-per: 40%; background-image: url('/images/thumbnail-wide01.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>JTBC 뉴스룸</strong>
+                    <b>0화</b>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-wide02.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>휴먼다큐 &lt;나는 살기로 했다&gt;</strong>
+                    <b>10화</b>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-wide03.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>건강면세점</strong>
+                    <b>130화</b>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-wide04.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>차이나는 클라스</strong>
+                    <b>254화</b>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-wide05.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>알맹이</strong>
+                    <b>208화</b>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-wide06.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-vod-quick" src="/icon/icon-quick-vod.svg" alt="Quick V.O.D" />
+                    </div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label">
+                    <strong>엄마의 봄날</strong>
+                    <b>380화</b>
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">실시간 인기 프로그램</h2>
+            <ul class="main-cont-list popular">
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long09.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number point">
+                    <em><span class="sr-only">순위</span>1</em>
+                    <strong>재벌집 막내아들</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long03.avif')">
+                    <div class="thumbnail-info-top">
+                      <img class="icon-19plus ml-auto" src="/icon/icon-19plus.svg" alt="국내 기준 19세 이상 관람가능" />
+                    </div>
+                    <div class="thumbnail-info-bottom">
+                      <img class="icon-original" src="/icon/icon-original.svg" alt="티빙 오리지널 콘텐츠" />
+                    </div>
+                  </div>
+                  <h3 class="thumnail-label number">
+                    <em><span class="sr-only">순위</span>2</em>
+                    <strong>술꾼도시여자들2</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long11.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number point">
+                    <em><span class="sr-only">순위</span>3</em>
+                    <strong>환혼: 빛과 그림자</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long12.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number point">
+                    <em><span class="sr-only">순위</span>4</em>
+                    <strong>캐나다 체크인</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long13.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number point">
+                    <em><span class="sr-only">순위</span>5</em>
+                    <strong>놀라운 토요일</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long10.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number point">
+                    <em><span class="sr-only">순위</span>6</em>
+                    <strong>SHOW ME THE MONEY 11</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long02.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number">
+                    <em><span class="sr-only">순위</span>7</em>
+                    <strong>러브캐쳐 인 발리</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long14.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number">
+                    <em><span class="sr-only">순위</span>8</em>
+                    <strong>알쓸인잡</strong>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-long06.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number">
+                    <em><span class="sr-only">순위</span>9</em>
+                    <strong>블랙독</strong>
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">인기 LIVE 채널</h2>
+            <ul class="main-cont-list live">
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live06.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>1</em>
+                    <strong>JTBC</strong>
+                    <b>JTBC 뉴스룸</b>
+                    <span>27.9%</span>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live01.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>2</em>
+                    <strong>tvN</strong>
+                    <b>줄 서는 식당 43회</b>
+                    <span>26.3%</span>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live02.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>3</em>
+                    <strong>YTN</strong>
+                    <b>뉴스가 있는 저녁</b>
+                    <span>9%</span>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live03.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>4</em>
+                    <strong>JTBC2</strong>
+                    <b>재벌집 막내아들 5화</b>
+                    <span>6.2%</span>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live04.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>5</em>
+                    <strong>연합뉴스 TV</strong>
+                    <b>뉴스프라임</b>
+                    <span>4.6%</span>
+                  </h3>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-live05.avif')">
+                    <div class="thumbnail-info-top"></div>
+                    <div class="thumbnail-info-bottom"></div>
+                  </div>
+                  <h3 class="thumnail-label number center">
+                    <em><span class="sr-only">순위</span>6</em>
+                    <strong>애니맥스</strong>
+                    <b>명탐정코난9(자막) 33화</b>
+                    <span>4.3%</span>
+                  </h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">오직 티빙에만 있어요</h2>
+            <ul class="main-cont-list only">
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original01.avif')">
+                    <span class="sr-only">전체관람가:숏버스터</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original02.avif')">
+                    <span class="sr-only">러브캐처 인 발리</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original03.avif')">
+                    <span class="sr-only">환승연애2</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original04.avif')">
+                    <span class="sr-only">몸값</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original05.avif')">
+                    <span class="sr-only">술꾼도시여자들</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original06.avif')">
+                    <span class="sr-only">괴이</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item long" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-original07.avif')">
+                    <span class="sr-only">푸드 크로니클</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="main-cont-wrap eventbanner" style="background-image: url('/images/thumbnail-wide-event01.avif')"></a>
+          <div class="main-cont-wrap">
+            <h2 class="main-cont-title">이벤트</h2>
+            <ul class="main-cont-list event">
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event01.avif')">
+                    <span class="sr-only">극장판 신비아파트 극장 개봉 기념! 예매권 증정 이벤트</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event02.avif')">
+                    <span class="sr-only">&lt;재벌집 막내아들&gt; 시청하고 1일 재벌 체험하세요!</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event03.avif')">
+                    <span class="sr-only">&lt;환승연애시즌2&gt;의 진한 여운을 잇는 과몰입 도파민 충전 이벤트</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event04.avif')">
+                    <span class="sr-only">슈룹을 지금 시청하고 공식 우산 굿즈 받아가세요.</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event05.avif')">
+                    <span class="sr-only">대한민국 대표 디저트 메이커를 찾습니다.</span>
+                  </div>
+                </a>
+              </li>
+              <li class="main-cont-item">
+                <a class="thumbnail-item wide" href="#">
+                  <div class="thumbnail" style="background-image: url('/images/thumbnail-event06.avif')">
+                    <span class="sr-only">소설 원작 &lt;렛미인&gt;을 지금 감상하고, 원작 도서 세트 받자!</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <!-- 컨텐츠 종료 -->
+      <!-- 푸터 시작 -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <!-- 고객센터 ~ 인재채용 -->
+          <div class="footer-top">
+            <nav aria-label="푸터 링크">
+              <ul class="footer-links">
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">청소년 보호정책</a></li>
+                <li><a href="#">법적고지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">인재채용</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- 연락처 정보 -->
+          <div class="footer-info">
+            <address>
+              <p>
+                <span>대표이사 : YANG JIEUL</span><span><a href="#">사업자정보확인</a></span
+                ><span>사업자등록번호 : 188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+              </p>
+
+              <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+
+              <p>
+                <a href="#"><span>고객문의 바로가기</span><span>대표메일 : tving@cj.net</span><span>고객센터 : 1670-1525 (평일/주말 09시~18시, 공휴일 휴무)</span></a>
+              </p>
+
+              <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(반송편성문의) : 1855-1631</span></p>
+            </address>
+          </div>
+
+          <!-- 소셜 미디어 -->
+          <div class="footer-social">
+            <ul class="social-icons" aria-label="SNS 링크">
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="유튜브" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="인스타그램" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="트위터" /></a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="페이스북" /></a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 저작권 -->
+          <div class="footer-bottom">
+            <small>Copyright &copy; 주식회사 티빙 All right reserved.</small>
+          </div>
+        </div>
+      </footer>
+      <!-- 푸터 종료 -->
+    </div>
+
+    <!-- 랜딩 모달 시작 -->
+    <dialog class="main-page-modal">
+      <div class="main-page-modal-wrap">
+        <div class="modal-image" style="background-image: url('/images/modal-image.avif')" aria-hidden="true"></div>
+        <div class="close-box">
+          <button type="button" class="btn today-close-button" onclick="alert('구현 전 입니다.')">오늘 하루 보지 않기</button>
+          <p aria-hidden="true">|</p>
+          <button type="button" class="btn close-button" onclick="document.querySelector('.main-page-modal').close();" autofocus>닫기</button>
+        </div>
+      </div>
+    </dialog>
+    <!-- 랜딩 모달 종료 -->
+
+    <!-- 로그아웃 모달 시작 -->
+    <dialog class="logout-modal">
+      <div class="logout-modal-wrap">
+        <div class="top-box">
+          <p class="logout-text">로그아웃 하시겠습니까?</p>
+        </div>
+        <div class="bottom-box">
+          <button type="button" class="button-st confirm-button" onclick="location.href='/index.html'" autofocus>확인</button>
+          <p class="divider" aria-hidden="true">|</p>
+          <button type="button" class="button-st" onclick="document.querySelector('.logout-modal').close()">취소</button>
+        </div>
+      </div>
+    </dialog>
+    <!-- 로그아웃 모달 종료 -->
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>
+                VOD 목록들의 타이틀 텍스트 옆에 붙는 빨간색의 작은 점을 타이틀 텍스트 영역의 가상 요소로 생성하여 처리하였고 포지션 값을 주어 위치를 배정하는 간단한 작업이였다. 따로 width 값을 주지 않았기에 텍스트의 길이만큼 늘어난 후에 뒤에 빨간점이 표시되는 방식이였는데 문제는 타이틀 텍스트가 늘어 났을때 발생했다. 줄넘김을 막기위해 생략기호 처리를 해야 하는데 css로 처리하기 위해서 들어가는 많은 속성 중에 width 값과 overflow: hidden이 들어가야했다. 이것으로 인해 배치되던 타이틀 텍스트 영역 밖의
+                빨간 포인트 점이 가려지고 width 값을 100% 로 설정하면 텍스트 길이에 상관 없이 항상 맨 끝에 배치된다.
+              </p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>우선 타이틀 텍스트 영역의 padding-inline-end 값으로 오른쪽 공간에 여백을 주어 빨간색 포인트 점이 텍스트와 겹쳐지 않으면서 보일 수 있게 처리하였고, 타이틀 텍스트의 width 값은 fit-content 값을 줘서 유연하게 처리했고 생략 기호 처리를 위해 max-width: 100%를 주는 방식으로 타이틀 텍스트가 길던 짧던 빨간색 포인트 점이 원하는 곳에 배치되도록 유연하게 처리했다.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>&lt;dialog&gt; 요소로 처리한 모달창이 메인페이지 진입시 접근성을 위해 포커스를 dialog 영역 안에 가두는 가상 요소인 ::backdrop이 활성화가 안되는 문제가 생겼다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>&lt;dialog&gt; 요소에 open 속성 값을 준 것이 문제였다. js의 .showModal(); 메소드 값을 통해 모달 요소를 활성화 시켜야 ::backdrop이라는 가상 요소가 생성된다는 것을 알게 되어 해당 방식대로 처리했다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- 헤더 검색 모달 -->
+    <dialog class="search-header">
+      <header class="header header-search-active">
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="/">
+                  <img src="/icon/live-icon-grey.svg" alt="" />
+                  <span>실시간</span>
+                </a>
+              </li>
+              <li>
+                <a href="/"><span>TV프로그램</span></a>
+              </li>
+              <li>
+                <a href="/"><span>영화</span></a>
+              </li>
+              <li>
+                <a href="/">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button type="button" class="icon-btn search-btn">
+              <img src="/icon/search-icon-grey.svg" alt="검색 열기" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button type="button" class="icon-btn close-btn" onclick="">
+              <img src="/icon/close-grey.svg" alt="검색 닫기" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button type="button" class="icon-btn profile-btn">
+              <img src="/icon/tving-icon-desktop.svg" alt="프로필 열기" />
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="search-area">
+        <div class="search-wrap">
+          <!-- 예시 콘텐츠 시작 -->
+          <!-- 검색 영역 인풋 -->
+          <div class="search-input">
+            <label for="searchVod" class="sr-only">검색어</label>
+            <input id="searchVod" type="text" placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요" />
+            <button class="search-submit-btn" type="submit" aria-label="검색">
+              <img src="/icon/icon-search.svg" alt="" aria-hidden="true" />
+            </button>
+          </div>
+
+          <!-- mine -->
+          <section class="search-history-section">
+            <!-- 최근 검색어 -->
+            <div class="search-history-box">
+              <div class="search-history-title-box">
+                <h2>최근 검색어</h2>
+                <!-- 최근 검색어 전부 삭제 버튼 -->
+                <button class="search-all-reset-btn" type="button">
+                  <span>모두 지우기</span>
+                  <img src="/icon/close-button.svg" alt="" />
+                </button>
+              </div>
+
+              <div>
+                <p class="hidden-history">검색 내역이 없습니다.</p>
+              </div>
+
+              <!-- 최근 검색어 버튼 -->
+              <div class="search-history-lists">
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">재벌집</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">브레이킹배드</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+                <div class="search-recent-item">
+                  <button class="search-recent-btn" type="button">세상에이런일이</button>
+                  <button class="search-recent-reset-btn" type="submit">
+                    <img src="/icon/icon-big-x.svg" alt="검색어 제거" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- 실시간 인기 검색어 -->
+            <div class="search-trending-box">
+              <h2>실시간 인기 검색어</h2>
+              <!-- 인기 검색어 버튼 -->
+              <div class="search-trending-lists">
+                <button class="search-popular-btn" type="button">
+                  <strong>1</strong>
+                  <span>재벌집 막내아들</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>2</strong>
+                  <span>미스터트롯2: 새로운 전설의 시작</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>3</strong>
+                  <span>유 퀴즈 온 더 블럭</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>4</strong>
+                  <span>대행사</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>5</strong>
+                  <span>SHOW ME THE MONEY 11</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>6</strong>
+                  <span>미씽: 그들이 있었다2</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>7</strong>
+                  <span>술꾼도시여자들2</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>8</strong>
+                  <span>캐나다 체크인</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>9</strong>
+                  <span>미씽: 그들이 있었다 - 그들을 '다만나다</span>
+                </button>
+                <button class="search-popular-btn" type="button">
+                  <strong>10</strong>
+                  <span>술꾼도시여자들</span>
+                </button>
+                <p class="timestamp">
+                  <time datetime="2022-12-24T03:04">2022.12.24 오전 03:04 기준</time>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- 예시 콘텐츠 종료 -->
+      </div>
+    </dialog>
+  </body>
+</html>

@@ -1,20 +1,57 @@
+.logout-modal,
+.main-page-modal {
+  position: fixed;
+  inline-size: 100%;
+  block-size: 100vh;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  background-color: rgb(0 0 0 / 0.7);
+
+  .logout-modal-wrap,
+  .main-page-modal-wrap {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    translate: -50% -50%;
+  }
+
+  .logout-modal-wrap {
+    inline-size: 526px;
+    block-size: 192px;
+    background-color: var(--modal-color);
+
+    @media screen and (max-width: 1024px) {
+      inline-size: 295px;
+      block-size: 110px;
+    }
+
+    @media screen and (max-width: 768px) {
+      inline-size: 196px;
+      block-size: 91px;
+    }
+  }
+
+  .main-page-modal-wrap {
+    inline-size: 588px;
+    block-size: 728px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1024px) {
+      inline-size: 328px;
+      block-size: 406px;
+    }
+
+    @media screen and (max-width: 768px) {
+      inline-size: 252px;
+      block-size: 320px;
+    }
+  }
+}
+
 .logout-modal {
   --modal-color: var(--brand-dark-bg-2);
 
-  inline-size: 526px;
-  block-size: 192px;
   border-radius: 4px;
-  background-color: var(--modal-color);
-
-  @media screen and (max-width: 1024px) {
-    inline-size: 295px;
-    block-size: 110px;
-  }
-
-  @media screen and (max-width: 768px) {
-    inline-size: 196px;
-    block-size: 91px;
-  }
 }
 
 .top-box {
@@ -89,23 +126,6 @@
 
   color: var(--divider-color);
   font-size: var(--divider-font-size);
-}
-
-.main-page-modal {
-  inline-size: 588px;
-  block-size: 728px;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 1024px) {
-    inline-size: 328px;
-    block-size: 406px;
-  }
-
-  @media screen and (max-width: 768px) {
-    inline-size: 252px;
-    block-size: 320px;
-  }
 }
 
 .modal-image {

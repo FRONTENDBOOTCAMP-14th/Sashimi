@@ -8,8 +8,8 @@
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
-
     <link rel="stylesheet" href="/src/components/footer/footer.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -59,16 +59,16 @@
                 <div class="footer-social">
                   <ul class="social-icons" aria-label="SNS 링크">
                     <li>
-                      <a href="#" aria-label="유튜브" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="" /></a>
+                      <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/youtube.svg" alt="유튜브" /></a>
                     </li>
                     <li>
-                      <a href="#" aria-label="인스타그램" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="" /></a>
+                      <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/instagram.svg" alt="인스타그램" /></a>
                     </li>
                     <li>
-                      <a href="#" aria-label="트위터" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="" /></a>
+                      <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/twitter.svg" alt="트위터" /></a>
                     </li>
                     <li>
-                      <a href="#" aria-label="페이스북" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="" /></a>
+                      <a href="#" target="_blank" rel="noopenner noreferrer"><img src="/icon/facebook.svg" alt="페이스북" /></a>
                     </li>
                   </ul>
                 </div>
@@ -83,5 +83,34 @@
         </li>
       </ul>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>푸터의 각 단어의 그룹을 | 표시로 구분이 되어 있었는데, 키보드에서 접근할 수 있는 | ← 이 키를 삽입해 보니, 시안보다 사이즈가 미묘하게 크게 느껴졌다. | 이 문자를 삽입하는 것말고 다른 방식으로 짝대기를 만들 수 없을까 고민하였다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>나는 각 단어 그룹을 &lt;span&gt; 요소로 묶었는데, ::after 가상 요소 선택자를 이용하여 마지막 자식만 제외하고 모든 자식의 앞 부분에 짝대기를 넣어주는 방식을 선택했다. 그로써 | 문자를 사용하지 않으면서도 시안과 비슷한 사이즈의 짝대기를 삽입할 수 있었다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

@@ -1,0 +1,39 @@
+@import url('/src/components/header/header.css');
+@import url('/src/components/footer/footer.css');
+
+dialog {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  background-color: var(--black);
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.contents-wrapper {
+  --contents-wrapper-width: auto;
+  --contents-wrapper-padding: 0px;
+
+  margin: 0 auto;
+
+  width: 100%;
+  max-inline-size: var(--contents-wrapper-width);
+  padding-inline: var(--contents-wrapper-padding);
+
+  &.full {
+    --contents-wrapper-width: 100%;
+    --contents-wrapper-padding: 0px;
+  }
+}
+
+.header {
+  position: sticky;
+  inset: 0 auto auto 0;
+  z-index: 999;
+}

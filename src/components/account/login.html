@@ -7,8 +7,9 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <link rel="stylesheet" href="/src/components/account/login.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
+    <link rel="stylesheet" href="/src/components/account/login.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -18,10 +19,13 @@
         <li class="components-item">
           <h2 class="components-title">id-input-field 컴포넌트</h2>
           <div class="components-box">
-            <div class="input-group">
-              <input class="input-field" type="text" placeholder="아이디" maxlength="30" aria-label="아이디 입력필드">
-              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
-              <p class="input-hint" aria-live="polite">아이디는 최대 30자까지 입력가능</p>
+            <div class="child-wrapper">
+              <div class="input-group">
+                <label for="user-id" class="sr-only">아이디</label>
+                <input id="user-id" class="input-field" type="text" placeholder="아이디" maxlength="30" />
+                <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" />
+                <p class="input-hint" aria-live="polite">영문 또는 영문, 숫자 조합 6~12자리</p>
+              </div>
             </div>
           </div>
         </li>
@@ -29,11 +33,15 @@
         <li class="components-item">
           <h2 class="components-title">pw-input-field 컴포넌트</h2>
           <div class="components-box">
-            <div class="input-group">
-              <input class="input-field" type="password" placeholder="패스워드" maxlength="20" aria-label="패스워드 입력필드">
-              <img src="/icon/pw-toggle-button.svg" alt="패스워드 보기/숨기기 버튼" class="toggle-password-icon" aria-hidden="true">
-              <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" aria-hidden="true">
-              <p class="input-hint" aria-live="polite">영문, 숫자, 특수문자를 포함 8자 이상 20자이내</p>
+            <div class="child-wrapper">
+              <div class="input-group">
+                <label for="password" class="sr-only">비밀번호</label>
+                <input id="password" class="input-field" type="password" placeholder="패스워드" maxlength="20" />
+                <button type="button" class="bt-st" aria-label="비밀번호 보기버튼">
+                  <img src="/icon/pw-toggle-button.svg" class="toggle-password-icon" alt="" />
+                </button>
+                <p class="input-hint" aria-live="polite">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</p>
+              </div>
             </div>
           </div>
         </li>
@@ -41,24 +49,79 @@
         <li class="components-item">
           <h2 class="components-title">login-button 컴포넌트</h2>
           <div class="components-box">
-            <button class="button-style login-button" type="submit">로그인하기</button>
+            <div class="child-wrapper-btn">
+              <button class="button-style login-button" type="submit">로그인하기</button>
+            </div>
           </div>
         </li>
 
         <li class="components-item">
           <h2 class="components-title">confirm-button 컴포넌트</h2>
           <div class="components-box">
-            <button class="button-style confirm-button" type="submit">확인</button>
+            <div class="child-wrapper-btn">
+              <button class="button-style confirm-button" type="submit">확인</button>
+            </div>
           </div>
         </li>
 
         <li class="components-item">
           <h2 class="components-title">certification-button 컴포넌트</h2>
           <div class="components-box">
-            <button class="button-style certification-button" type="submit">본인인증하기</button>
+            <div class="child-wrapper-btn">
+              <button class="button-style certification-button" type="submit">본인인증하기</button>
+            </div>
           </div>
         </li>
       </ul>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>접근성을 신경써야한다는 관점에 너무 치중한 나머지 aria속성을 남발하며 구현을 하였었는데 &lt;img&gt; 태그의 alt속성이나 &lt;button&gt;요소에 텍스트가 존재할땐 오히려 aria속성이 혼동을 주며 불필요할 수 있다는 피드백</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>문제 해결을 위해 굳이 안알려줘도 되는 중요하지않은 이미지의 경우는 그냥 alt값만 주는 방식으로 변경하였고 만약 백그라운드 이미지이나 사용자에게 알려야하는 정보라면 aira-label속성으로 사용자에게 정보전달을 더 명확한 설명을 할 수 있도록 수정하였다.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>피그마 시안상에 레이블이 없다고 1차원적으로 그냥 인풋요소에 &lt;label&gt;을 넣지않고 그냥 &lt;div&gt; 로만 구현을 하여 접근성 측면에서 취약하다는 피드백</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>스크린리더를 쓰는 사용자들의 접근성을 고려하여 &lt;label&gt; 태그를 인풋요소를 넣고 sr-only 클래스를 넣어 시각적으로는 보이지 않게하면서도 스크린리더가 읽어주는 방향으로 접근성을 고려하여 마크업을 수정하였다.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>패스워드 토글버튼의 마크업을 &lt;img&gt; 태그로하여 마찬가지로 접근성 부분에서 취약하다는 피드백</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>&lt;img&gt; 태그를 &lt;button&gt; 태그로 감싼 뒤 버튼 요소에 aria-label 속성을 주어 토글버튼을 스크린리더가 명확하게 전달 할 수 있도록 변경. 하지만 마크업상 어떤 구조가 더 나은지는 추후 검토후 리팩토링이 필요.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

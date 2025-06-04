@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Component - landing</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/common/component-layout.css" />
+    <link rel="stylesheet" href="/src/components/landing/landing.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <div class="components-wrapper">
+      <h1>Component - landing</h1>
+      <ul class="components-list">
+        <li class="components-item">
+          <h2 class="components-title">Icon</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <!-- 로그인 페이지로 이동하는 링크 -->
+            <a class="icon-taing-renewal" href="/"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Text</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <div class="landing-text-box">
+              <h2 class="text-headline"><span>타잉 오리지널 콘텐츠,</span><span>방송, 영화, 해외시리즈까지!</span><span>재미를 플레이해보세요.</span></h2>
+              <p class="text-description">해당 부분에 맞는 설명을 작성해주세요.</p>
+              <p class="text-sub-description">해당 부분에 맞는 서브 설명을 작성해주세요.</p>
+            </div>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+        <li class="components-item">
+          <h2 class="components-title">Resources</h2>
+          <div class="components-box">
+            <!-- 컴포넌트 시작 -->
+            <ul class="landing-resources-list">
+              <!-- 가로, 세로 original-content 컨테이너 -->
+              <li class="original-content horizontal" style="background-image: url('/images/image-thumbnail-05.avif')"><span class="sr-only">콘텐츠 1</span></li>
+              <li class="original-content vertical" style="background-image: url('/images/image-thumbnail-01.avif')"><span class="sr-only">콘텐츠 2</span></li>
+
+              <!-- discover-content 컨테이너 -->
+              <li class="discover-content" style="background-image: url('/images/image-thumbnail-09.avif')"><span class="sr-only">콘텐츠 3</span></li>
+            </ul>
+            <!-- 컴포넌트 종료 -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>처음에 아이콘을 별도의 컴포넌트로 마크업했지만, 다른 컴포넌트에서는 아이콘이 background-image로만 사용하면서 재사용이 되지 않았다. 그리고 랜딩 페이지 상단의 배경 이미지 역시 한 번만 사용되는 구조임에도 컴포넌트로 분리했는데, 이는 ‘재사용 가능 단위’로서의 컴포넌트 정의에 적합하지 않다는 피드백을 받았다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>아이콘 컴포넌트는 제거하고, 일관되게 background-image로 처리했다. 또한, 한 번만 사용되는 배경 이미지 컴포넌트도 제거하여 불필요한 컴포넌트 분리를 없앴다. 이 과정을 통해 컴포넌트의 정의와 역할을 다시 한 번 명확하게 정립하게 되었다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
