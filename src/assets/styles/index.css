@@ -183,19 +183,19 @@ body {
             background-size: cover;
 
             &.cjw {
-              background-image: url('/images/cjw.png');
+              background-image: url('/images/cjw.avif');
             }
 
             &.pms {
-              background-image: url('/images/pms.png');
+              background-image: url('/images/pms.avif');
             }
 
             &.jhj {
-              background-image: url('/images/jhj.png');
+              background-image: url('/images/jhj.avif');
             }
 
             &.jgy {
-              background-image: url('/images/jgy.png');
+              background-image: url('/images/jgy.avif');
             }
           }
           h3 {
@@ -227,19 +227,19 @@ body {
             background-color: #292929;
 
             &.cjw {
-              background-image: url('/images/cjw-h.png');
+              background-image: url('/images/cjw-h.avif');
             }
 
             &.pms {
-              background-image: url('/images/pms-h.png');
+              background-image: url('/images/pms-h.avif');
             }
 
             &.jhj {
-              background-image: url('/images/jhj-h.png');
+              background-image: url('/images/jhj-h.avif');
             }
 
             &.jgy {
-              background-image: url('/images/jgy-h.png');
+              background-image: url('/images/jgy-h.avif');
             }
           }
 
