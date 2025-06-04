@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/components/modal/modal.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
     <style>
       .logout-modal,
@@ -67,5 +68,34 @@
         </li>
       </ul>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>모달창의 마크업을 그냥 &lt;div&gt; 로 구현하여 접근성 측면에서 취약하다는 피드백</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>&lt;div&gt; 를 &lt;dialog&gt; 태그로 변경하여 좀 더 모달(팝업)창 이란 이름에 어울리는 시멘틱한 구조로 변경하여 다른 페이지에서도 좀 더 쉽게 활용 될 수 있도록 변경.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

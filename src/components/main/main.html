@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/common/component-layout.css" />
     <link rel="stylesheet" href="/src/components/main/main.css" />
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -257,5 +258,34 @@
         </li>
       </ul>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>현재 표시되는 슬라이드가 어떤 슬라이드고 몇 개의 슬라이드 중 몇 번째임을 알려주는 도트 방식의 슬라이드 네비게이션(비슷한 경우로는 페이지의 넘버링 네비게이션)의 각 슬라이드 도트(button 요소)에 aria-label을 사용하여 몇 번째 슬라이드 인지 확인하는 역할을 부여했다. 하지만 중간 점검 피드백을 통해 활성화된 도트의 접근성 처리가 따로 없다는 것을 알게됐다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>중간 점검 피드백을 통해 문제를 알게되었고 aria-current 라는 큰 힌트까지 얻게되어 활성화된 슬라이드 도트에 aria-current=”true” 값을 줌으로써 문제를 해결했다. 이를 통해 접근성을 고려할때 좀 더 디테일하게 생각해 볼 수 있는 계기가 되었다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>

@@ -7,6 +7,8 @@
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
+    <!-- 시행착오 모달 js -->
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <!-- 각 페이지 css -->
     <link rel="stylesheet" href="/src/page/landing-page/landing-page.css" />
     <script type="module" src="/src/main.js"></script>
@@ -69,7 +71,7 @@
             <p class="text-description">간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
             <p class="text-sub-description">간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
           </div>
-          <a class="icon-taing-renewal" href="/"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
+          <a class="icon-taing-renewal" href="/src/page/login-page/login-page.html"><img src="/icon/icon-taing-renewal.svg" alt="로그인 페이지로 이동" /></a>
           <!--  콘텐츠 종료 -->
         </div>
         <div class="contents-wrapper contents-wrapper-padding-sm">
@@ -216,6 +218,35 @@
         </div>
       </footer>
     </div>
+
+    <!-- 플로팅 버튼 -->
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
+    </button>
+
+    <!-- 제작 과정 모달 -->
+    <dialog class="making-story-modal">
+      <div class="making-story-content" role="document">
+        <div class="making-story-header">
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
+          <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
+            <img src="/icon/close-grey.svg" alt="" />
+          </button>
+        </div>
+        <div class="making-story-body">
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>콘텐츠가 슬라이드 됐을 때, 해당 콘텐츠들을 화면 중앙에 위치시키기 위해 margin이나 padding을 활용했지만, 반응형 환경에서는 컨텐츠가 자연스럽게 중앙정렬이 되지 않았다. 따라서 뷰포트 중심 정렬을 위해 보다 정밀한 방식이 필요하다는 점을 깨달았다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>첫 번째 콘텐츠 앞에 가상 요소를 배치하여 콘텐츠를 밀어내는 방식으로 중앙 정렬을 구현했다. 가상 요소의 너비를 `50% - 콘텐츠 너비의 절반 - 갭 크기`로 계산하여, 뷰포트 크기에 따라 가상 요소의 너비가 달라지고, slider-wrapper의 콘텐츠가 자동 정렬되도록 만들었다. 이 방식으로 반응형에서도 콘텐츠가 자연스럽게 화면 정중앙에 배치되도록 개선했다.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dialog>
     <!-- 랜딩 모달 시작 -->
     <dialog class="main-page-modal">
       <div class="main-page-modal-wrap">

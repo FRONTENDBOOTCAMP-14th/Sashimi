@@ -13,53 +13,53 @@
   <body>
     <div class="container">
       <header class="header header-logged-out">
-            <!-- 로고 (공통) -->
-            <div class="header-inner">
-                <h1 class="logo">
-                <a href="/">
-                    <img src="/icon/tving-white-logo.svg" alt="TAING 로고" />
+        <!-- 로고 (공통) -->
+        <div class="header-inner">
+          <h1 class="logo">
+            <a href="/">
+              <img src="/icon/tving-white-logo.svg" alt="TAING 로고" />
+            </a>
+          </h1>
+          <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
+          <nav class="nav" aria-label="주요 메뉴">
+            <ul class="nav-list">
+              <li>
+                <a href="#">
+                  <img src="/icon/live-icon-grey.svg" alt="실시간 라이브" />
+                  <p>실시간</p>
                 </a>
-                </h1>
-                <!-- 메뉴: 로그인 상태에서만 보여야 함 -->
-                <nav class="nav" aria-label="주요 메뉴">
-                <ul class="nav-list">
-                    <li>
-                    <a href="#">
-                        <img src="/icon/live-icon-grey.svg" alt="실시간 라이브" />
-                        <p>실시간</p>
-                    </a>
-                    </li>
-                    <li>
-                    <a href="#"><p>TV프로그램</p></a>
-                    </li>
-                    <li>
-                    <a href="#"><p>영화</p></a>
-                    </li>
-                    <li>
-                    <a href="#">
-                        <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
-                    </a>
-                    </li>
-                </ul>
-                </nav>
-                <!-- 버튼 영역 (우측) -->
-                <div class="header-right">
-                <!-- 검색 버튼 -->
-                <button class="icon-btn search-btn" aria-label="검색 열기">
-                    <img src="/icon/search-icon-grey.svg" alt="" class="search-btn-desktop" />
-                    <img src="/icon/search-icon-white.svg" alt="" class="search-btn-mobile" />
-                </button>
-                <!-- 검색 닫기 버튼 -->
-                <button class="icon-btn close-btn" aria-label="검색 닫기">
-                    <img src="/icon/close-grey.svg" alt="" class="close-btn-desktop" />
-                    <img src="/icon/close-white.svg" alt="" class="close-btn-mobile" />
-                </button>
-                <!-- 프로필 버튼 -->
-                <button class="icon-btn profile-btn" aria-label="프로필 열기">
-                    <img src="/icon/tving-icon-desktop.svg" alt="" />
-                </button>
-                </div>
-            </div>
+              </li>
+              <li>
+                <a href="#"><p>TV프로그램</p></a>
+              </li>
+              <li>
+                <a href="#"><p>영화</p></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/icon/paramount-grey.svg" alt="Paramount+" class="paramounts" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- 버튼 영역 (우측) -->
+          <div class="header-right">
+            <!-- 검색 버튼 -->
+            <button class="icon-btn search-btn" aria-label="검색 열기">
+              <img src="/icon/search-icon-grey.svg" alt="" class="search-btn-desktop" />
+              <img src="/icon/search-icon-white.svg" alt="" class="search-btn-mobile" />
+            </button>
+            <!-- 검색 닫기 버튼 -->
+            <button class="icon-btn close-btn" aria-label="검색 닫기">
+              <img src="/icon/close-grey.svg" alt="" class="close-btn-desktop" />
+              <img src="/icon/close-white.svg" alt="" class="close-btn-mobile" />
+            </button>
+            <!-- 프로필 버튼 -->
+            <button class="icon-btn profile-btn" aria-label="프로필 열기">
+              <img src="/icon/tving-icon-desktop.svg" alt="" />
+            </button>
+          </div>
+        </div>
       </header>
       <main>
         <div class="contents-wrapper">
@@ -69,28 +69,28 @@
               <h1 class="title-st">TVING ID 로그인</h1>
               <div class="input-group input-mg">
                 <label for="user-id" class="sr-only">아이디</label>
-                <input id="user-id" class="input-field" type="text" placeholder="아이디" maxlength="30"/>
-                <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon"/>
+                <input id="user-id" class="input-field" type="text" placeholder="아이디" maxlength="30" />
+                <img src="/icon/close-button.svg" alt="입력 내용 지우기 버튼" class="clear-input-icon" />
               </div>
-      
+
               <div class="input-group">
                 <label for="password" class="sr-only">비밀번호</label>
-                <input id="password" class="input-field" type="password" placeholder="패스워드" maxlength="20"/>
+                <input id="password" class="input-field" type="password" placeholder="패스워드" maxlength="20" />
                 <button type="button" class="bt-st" aria-label="비밀번호 보기버튼">
-                  <img src="/icon/pw-toggle-button.svg" class="toggle-password-icon" alt=""/>
+                  <img src="/icon/pw-toggle-button.svg" class="toggle-password-icon" alt="" />
                 </button>
               </div>
 
               <div class="button-box button-mg">
-                <input type="checkbox" id="auto-login" class="auto-login-checkbox">
+                <input type="checkbox" id="auto-login" class="auto-login-checkbox" />
                 <label for="auto-login" class="auto-login-btn">
-                    <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg" alt="체크 비활성화">
-                    <img class="check-img check-img-checked" src="/icon/red-check-button.svg" alt="체크 활성화">
-                    자동로그인
+                  <img class="check-img check-img-unchecked" src="/icon/gray-check-button.svg" alt="체크 비활성화" />
+                  <img class="check-img check-img-checked" src="/icon/red-check-button.svg" alt="체크 활성화" />
+                  자동로그인
                 </label>
-            </div>
-      
-              <button class="button-style login-button" type="submit">로그인하기</button>
+              </div>
+
+              <button class="button-style login-button" type="button" onclick="location.href='/src/page/profile-page/profile-page-select.html'">로그인하기</button>
 
               <div class="find-box">
                 <a class="find-btn" href="/src/page/login-page/find-id-page.html" title="아이디 찾기 페이지로 이동">아이디찾기</a>
@@ -98,7 +98,8 @@
                 <a class="find-btn" href="/src/page/login-page/find-pw-page.html" title="비밀번호 찾기 페이지로 이동">비밀번호찾기</a>
               </div>
 
-              <p class="advice-mg">아직 계정이 없으신가요?&nbsp;
+              <p class="advice-mg">
+                아직 계정이 없으신가요?&nbsp;
                 <a class="find-btn" href="/src/page/login-page/sign-up-page.html" title="회원가입 페이지로 이동">&nbsp;회원가입하기</a>
               </p>
             </div>
