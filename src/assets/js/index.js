@@ -87,6 +87,7 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('.workflow-nav button');
   const contents = document.querySelectorAll('.workflow-content');
+  const scrollContainer = document.querySelector('.workflow-area'); // 스크롤 대상
 
   buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -95,13 +96,21 @@ document.addEventListener('DOMContentLoaded', () => {
       button.parentElement.classList.add('active');
 
       // 모든 콘텐츠 숨기기
-      contents.forEach((content) => (content.style.display = 'none'));
+      contents.forEach((content) => {
+        content.style.display = 'none';
+      });
 
       // name 속성으로 콘텐츠 선택
       const targetClass = button.getAttribute('name');
       const targetContent = document.querySelector(`.workflow-content.${targetClass}`);
       if (targetContent) {
+        // 콘텐츠 표시
         targetContent.style.display = 'block';
+
+        // 스크롤 영역 초기화
+        requestAnimationFrame(() => {
+          scrollContainer.scrollTop = 0;
+        });
       }
     });
   });
