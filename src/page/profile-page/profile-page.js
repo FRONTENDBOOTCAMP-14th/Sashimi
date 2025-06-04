@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (completeButton) {
     completeButton.addEventListener('click', function () {
       // 메인 페이지로 이동
-      window.location.href = '/src/page/main-page/main-page.html';
+      window.location.href = '/src/page/profile-page/profile-page-select.html';
     });
   }
 });

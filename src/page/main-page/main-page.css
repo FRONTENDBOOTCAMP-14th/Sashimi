@@ -1,5 +1,6 @@
 @import '/src/components/main/main.css';
 @import '/src/components/modal/modal.css';
+@import '/src/page/search-page/search-page.css';
 
 .container {
   display: block;

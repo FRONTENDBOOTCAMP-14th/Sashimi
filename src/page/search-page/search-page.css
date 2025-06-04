@@ -1,11 +1,20 @@
 @import url('/src/components/search/search.css');
 
+.search-header {
+  width: 100%;
+  background-color: #191919;
+
+  .header {
+    position: static;
+  }
+}
+
 .search-area {
   --search-area-padding-top: 52px;
   --search-area-padding-bottom: 93px;
   --search-area-padding-x: 70px;
 
-  background-color: #191919;
+  width: 100%;
 
   .search-wrap {
     inline-size: 100%;

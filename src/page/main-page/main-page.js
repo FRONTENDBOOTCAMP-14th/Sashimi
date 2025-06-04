@@ -71,3 +71,18 @@ $('.main-cont-list.only').slick({
 });
 
 document.querySelector('.main-page-modal').showModal();
+
+document.querySelector('.search-btn').addEventListener('click', () => {
+  const dialog = document.querySelector('.search-header');
+  if (dialog) {
+    dialog.showModal();
+  }
+});
+
+// 닫기 버튼 기능 추가 (선택 사항)
+document.querySelector('.search-header .close-btn')?.addEventListener('click', () => {
+  const dialog = document.querySelector('.search-header');
+  if (dialog) {
+    dialog.close();
+  }
+});
