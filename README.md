@@ -1,7 +1,5 @@
-###### Likelion Front-end Bootcamp
+# 🎯 Team Project: UI 팀 "사! 시! 미!"
 
-# UI Project(CSS)
+"우린 티빙 UI를 정교하게 '뜬다'! 그래서 이름은... 사! 시! 미!"
 
-멋쟁이 사자처럼 프론트엔드 부트캠프 14기💕
-
-14기 여러분의 첫 프로젝트를 응원합니다. 화이팅 👏‼️
+> 모든 세부 정보는 [Wiki](https://github.com/FRONTENDBOOTCAMP-14th/Sashimi/wiki)에서 확인하실 수 있습니다!
