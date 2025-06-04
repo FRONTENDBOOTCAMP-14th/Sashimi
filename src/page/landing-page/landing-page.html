@@ -216,5 +216,27 @@
         </div>
       </footer>
     </div>
+    <!-- 랜딩 모달 시작 -->
+    <dialog class="main-page-modal">
+      <div class="main-page-modal-wrap">
+        <div class="modal-image">
+          <img class="modal-icon" src="/icon/sashimi-logo.svg" alt="" />
+          <div class="modal-text">
+            <p>📢 안내해 드립니다</p>
+            <p><span>본 사이트는 공식 티빙(TVING) 사이트가 아닌,</span><span>학습을 위해 제작된 비상업적 사이트입니다.</span></p>
+            <p>이용 시 참고 부탁드리며, 혼동 없길 바랍니다.</p>
+          </div>
+        </div>
+        <div class="close-box">
+          <button type="button" class="btn today-close-button" onclick="alert('구현 전 입니다.')">오늘 하루 보지 않기</button>
+          <p aria-hidden="true">|</p>
+          <button type="button" class="btn close-button" onclick="document.querySelector('.main-page-modal').close();" autofocus>닫기</button>
+        </div>
+      </div>
+    </dialog>
+    <script>
+      document.querySelector('.main-page-modal').showModal();
+    </script>
+    <!-- 랜딩 모달 종료 -->
   </body>
 </html>

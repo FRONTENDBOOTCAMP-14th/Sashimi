@@ -1,5 +1,6 @@
 @import url('/src/components/landing/landing.css');
 @import url('/src/page/landing-page/landing-page-animation.css');
+@import '/src/components/modal/modal.css';
 
 /* 헤더를 fixed로 배치하여 항상 상단에 고정 */
 /* sticky를 사용하면 공간을 차지해서 main 콘텐츠의 배경 이미지가 헤더 아래부터 시작함 */
@@ -236,5 +237,56 @@
     --column-gap: 18px;
     --padding-block: 52px;
     --logo-inline-size: 83px;
+  }
+}
+
+/* 랜딩페이지에 들어갈 비상업적 모달 스타일링 */
+.modal-image {
+  --font-size: var(--paragraph-large);
+  --icon-inline-size: 400px;
+  --icon-margin-start: 125px;
+  --icon-margin-end: 100px;
+  --text-row-gap: 20px;
+
+  font-size: var(--font-size);
+  line-height: 1.4;
+  color: white;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  background-color: #292929;
+
+  .modal-icon {
+    inline-size: var(--icon-inline-size);
+    margin-block-start: var(--icon-margin-start);
+    margin-block-end: var(--icon-margin-end);
+  }
+
+  .modal-text {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    row-gap: var(--text-row-gap);
+
+    span {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    --font-size: var(--paragraph-medium);
+    --icon-inline-size: 200px;
+    --icon-margin-start: 65px;
+    --icon-margin-end: 55px;
+    --text-row-gap: 10px;
+  }
+
+  @media screen and (max-width: 768px) {
+    --font-size: var(--paragraph-small);
+    --icon-inline-size: 150px;
+    --icon-margin-start: 50px;
+    --icon-margin-end: 35px;
   }
 }
