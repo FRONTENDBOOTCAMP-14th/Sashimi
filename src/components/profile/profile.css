@@ -86,6 +86,7 @@
 
   .nickname {
     font-size: var(--nickname-size);
+    color: #fff;
   }
 
   /* 태블릿 (769px ~ 1024px) */
