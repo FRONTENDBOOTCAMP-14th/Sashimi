@@ -40,6 +40,7 @@
     background-color: transparent;
     border: 0;
     flex-grow: 1;
+    inline-size: 100%;
     font-size: var(--search-input-font-size);
     color: var(--white);
   }
