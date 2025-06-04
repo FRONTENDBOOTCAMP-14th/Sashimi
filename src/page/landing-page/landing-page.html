@@ -220,36 +220,30 @@
     </div>
 
     <!-- 플로팅 버튼 -->
-    <button type="button" class="floating-button" aria-label="프로젝트 제작 과정 보기">
-      <img src="/src/assets/icon/chat.svg" alt="" aria-hidden="true" />
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
     </button>
 
     <!-- 제작 과정 모달 -->
     <dialog class="making-story-modal">
       <div class="making-story-content" role="document">
         <div class="making-story-header">
-          <h2 id="making-story-title">프로젝트 제작 과정</h2>
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
           <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
             <img src="/icon/close-grey.svg" alt="" />
           </button>
         </div>
         <div class="making-story-body">
-          <div class="story-section">
-            <h3>1. 기획 단계</h3>
-            <p>TVING 사이트를 클론 코딩하면서 겪은 첫 번째 도전은 기획 단계였습니다. 사용자 경험을 개선하면서도 원래의 디자인 정체성을 유지하는 것이 중요했습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>2. 개발 과정</h3>
-            <p>반응형 웹 디자인을 구현하면서 다양한 기술적 도전을 마주했습니다. 특히 미디어 쿼리를 활용한 레이아웃 조정과 컴포넌트 재사용에 중점을 두었습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>3. 문제 해결</h3>
-            <p>개발 과정에서 마주친 여러 문제들을 해결하면서 팀원들과 함께 성장할 수 있었습니다. 특히 검색 기능 구현과 모달 컴포넌트 개발에서 많은 것을 배웠습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>4. 성과</h3>
-            <p>최종적으로 우리는 사용자 친화적이면서도 성능이 뛰어난 웹사이트를 구현할 수 있었습니다. 이 과정에서 얻은 경험은 앞으로의 프로젝트에도 큰 도움이 될 것입니다.</p>
-          </div>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>콘텐츠가 슬라이드 됐을 때, 해당 콘텐츠들을 화면 중앙에 위치시키기 위해 margin이나 padding을 활용했지만, 반응형 환경에서는 컨텐츠가 자연스럽게 중앙정렬이 되지 않았다. 따라서 뷰포트 중심 정렬을 위해 보다 정밀한 방식이 필요하다는 점을 깨달았다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>첫 번째 콘텐츠 앞에 가상 요소를 배치하여 콘텐츠를 밀어내는 방식으로 중앙 정렬을 구현했다. 가상 요소의 너비를 `50% - 콘텐츠 너비의 절반 - 갭 크기`로 계산하여, 뷰포트 크기에 따라 가상 요소의 너비가 달라지고, slider-wrapper의 콘텐츠가 자동 정렬되도록 만들었다. 이 방식으로 반응형에서도 콘텐츠가 자연스럽게 화면 정중앙에 배치되도록 개선했다.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </dialog>

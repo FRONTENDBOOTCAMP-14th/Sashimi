@@ -103,39 +103,55 @@
 .making-story-body {
   max-height: 70vh;
   overflow-y: auto;
-  padding-right: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+
+  ul {
+    background-color: #313131;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+    li {
+      strong,
+      b {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      strong {
+        color: #ff3333;
+      }
+
+      b {
+        color: #379ad3;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+    }
+  }
 }
 
 .making-story-body::-webkit-scrollbar {
-  width: 8px;
+  width: 16px;
 }
 
 .making-story-body::-webkit-scrollbar-track {
-  background: #333333;
-  border-radius: 4px;
+  background: transparent;
+  border-radius: 999px;
 }
 
 .making-story-body::-webkit-scrollbar-thumb {
-  background: #666666;
-  border-radius: 4px;
-}
-
-.story-section {
-  margin-bottom: 24px;
-}
-
-.story-section h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0 0 12px 0;
-  color: var(--brand-red-1);
-}
-
-.story-section p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-  color: #cccccc;
+  background: #333;
+  background-clip: padding-box;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 
 /* 태블릿 */
@@ -146,14 +162,6 @@
 
   .making-story-header h2 {
     font-size: 22px;
-  }
-
-  .story-section h3 {
-    font-size: 18px;
-  }
-
-  .story-section p {
-    font-size: 15px;
   }
 }
 
@@ -170,13 +178,5 @@
   .making-story-close img {
     width: 20px;
     height: 20px;
-  }
-
-  .story-section h3 {
-    font-size: 16px;
-  }
-
-  .story-section p {
-    font-size: 14px;
   }
 }

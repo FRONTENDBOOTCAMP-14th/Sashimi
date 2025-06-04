@@ -8,13 +8,13 @@
     <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
-    <!-- 시행착오 모달 js -->
-    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <!-- 각 페이지 css -->
     <link rel="stylesheet" href="/src/page/main-page/main-page.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="module" src="/src/page/main-page/main-page.js"></script>
+    <!-- 시행착오 모달 js -->
+    <script type="module" src="/src/assets/js/review-modal.js"></script>
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -733,36 +733,43 @@
     <!-- 로그아웃 모달 종료 -->
 
     <!-- 플로팅 버튼 -->
-    <button type="button" class="floating-button" aria-label="프로젝트 제작 과정 보기">
-      <img src="/src/assets/icon/chat.svg" alt="" aria-hidden="true" />
+    <button type="button" class="floating-button">
+      <img src="/src/assets/icon/chat.svg" alt="해당 작업 영역의 시행착오 보기" />
     </button>
 
     <!-- 제작 과정 모달 -->
     <dialog class="making-story-modal">
       <div class="making-story-content" role="document">
         <div class="making-story-header">
-          <h2 id="making-story-title">프로젝트 제작 과정</h2>
+          <h2 id="making-story-title">❗️ 해당 작업 영역의 시행착오</h2>
           <button type="button" class="making-story-close" aria-label="모달 닫기" onclick="this.closest('dialog').close()">
             <img src="/icon/close-grey.svg" alt="" />
           </button>
         </div>
         <div class="making-story-body">
-          <div class="story-section">
-            <h3>1. 기획 단계</h3>
-            <p>TVING 사이트를 클론 코딩하면서 겪은 첫 번째 도전은 기획 단계였습니다. 사용자 경험을 개선하면서도 원래의 디자인 정체성을 유지하는 것이 중요했습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>2. 개발 과정</h3>
-            <p>반응형 웹 디자인을 구현하면서 다양한 기술적 도전을 마주했습니다. 특히 미디어 쿼리를 활용한 레이아웃 조정과 컴포넌트 재사용에 중점을 두었습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>3. 문제 해결</h3>
-            <p>개발 과정에서 마주친 여러 문제들을 해결하면서 팀원들과 함께 성장할 수 있었습니다. 특히 검색 기능 구현과 모달 컴포넌트 개발에서 많은 것을 배웠습니다.</p>
-          </div>
-          <div class="story-section">
-            <h3>4. 성과</h3>
-            <p>최종적으로 우리는 사용자 친화적이면서도 성능이 뛰어난 웹사이트를 구현할 수 있었습니다. 이 과정에서 얻은 경험은 앞으로의 프로젝트에도 큰 도움이 될 것입니다.</p>
-          </div>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>
+                VOD 목록들의 타이틀 텍스트 옆에 붙는 빨간색의 작은 점을 타이틀 텍스트 영역의 가상 요소로 생성하여 처리하였고 포지션 값을 주어 위치를 배정하는 간단한 작업이였다. 따로 width 값을 주지 않았기에 텍스트의 길이만큼 늘어난 후에 뒤에 빨간점이 표시되는 방식이였는데 문제는 타이틀 텍스트가 늘어 났을때 발생했다. 줄넘김을 막기위해 생략기호 처리를 해야 하는데 css로 처리하기 위해서 들어가는 많은 속성 중에 width 값과 overflow: hidden이 들어가야했다. 이것으로 인해 배치되던 타이틀 텍스트 영역 밖의
+                빨간 포인트 점이 가려지고 width 값을 100% 로 설정하면 텍스트 길이에 상관 없이 항상 맨 끝에 배치된다.
+              </p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>우선 타이틀 텍스트 영역의 padding-inline-end 값으로 오른쪽 공간에 여백을 주어 빨간색 포인트 점이 텍스트와 겹쳐지 않으면서 보일 수 있게 처리하였고, 타이틀 텍스트의 width 값은 fit-content 값을 줘서 유연하게 처리했고 생략 기호 처리를 위해 max-width: 100%를 주는 방식으로 타이틀 텍스트가 길던 짧던 빨간색 포인트 점이 원하는 곳에 배치되도록 유연하게 처리했다.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong>❓ 문제점</strong>
+              <p>&lt;dialog&gt; 요소로 처리한 모달창이 메인페이지 진입시 접근성을 위해 포커스를 dialog 영역 안에 가두는 가상 요소인 ::backdrop이 활성화가 안되는 문제가 생겼다.</p>
+            </li>
+            <li>
+              <b>💡 해결방식</b>
+              <p>&lt;dialog&gt; 요소에 open 속성 값을 준 것이 문제였다. js의 .showModal(); 메소드 값을 통해 모달 요소를 활성화 시켜야 ::backdrop이라는 가상 요소가 생성된다는 것을 알게 되어 해당 방식대로 처리했다.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </dialog>
