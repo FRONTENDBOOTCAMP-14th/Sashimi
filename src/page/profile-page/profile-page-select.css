@@ -16,6 +16,12 @@
   }
 }
 
+.profile-thumbnail {
+  .profile-resource {
+    border-radius: 4px;
+  }
+}
+
 /* mine */
 .profiles-wrapper {
   --profiles-wrapper-spacing: 130px;
